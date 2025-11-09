@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> تقرير مالي</title>
+    <link rel="icon" href="img/logo.png">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo:500,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/dripicons/2.0.0/webfont.min.css' />
+
+  
+    <link href="css/style.css" rel="styleSheet">
+      <!-- <link href="css/English_style.css" rel="styleSheet"> -->
+      <style>
+        .password-modal-header {
+          flex-direction: column-reverse;
+          align-items: center;
+          border-bottom: none;}
+          .card-title {
+            color: #FF9626;
+            text-shadow: 1px 4px 4px rgb(187 187 187 / 68%);
+            font-size: 1rem;
+            letter-spacing: 0.32px;
+        }
+        .password-modal-header .close {
+          padding: 1rem;
+          padding-left: .1rem;
+          margin: -1rem -1rem -2.5rem auto;
+          direction: rtl;
+        }
+        .password-modal-body {
+          font-size: .8125rem;
+        }
+        
+        .password-container {
+          border-radius: 8px;
+          border: 1px solid #39629C;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          padding: 15px;
+          margin: 0px 30px;
+          color: #000;
+        }
+        .pass-titles {
+          text-align: end;
+        }
+        .password-input {
+          border-radius: 8px;
+          border: 2px solid #FF9626;
+          text-align: center;
+          color: #39629C;
+          width: 100%;
+          direction: rtl;
+          height: 30px;
+        }
+        .requird-field {
+          justify-content: flex-end;
+          height: 20px;
+          text-align: end;
+          padding-right: 20px;
+          color: red;
+          font-size: 10px;
+        }
+        .password-save-button-row {
+          border: none;
+          flex-direction: row-reverse;
+          padding-left: 40px;
+        }
+        #passowrd-save {
+          padding-left: 25px;
+        }
+        .password-btn-custom {
+          color: #fff !important;
+          background-color: #FF9626 !important;
+          border-color: #FF9626;
+          padding-top: 0;
+          padding-bottom: 1px;
+          padding-right: 15px;
+          border-radius: 8px;
+          padding-left: 15px;
+        }
+        
+          </style>
+
+</head>
+
+
+    <body id="page-top" style="background-color:rgba(254, 248, 232, 1);">
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper">
+
+            <!-- Main Content -->
+            <div id="content">
+                  <!-- Topbar -->
+                  <header class="header">
+                    <div class="navbar-area">
+                        <!-- Topbar -->
+                        <nav class="navbar navbar-expand navbar-light topbar mb-2 static-top shadow  justify-content-between"
+                            style="height:90px">
+                            <!-- Topbar -->
+                            <!-- Topbar Navbar -->
+                            <ul class="navbar-nav ">
+                                <!-- Nav Item - User Information -->
+                                <li class="nav-item dropdown no-arrow">
+                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img class="img-profile rounded-circle" src="img/pic (3).svg">
+                                        <div class="userName" style="display: flex; flex-direction: column;">
+                                            <span class=" text-dark font-weight-bold">
+                                                &#x639;&#x64A;&#x633;&#x649; &#x647;&#x627;&#x646;&#x64A;
+                                                &#x645;&#x628;&#x631;&#x648;&#x643; &#x639;&#x632;&#x627;&#x645;
+                                            </span>
+                                            <span class="text-dark">
+                                                &#x645;&#x634;&#x631;&#x641; &#x639;&#x644;&#x649;
+                                                &#x627;&#x644;&#x641;&#x631;&#x648;&#x639;
+                                            </span>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-left shadow animated--grow-in text-right"
+                                        style="font-size: 16px;font-weight: 600;color: black;" aria-labelledby="userDropdown">
+                                        <!-- item-->
+                                        <div class="dropdown-header noti-title dropdown-item">
+                                            <h6 class="text-overflow m-0">مرحباً</h6>
+                                        </div>
+            
+                                        <!-- item-->
+                                        <a class="dropdown-item notify-item" href="https://ayatt12.github.io/account/">
+                                            <i class="mdi mdi-account-circle me-1"></i>
+                                            <span>حسابى</span>
+                                        </a>
+                                        <a class="dropdown-item notify-item" data-bs-toggle="modal" data-bs-target="#PasswordModal"
+                                            style="cursor:pointer">
+                                            <i class="mdi mdi-onepassword me-1"></i>
+                                            <span>تغيير كلمة السر</span>
+                                        </a>
+                                        <a class="dropdown-item notify-item" href="https://ayatt12.github.io/test-page/">
+                                            <i class="mdi mdi-access-point-network me-1"></i>
+                                            <span>الانظمة</span>
+                                        </a>
+            
+                                        <!-- item-->
+                                        <a class="dropdown-item notify-item" href="https://ayatt12.github.io/test-page/login.html">
+                                            <i class="mdi mdi-logout me-1"></i>
+                                            <span>تسجيل الخروج</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- Nav Item - Alerts -->
+                                <li class="nav-item dropdown no-arrow mx-1">
+                                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="dripicons-bell noti-icon"
+                                            style="font-size: 22px;vertical-align: middle;line-height: 70px;color: #7a7272;"></i>
+                                        <!-- Counter - Alerts -->
+                                        <span class="noti-icon-badge"></span>
+                                    </a>
+                                    <!-- Dropdown - Alerts -->
+                                    <div class="dropdown-list dropdown-menu dropdown-menu-left shadow animated--grow-in"
+                                        aria-labelledby="alertsDropdown">
+                                        <div class="row alert">
+                                            <div class="col-6" style="text-align:end;">
+                                                الاشعارات
+                                            </div>
+            
+                                            <div class="col-3">
+                                                علي وشك
+                                            </div>
+                                            <div class="col-3">
+                                                <span class="d-block">
+                                                    منتهي
+                                                </span>
+                                                <span>
+                                                    (لم يسجل)
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <a class="dropdown-item dropdown-item-custom ">
+                                            <div class="col-md-6 p-0" style="text-align:end;">
+                                                مستندات الفرع
+                                            </div>
+                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                                1
+                                            </div>
+                                            <div class="col-md-3 ended-Docs-Num">
+                                                0
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item dropdown-item-custom ">
+                                            <div class="col-md-6 p-0" style="text-align:end;">
+                                                وثائق السيارة
+                                            </div>
+                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                                0
+                                            </div>
+                                            <div class="col-md-3 ended-Docs-Num">
+                                                4
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item dropdown-item-custom ">
+                                            <div class="col-md-6 p-0" style="text-align:end;">
+                                                صيانة السيارة
+                                            </div>
+                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                                0
+                                            </div>
+                                            <div class="col-md-3 ended-Docs-Num">
+                                                5
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item dropdown-item-custom ">
+                                            <div class="col-md-6 p-0" style="text-align:end;">
+                                                اسعار السيارات
+                                            </div>
+            
+                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                                0
+                                            </div>
+                                            <div class="col-md-3 ended-Docs-Num">
+                                                2
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- Nav Item - Language -->
+                                <li class="nav-item dropdown no-arrow mx-2 me-2">
+                                    <a class="nav-link dropdown-toggle" role="button"
+                                        href="#">
+                                        <span class="align-middle"
+                                            style="color: #8d8282;font-size: 14px;font-weight: 600;">En</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- logo -->
+                            <div class=" d-flex align-items-center on-mobile" style="color:black;">
+                                <div class="pt-sm-0 pt-md-4  pt-lg-4 pt-xl-4 px-3">
+                                    <h1 class="hide-on-mobile" style="font-size: 1.2rem;font-weight: bold;">
+                                        شركة كدي لتأجير السيارات </h1>
+                                    <p class="extra-small-mobile">
+                                        &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A; </p>
+                                </div>
+                                <img class="extra-small-mobile " src="img/CompanyLogo_20240325231449.png"
+                                    style="height: 60px;width: 140px;">
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+
+                <div class="container-fluid" >
+                    <section class="section-mainCard">
+                        <div class="row justify-content-center w-100 h-100">
+                            <div class="col-11 col-sm-10 col-md-11 col-lg-11 col-xl-10 text-center p-0 ">
+                                <div class="card main-card ">
+                                      <!-- edited -->
+                                <div class="row p-2">
+                                    <a href="https://ayatt12.github.io/BranchesUI/"  style="width: fit-content;">
+                                        <div>
+                                            <img src="img/Close.svg" alt="close_icon" class="close-icon">
+                                        </div>
+                                    
+
+                                    </a>
+                                </div>
+                                    <div class="row layout-row">
+
+                                    <div class="row" style="flex-direction: row-reverse;">
+                                        <div class="col justify-content-center d-flex title-row">
+                                            <h1 class="card-title">
+                                                تقرير مالي</h1>
+                                        </div>
+
+                                    </div>
+                                    <div class="row justify-content-center h-100 content-row">
+
+                                        <div class="col-md-11 mx-0 h-100">
+
+                                            <form id="report-form">
+
+                                                <fieldset>
+                                                    <div class="form-card" >
+                                                        <div class="row  flex-row-reverse">
+                                                            <div class="col-md-7 col-lg-4 d-flex flex-wrap flex-row-reverse">
+                                                               <div class="col-auto">
+                                                               <p>رصيد الموظف بالفرع</p>
+                                                               </div>
+                                                               <div class="col-auto personal-data">
+                                                                <P>15050.00</P>
+                                                               </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-lg-3 d-flex flex-row-reverse">
+                                                                <div class="col-auto">
+                                                                   <P> الرصيد المتاح</P>
+                                                                </div>
+                                                                <div class="col-auto personal-data">
+                                                                    <P>0.00</P>
+                                                                </div>
+                                                             </div>
+                                                             <div class="col-md-4 col-lg-3 d-flex flex-row-reverse">
+                                                                <div class="col-auto">
+                                                                    <P>الرصيد المحجوز</P>
+                                                                </div>
+                                                                <div class="col-auto personal-data">
+                                                                   <P> 225.75</P>
+                                                                </div>
+                                                             </div>
+                                                        </div>
+                                                        <div class="row  flex-row-reverse">
+                                                            
+                                                            <div class="col-md-4 col-lg-4 d-flex flex-row-reverse">
+                                                                <div class="col-auto">
+                                                                    <P> إجمالي الدائن
+
+                                                                    </P>
+                                                                </div>
+                                                                <div class="col-auto personal-data">
+                                                                   <P> 0.00</P>
+                                                                </div>
+                                                             </div>
+                                                             <div class="col-md-4 col-lg-3 d-flex flex-row-reverse">
+                                                                <div class="col-auto">
+                                                                   <P>  إجمالي المدين
+
+                                                                   </P>
+                                                                </div>
+                                                                <div class="col-auto personal-data">
+                                                                   <P> 225.75</P>
+                                                                </div>
+                                                             </div>
+                                                        </div>
+                                                        <!--edited  -->
+                                                        <div class="row py-2 seacrh-row flex-row-reverse g-3" style="justify-content: space-between;">
+                                                            <div class="col-12 col-xl-8 d-flex align-items-center Search-col flex-row-reverse flex-wrap gap-4">
+                                                                <div class="col-md-auto d-flex flex-row-reverse gap-3 align-items-center">
+                                                                    <label for="start-date">من</label>
+                                                                    <input type="date" class="form-control inputs" id="start-date" name="start-date" required>
+                                                                </div>
+                                                              <div class="col-md-auto d-flex flex-row-reverse gap-3 align-items-center">
+                                                                <label for="end-date">إلى</label>
+                                                               <input type="date" class="form-control inputs" id="end-date" name="end-date" required>
+                                                              </div>
+                                                               
+                                                               <button type="submit" class="btn btn-custom me-2">عرض</button>
+                                                            </div>
+                                                            <div class="col-auto d-flex  radio-container flex-row-reverse flex-wrap" >
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input custom" type="radio" name="Options" id="all" value="All" checked/>
+                                                                        <label class="form-check-label" for="all" >الكل</label>
+                                                                    </div>
+                                                                
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input custom" type="radio" name="Options" id="Custody" value="Custody" />
+                                                                        <label class="form-check-label" for="Custody" style="color: #39629C;">عهدة</label>
+                                                                    </div>
+
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input custom" type="radio" name="Options" id="reserved" value="reserved" />
+                                                                        <label class="form-check-label" for="reserved" style="color: #FF9626;">محجوز</label>
+                                                                    </div>
+
+                                                                    <div class="form-check form-check-inline">
+                                                                        <input class="form-check-input custom" type="radio" name="Options" id="deported" value="deported" />
+                                                                        <label class="form-check-label" for="deported" style="color: #aa0d02;">مرحل</label>
+                                                                    </div>
+                                                                
+                                                                   
+                                                                </div>
+                                                                
+                                                            
+                                                        </div>
+                                                       <!--edited  -->
+
+                                                        <div class="row table-row px-3">
+                                                            <div class="col  scroll-table-div   table-responsive-sm  w-100 ">
+                                                                <table  class=" tables-style table table-borderless " id="reportTable" >
+                                                                    <thead>
+                                                                      <tr >
+                                                                        <th scope="col">سند</th>
+                                                                        <th scope="col" class="not-in-mobile">رصيد سابق</th>
+                                                                        <th scope="col">مدين </th>
+                                                                        <th scope="col">دائن</th>
+                                                                        <th scope="col" class="firstTable-col not-in-mobile">طريقة الدفع</th>
+                                                                        <th scope="col" class="firstTable-col not-in-mobile"> المرجع</th>
+                                                                        <th scope="col" class="firstTable-col">رقم القيد</th>
+                                                                        <th></th>
+                                                                      </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                      <tr>
+                                                                        <td class="text-center"> 
+                                                                            <a href="#"><img src="img/Rectangle 196.svg" alt="pdf file link icon"></a>
+                                                                        </td>
+                                                                        <td class="not-in-mobile">1.000.000.00</td>
+                                                                        <td>00.00</td>
+                                                                        <td>1.000.000.00</td>
+                                                                        <td class="firstTable-col not-in-mobile"><p>صندوق فرع الزهور</p>
+                                                                            <p>نقدًا</p>
+                                                                        </td>
+                                                                        <td class="firstTable-col not-in-mobile"><p>24-1401-4004106-000079</p>
+                                                                            <p>إنشاء عقد</p>
+                                                                        </td>
+                                                                        <td  data-bs-toggle="modal" data-bs-target="#myModal" class="contract_number_td firstTable-col">
+                                                                            <div class="row flex-nowrap">
+                                                                                <div class="col">
+                                                                                    <p class="contract_number"> 24-1301-4004106-000100</p>
+                                                                                    <p>2024/06/30</p>
+                                                                                </div>
+                                                                               </div>
+                                                                        </td>
+                                                                        <td>
+                                                                                <div class="status-number gap-2">
+                                                                                <div class="status red-state"></div>
+                                                                                <div>1</div>
+                                                                         </div>
+                                                                        </td>
+                                                                      </tr>
+                                                                
+                                                                    </tbody>
+                                                                  </table>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </fieldset>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="myModal">
+                    <div class="modal-dialog modal-dialog-centered ">
+                      <div class="modal-content report-modal-content">
+                        <div class="modal-header "style="border-bottom:0px">
+                            <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+
+                          <h5 class="modal-title card-title m-auto">بيانات تفاصيل القيد</h5>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="data-details">
+                         <div class="row flex-row-reverse">
+                        <div class="col-md-12 d-flex flex-row-reverse">
+                            <div class="col-auto p-0">
+                               <p>رقم القيد</p> 
+                            </div>
+                            <div class="col-auto personal-data">
+                               <p> 24-1301-4001101-000092  </p>
+                            </div>
+                        </div>
+                     
+
+                        </div>
+                      
+                        
+                            <div class="row flex-row-reverse">
+                                <div class="col-md-7 d-flex flex-row-reverse">
+                                    <div class="col-auto p-0">
+                                        <P>رقم الحساب  </P> 
+                                    </div>
+                                    <div class="col-auto personal-data">
+                                       <p>SA80004001100400001</p> 
+                                    </div>
+                                </div>
+                                  <div class="col-md-auto d-flex flex-row-reverse">
+                                    <div class="col-auto p-0">
+                                       <P> البنك</P>
+                                    </div>
+                                    <div class="col-auto personal-data">
+                                       <P> مصرف الإنماء  </P>
+                                    </div>
+                                  </div>
+        
+                                </div>
+                               
+                                <div class="row flex-row-reverse">
+                                    <div class="col-md-7 d-flex flex-row-reverse">
+                                        <div class="col-auto p-0">
+                                            <p> رقم العهدة</P> 
+                                        </div>
+                                        <div class="col-auto personal-data">
+                                            <P>24-1304-4001101-000044  </P>
+                                        </div>
+                                    </div>
+                                     
+                                    <div class="col-md-auto d-flex flex-row-reverse not-in-desktop">
+                                        <div class="col-auto p-0">
+                                            <p>طريقة الدفع  </P> 
+                                        </div>
+                                        <div class="col-auto personal-data">
+                                            <P> ماستر كارد </P>
+                                        </div>
+                                    </div>       
+                                </div>
+                              
+                                
+                                <div class="row flex-row-reverse not-in-desktop">
+                                    <div class="col-md-7 d-flex flex-row-reverse">
+                                        <div class="col-auto p-0">
+                                            <P>رقم المرجع   </P> 
+                                        </div>
+                                        <div class="col-auto personal-data">
+                                           <p>24-1401-4001101-000065   </p> 
+                                        </div>
+                                    </div>
+                                      <div class="col-md-auto d-flex flex-row-reverse">
+                                        <div class="col-auto p-0">
+                                           <P> نوع المرجع </P>
+                                        </div>
+                                        <div class="col-auto personal-data">
+                                           <P> انشاء عقد </P>
+                                        </div>
+                                      </div>
+            
+                                    </div>
+                                    <div class="row flex-row-reverse not-in-desktop">
+                                        <div class="col-md-12 d-flex flex-row-reverse">
+                                            <div class="col-auto p-0">
+                                                <P>  رصيد سابق  </P> 
+                                            </div>
+                                            <div class="col-auto personal-data">
+                                               <p> 150000 </p> 
+                                            </div>
+                                        </div>
+                                        </div>
+                                    <div class="row flex-row-reverse">
+                                        <div class="col-md-7 d-flex flex-row-reverse">
+                                            <div class="col-auto p-0">
+                                                <p> المستلم</P> 
+                                            </div>
+                                            <div class="col-auto personal-data">
+                                                <P> عادل عبدالعزيز رائد</P>
+                                            </div>
+                                        </div>
+                                          <div class="col-md-auto d-flex flex-row-reverse">
+                                            <div class="col-auto p-0">
+                                               <P> تاريخ التسليم</P>
+                                            </div>
+                                            <div class="col-auto personal-data">
+                                                <p>2024/02/03</p>
+                                            </div>
+                                          </div>
+                
+                                    </div>
+                                <div class="row flex-row-reverse">
+                                    <div class="col-md-12 d-flex flex-row-reverse flex-wrap">
+                                        <div class="col-auto p-0 text-end">
+                                            الملاحظات
+                                        </div>
+                                        <div class="col-auto personal-data ">
+                                            <div class="notes_box"><p> ملاحظاات </p> </div>      
+                                         </div>
+                                    </div>
+                                      
+                                </div>
+                            </div>
+                        
+                         </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                <footer class="fixed-bottom-xl">
+                    <div class="before-footer-widget">
+                        <svg width: 100%; height:auto viewbox="0 0 2444 132">
+                            <path fill="rgba(254, 248, 232, 1)" fill-rule="evenodd"
+                                d="M1222 0h1222c-444.13 88-852.127 132-1223.993 132C849.253 132 442.585 88.263 0 .789V0h1222z">
+                            </path>
+                        </svg>
+                    </div>
+
+                </footer>
+                <div class="modal fade" id="PasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered  ">
+                    <div class="modal-content">
+                        <form class="needs-validation" novalidate>
+                            <div class="modal-header password-modal-header mb-2">
+                                <p class="card-title">تغيير كلمة السر</p>
+                                <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><img src="img/cancel.png"></span>
+                                </button>
+                            </div>
+                            <div class="modal-body p-0 password-modal-body">
+                                <div class="account-container password-container p-4">
+                                    <div class="row gap-2">
+                                        <div class="col-md-12 ">
+                                            <div class="row flex-row-reverse">
+                                                <div class="col-md-5 pass-titles">
+                                                    <label for="current_pass">كلمة السر الحالية</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="password" id="current_pass" class="password-input"
+                                                        name=" current passowrd" autocomplete="off">
+                                                    <div class="row requird-field">
+                                                        <p style="display:none;"> هذا الحقل مطلوب</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="row flex-row-reverse">
+                                                <div class="col-md-5 pass-titles">
+                                                    <label for="New_pass">كلمة السر الجديدة </label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="password" id="New_pass" class="password-input"
+                                                        name="new passowrd" autocomplete="off">
+                                                    <div class="row requird-field">
+                                                        <p style="display:none;">هذا الحقل مطلوب</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="row flex-row-reverse">
+                                                <div class="col-md-5 pass-titles">
+                                                    <label for="New_pass_reenter">تأكيد كلمة السر الجديدة </label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="password" id="New_pass_reenter" class="password-input"
+                                                        name="new passowrd reenter" autocomplete="off">
+                                                    <div class="row requird-field">
+                                                        <p style="display:none;">هذا الحقل مطلوب</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer password-save-button-row" id="passowrd-save">
+                                <button type="submit" class="btn password-btn-custom ">حفظ</button>
+                            </div>
+        
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+  
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <script src="js/report.js"></script>
+    </body>
+
+</html>
