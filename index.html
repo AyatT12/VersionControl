@@ -1,1043 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> تقرير مالي </title>
+    <title>تسليم عهدة</title>
     <link rel="icon" href="img/logo.png">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cairo:500,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha384-..." crossorigin="anonymous">
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/dripicons/2.0.0/webfont.min.css' />
-    <link href="../../css/style.css" rel="styleSheet">
-    <!-- <link href="../../css/English_style.css" rel="styleSheet"> -->
-    <style>
-        @media(max-width:500px) {
-            body {
-                overflow-y: hidden;
-            }
-        }
-    </style>
-</head>
-<body id="page-top" >
-    <!-- Content Wrapper -->
-    <div id="content-wrapper">
-        <!-- Main Content -->
-        <!-- Topbar -->
-        <header class="header">
-            <div class="navbar-area">
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light topbar mb-2 static-top   justify-content-between"
-                    style="height:100px">
 
-                </nav>
-            </div>
-        </header>
-        <main class="main-container container-fluid">
-            <div class="row justify-content-center w-100 h-100" style="flex:1">
-                <div class="col-xl-10 text-center h-100">
-                    <div class="card main-card report-card ">
-                        <!-- edited -->
-                        <div class="col-md-12">
-                            <div class="row py-2 align-items-center">
-                                <div class="col-auto d-flex">
-                                    <a href="https://ayatt12.github.io/BnanBranch/" style="width: fit-content;">
-                                        <div> <img src="img/Close.svg" alt="close_icon" class="close-icon">
+    <link href="css/style.css" rel="styleSheet">
+      <!-- <link href="css/English_style.css" rel="styleSheet"> -->
+      <style>
+        .password-modal-header {
+          flex-direction: column-reverse;
+          align-items: center;
+          border-bottom: none;}
+          .card-title {
+            color: #FF9626;
+            text-shadow: 1px 4px 4px rgb(187 187 187 / 68%);
+            letter-spacing: 0.32px;
+        }
+        .password-modal-header .close {
+          padding: 1rem;
+          padding-left: .1rem;
+          margin: -1rem -1rem -2.5rem auto;
+          direction: rtl;
+        }
+        .password-modal-body {
+          font-size: .8125rem;
+        }
+        
+        .password-container {
+          border-radius: 8px;
+          border: 1px solid #39629C;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          padding: 15px;
+          margin: 0px 30px;
+          color: #000;
+        }
+        .pass-titles {
+          text-align: end;
+        }
+        .password-input {
+          border-radius: 8px;
+          border: 2px solid #FF9626;
+          text-align: center;
+          color: #39629C;
+          width: 100%;
+          direction: rtl;
+          height: 30px;
+        }
+        .requird-field {
+          justify-content: flex-end;
+          height: 20px;
+          text-align: end;
+          padding-right: 20px;
+          color: red;
+          font-size: 10px;
+        }
+        .password-save-button-row {
+          border: none;
+          flex-direction: row-reverse;
+          padding-left: 40px;
+        }
+        #passowrd-save {
+          padding-left: 25px;
+        }
+        .password-btn-custom {
+          color: #fff !important;
+          background-color: #FF9626 !important;
+          border-color: #FF9626;
+          padding-top: 0;
+          padding-bottom: 1px;
+          padding-right: 15px;
+          border-radius: 8px;
+          padding-left: 15px;
+        }
+        
+          </style>
+</head>
+
+    <body id="page-top" style="background-color:rgba(254, 248, 232, 1);">
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper">
+
+            <!-- Main Content -->
+            <div id="content">
+                  <!-- Topbar -->
+                  <header class="header">
+                    <div class="navbar-area">
+                        <!-- Topbar -->
+                        <nav class="navbar navbar-expand navbar-light topbar mb-2 static-top shadow  justify-content-between"
+                            style="height:90px">
+                            <!-- Topbar -->
+                            <!-- Topbar Navbar -->
+                            <ul class="navbar-nav ">
+                                <!-- Nav Item - User Information -->
+                                <li class="nav-item dropdown no-arrow">
+                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img class="img-profile rounded-circle" src="img/pic (3).svg">
+                                        <div class="userName" style="display: flex; flex-direction: column;">
+                                            <span class=" text-dark font-weight-bold">
+                                                &#x639;&#x64A;&#x633;&#x649; &#x647;&#x627;&#x646;&#x64A;
+                                                &#x645;&#x628;&#x631;&#x648;&#x643; &#x639;&#x632;&#x627;&#x645;
+                                            </span>
+                                            <span class="text-dark">
+                                                &#x645;&#x634;&#x631;&#x641; &#x639;&#x644;&#x649;
+                                                &#x627;&#x644;&#x641;&#x631;&#x648;&#x639;
+                                            </span>
                                         </div>
                                     </a>
+                                    <div class="dropdown-menu dropdown-menu-left shadow animated--grow-in text-right"
+                                        style="font-size: 16px;font-weight: 600;color: black;" aria-labelledby="userDropdown">
+                                        <!-- item-->
+                                        <div class="dropdown-header noti-title dropdown-item">
+                                            <h6 class="text-overflow m-0">مرحباً</h6>
+                                        </div>
+            
+                                        <!-- item-->
+                                        <a class="dropdown-item notify-item" href="https://ayatt12.github.io/account/">
+                                            <i class="mdi mdi-account-circle me-1"></i>
+                                            <span>حسابى</span>
+                                        </a>
+                                        <a class="dropdown-item notify-item" data-bs-toggle="modal" data-bs-target="#PasswordModal"
+                                            style="cursor:pointer">
+                                            <i class="mdi mdi-onepassword me-1"></i>
+                                            <span>تغيير كلمة السر</span>
+                                        </a>
+                                        <a class="dropdown-item notify-item" href="https://ayatt12.github.io/test-page/">
+                                            <i class="mdi mdi-access-point-network me-1"></i>
+                                            <span>الانظمة</span>
+                                        </a>
+            
+                                        <!-- item-->
+                                        <a class="dropdown-item notify-item" href="https://ayatt12.github.io/test-page/login.html">
+                                            <i class="mdi mdi-logout me-1"></i>
+                                            <span>تسجيل الخروج</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- Nav Item - Alerts -->
+                                <li class="nav-item dropdown no-arrow mx-1">
+                                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="dripicons-bell noti-icon"
+                                            style="font-size: 22px;vertical-align: middle;line-height: 70px;color: #7a7272;"></i>
+                                        <!-- Counter - Alerts -->
+                                        <span class="noti-icon-badge"></span>
+                                    </a>
+                                    <!-- Dropdown - Alerts -->
+                                    <div class="dropdown-list dropdown-menu dropdown-menu-left shadow animated--grow-in"
+                                        aria-labelledby="alertsDropdown">
+                                        <div class="row alert">
+                                            <div class="col-6" style="text-align:end;">
+                                                الاشعارات
+                                            </div>
+            
+                                            <div class="col-3">
+                                                علي وشك
+                                            </div>
+                                            <div class="col-3">
+                                                <span class="d-block">
+                                                    منتهي
+                                                </span>
+                                                <span>
+                                                    (لم يسجل)
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <a class="dropdown-item dropdown-item-custom ">
+                                            <div class="col-md-6 p-0" style="text-align:end;">
+                                                مستندات الفرع
+                                            </div>
+                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                                1
+                                            </div>
+                                            <div class="col-md-3 ended-Docs-Num">
+                                                0
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item dropdown-item-custom ">
+                                            <div class="col-md-6 p-0" style="text-align:end;">
+                                                وثائق السيارة
+                                            </div>
+                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                                0
+                                            </div>
+                                            <div class="col-md-3 ended-Docs-Num">
+                                                4
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item dropdown-item-custom ">
+                                            <div class="col-md-6 p-0" style="text-align:end;">
+                                                صيانة السيارة
+                                            </div>
+                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                                0
+                                            </div>
+                                            <div class="col-md-3 ended-Docs-Num">
+                                                5
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item dropdown-item-custom ">
+                                            <div class="col-md-6 p-0" style="text-align:end;">
+                                                اسعار السيارات
+                                            </div>
+            
+                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                                                0
+                                            </div>
+                                            <div class="col-md-3 ended-Docs-Num">
+                                                2
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- Nav Item - Language -->
+                                <li class="nav-item dropdown no-arrow mx-2 me-2">
+                                    <a class="nav-link dropdown-toggle" role="button"
+                                        href="#">
+                                        <span class="align-middle"
+                                            style="color: #8d8282;font-size: 14px;font-weight: 600;">En</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- logo -->
+                            <div class=" d-flex align-items-center on-mobile" style="color:black;">
+                                <div class="pt-sm-0 pt-md-4  pt-lg-4 pt-xl-4 px-3">
+                                    <h1 class="hide-on-mobile" style="font-size: 1.2rem;font-weight: bold;">
+                                        شركة كدي لتأجير السيارات </h1>
+                                    <p class="extra-small-mobile">
+                                        &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A; </p>
                                 </div>
-                                <div class="col">
-                                    <h1 class="card-title"> التقرير المالي </h1>
-                                </div>
+                                <img class="extra-small-mobile " src="img/CompanyLogo_20240325231449.png"
+                                    style="height: 60px;width: 140px;">
                             </div>
-                        </div>
-                        <div class="col-md-12" style="flex: 1;min-height: 0;">
-                            <div class="row justify-content-center h-100 content-row">
-                                <div class="col-md-12 px-md-4 h-100 d-flex">
-                                    <form class="d-flex align-items-center w-100">
-                                        <fieldset class="w-100">
-                                            <div class="form-card">
-                                                <div class="row flex-row-reverse justify-content-between justify-content-md-start">
-                                                    <div class="col-md-8 col-lg-4 ">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto">
-                                                                <p>رصيد الموظف بالفرع</p>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <p>9,999,999.99</p>
-                                                            </div>
-                                                        </div>
+                        </nav>
+                    </div>
+                </header>        
+              <div class="container-fluid" >
+                <section class="section-mainCard">
+                    <div class="row justify-content-center w-100 h-100">
+                        <div class="col-11 col-sm-10 col-md-11 col-lg-11 col-xl-10 text-center p-0 ">
+                            <div class="card main-card ">
+                                <div class="row p-2">
+                                    <a href="https://ayatt12.github.io/BranchesUI/"  style="width: fit-content;">
+                                        <div>
+                                            <img src="img/Close.svg" alt="close_icon" class="close-icon">
+                                        </div>
+                                    
+
+                                    </a>
+                                </div>
+                                <div class="row layout-row custody-layout-row">
+
+                                <div class="row" style="flex-direction: row-reverse;">
+                                    <div class="col justify-content-center d-flex title-row">
+                                        <h1 class="card-title">
+                                            تسليم عهدة  </h1>
+                                    </div>
+
+                                </div>
+                                <div class="row justify-content-center h-100 content-row">
+
+                                    <div class="col-md-11 mx-0 h-100">
+
+                                        <form id="custody-form" class="needs-validation" novalidate>
+
+                                            <fieldset>
+
+                                                <div class="form-card details-card">
+                                                
+                                                <div class="row  pt-2"style="flex-direction:row-reverse">
+                                                   <div class=" col-lg-6 col-xl-4 d-flex data-col flex-md-nowrap" >
+                                                    <div class="col-auto ">
+                                                        <P>رقم العهدة</P>
                                                     </div>
-                                                    <div class="col-auto col-md-4 Report-avaliable-balance">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto ">
-                                                                <p class="mb-0">
-                                                                    <span class="Hidden-word">الرصيد</span>
-                                                                    <span>المتاح</span>
-                                                                </p>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <p>9,999,999.99</p>
-                                                            </div>
-                                                        </div>
+                                                    <div class="col-auto  personal-data">
+                                                       <P> 24-1304-4004106-000053</P>
                                                     </div>
-                                                    <div class="col-auto col-md-4 Report-reserved-balance">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto ">
-                                                                <p class="mb-0">
-                                                                    <span class="Hidden-word">الرصيد</span>
-                                                                    <span>المحجوز</span>
-                                                                </p>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <p> 9,999,999.99 </p>
-                                                            </div>
-                                                        </div>
+                                                   </div>
+                                                   <div class=" col-lg-6 col-xl-4  d-flex data-col">
+                                                    <div class="col-auto ">
+                                                        <P>تاريخها </P>
                                                     </div>
-                                                    <div class="col-auto col-md-4 report-credit">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto">
-                                                                <p class="mb-0">
-                                                                    <span class="Hidden-word">إجمالي</span>
-                                                                    <span>الدائن</span>
-                                                                </p>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <p>9,999,999.99</p>
-                                                            </div>
-                                                        </div>
+                                                    <div class="col-auto  personal-data">
+                                                        <P>2024/02/02</P>
                                                     </div>
-                                                    <div class="col-auto col-md-4 report-debit">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto">
-                                                                <p class="mb-0">
-                                                                    <span class="Hidden-word">إجمالي</span>
-                                                                    <span>المدين</span>
-                                                                </p>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <p>9,999,999.99</p>
-                                                            </div>
+                                                   </div>
+                                                   
+                                                </div>
+                                                <div class="row "style="flex-direction:row-reverse">
+                                                    <div class=" col-lg-6 col-xl-4  flex-wrap    d-flex"style="flex-direction: row-reverse;">
+                                                        <div class="col-auto">
+                                                            <label for="selling-point-drop">نقطة البيع</label> 
+    
                                                         </div>
+                                                        <div class=" col-md-9 personal-data">
+                                                            <div id="dropdown-container ">
+                                                                <div class="">
+                                                                    <select class="form-select form-select-selling " id="selling-point-drop" name="selling-point" required>
+                                                                        <option selected disabled> 
+                                                                            
+                                                                        </option>
+                                                                        <option value= "1 "> صندوق فرع الزهور 
+                                                                        </option>
+                                                                        <option value=" 2"> صندوق فرع الصريف 
+                                                                        </option>
+                                                                        <option value=" 3"> صندوق فرع المرجان   
+                                                                        </option>
+                                                                    </select>
+                                                                    <div class="row requird-field-row-last">
+                                                                        <div class="invalid-feedback m-0" style="display: none;">
+                                                                            هذا الحقل مطلوب
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+    
+                                                        </div>
+                                                        
+                                                    </div>
+                                                       <div class=" col-lg-6 col-xl-3  d-flex data-col">
+                                                        <div class="col-auto ">
+                                                           <P> الرصيد المتاح</P>
+                                                        </div>
+                                                        <div class="col-auto personal-data">
+                                                           <P> 216.02</P>
+                                                        </div>
+                                                       </div>
+                                                   
+                                                 </div>
+                                                
+                                                 <div class="row "style="flex-direction:row-reverse">
+                                                    <div class=" col-lg-6 col-xl-4 d-flex data-col ">
+                                                        <div class="col-auto ">
+                                                           <P> إجمالي الدائن</P>
+                                                        </div>
+                                                        <div class="col-auto personal-data">
+                                                           <P> 23.450.78</P>
+                                                        </div>
+                                                       </div>
+                                                       <div class=" col-lg-6 col-xl-3  d-flex data-col">
+                                                        <div class="col-auto ">
+                                                           <P> إجمالي المدين</P>
+                                                        </div>
+                                                        <div class="col-auto personal-data">
+                                                           <P> 216.02</P>
+                                                        </div>
+                                                       </div>
+                                                    <div class="col-md-4 d-flex data-col">
+                                                        <div class="col-auto ">
+                                                            <P> المسلم </P>
+                                                        </div>
+                                                        <div class="col-auto personal-data">
+                                                            <P>315.87.12</P>
+                                                        </div>
+                                                       </div>
+                                                 </div>
+                                             
+                                                 <div class="row  pb-2" >
+                                                    <div class="col d-flex" style="justify-content:flex-start;flex-direction:row-reverse ;flex-wrap: wrap;">
+                                                    <div class="col-auto">
+                                                        <label for="FormControlTextarea2">ملاحظات</label>
+                                                    </div>
+                                                    <div class="col-lg-6 pt-2">
+
+                                                        <textarea class="form-control textarea-inputs" id="FormControlTextarea2"
+                                                            maxlength="100" rows="1"
+                                                            name="driver-notes"></textarea>
                                                     </div>
                                                 </div>
-                                                <!--edited  -->
-                                                <div class="row pb-2 gy-2 seacrh-row flex-row-reverse "
-                                                    style="justify-content: space-between;">
-                                                    <div class="col">
-                                                        <div class="row flex-row-reverse align-items-cente g-1 gap-sm-3">
-                                                            <div class="col-auto d-flex flex-row-reverse align-items-center gap-1">
-                                                                <label for="start-date" class="mb-0">من</label>
-                                                                <input type="date" class="form-control inputs"
-                                                                    id="start-date" name="start-date"
-                                                                    style="min-width: 160px;" required>
-                                                            </div>
-                                                            <div class="col-auto d-flex flex-row-reverse align-items-center gap-1">
-                                                                <label for="end-date" class="mb-0">إلى</label>
-                                                                <input type="date" class="form-control inputs"
-                                                                    id="end-date" name="end-date"
-                                                                    style="min-width: 160px;" required>
-                                                                <button type="submit"
-                                                                    class="btn btn-custom">عرض</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-auto d-flex  radio-container flex-row-reverse flex-wrap">
-                                                        <div class="form-check form-check-inline">
-                                                            <label class="form-check-label" for="all">الكل</label>
-                                                            <input class="form-check-input custom" type="radio"
-                                                                name="Options" id="all" value="All" checked />
-                                                        </div>
-
-                                                        <div class="form-check form-check-inline">
-                                                            <label class="form-check-label" for="Custody"
-                                                                style="color: #39629C;">عهدة</label>
-                                                            <input class="form-check-input custom" type="radio"
-                                                                name="Options" id="Custody" value="Custody" />
-                                                        </div>
-
-                                                        <div class="form-check form-check-inline">
-                                                            <label class="form-check-label" for="reserved"
-                                                                style="color: #FF9626;">محجوز</label>
-                                                            <input class="form-check-input custom" type="radio"
-                                                                name="Options" id="reserved" value="reserved" />
-                                                        </div>
-
-                                                        <div class="form-check form-check-inline ">
-                                                            <label class="form-check-label" for="deported"
-                                                                style="color: #aa0d02;">مرحل</label>
-                                                            <input class="form-check-input custom" type="radio"
-                                                                name="Options" id="deported" value="deported" />
-                                                        </div>
-                                                    </div>
                                                 </div>
-                                                <!--edited  -->
-                                                <div class="row table-row px-md-2">
-                                                    <div class="col  scroll-table-div  w-100 reportTable-div">
-                                                        <table class="tables-style table table-borderless" id="reportTable">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="Receipt_Col">السند</th>
-                                                                    <th class="not-in-mobile not-in-tablet">الرصيد سابق</th>
-                                                                    <th class="Credit-debit-col"> مدين </th>
-                                                                    <th class="Credit-debit-col"> دائن </th>
-                                                                    <th class="firstTable-col not-in-mobile not-in-tablet"> طريقة الدفع</th>
-                                                                    <th class="firstTable-col not-in-mobile"> المرجع</th>
-                                                                    <th class="firstTable-col">رقم القيد</th>
-                                                                    <th></th>
-                                                                </tr>
+                                                <div class="row table-row px-3">
+                                                    <div class="col  scroll-table-div  table-responsive-sm  w-100 " id="custody-table-div">
+                                                        <table  class=" tables-style table table-borderless" >
+                                                            <thead >
+                                                              <tr>
+                                                                <th scope="col" > السند </th>
+                                                                <th scope="col" > مدين</th>
+                                                                <th scope="col">دائن</th>
+                                                                <th scope="col" class="firstTable-col">طريقة الدفع </th>
+                                                                <th scope="col" class="firstTable-col"> المرجع</th>
+                                                                <th scope="col" class="firstTable-col"> القيد </th>
+                                                                <th></th>
+                                                              </tr>
                                                             </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="Receipt_Col text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                   <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-tablet not-in-mobile">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class=" not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
+                                                            <tbody >
+                                                              <tr>
+                                                                <td> <a href="#"><img src="img/Rectangle 196.svg" alt="pdf file link"></a></td>
+                                                                <td>00.00</td>
+                                                                <td>1.000.000.00</td>
+                                                                <td class="firstTable-col">نقدًا</td>
+                                                                <td class="firstTable-col">
+                                                                    24-1401-4004106-000079
+                                                                    <p>إنشاء عقد</p>
+                                                                </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center ">
                                                                             <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
+                                                                                <div class="row justify-content-end">
+                                                                                    <div class="col"><label class="form-check-label" for="contract-number">24-1401-4001105-000078</label>
+                                                                                        <div class="col-auto date-col">
+                                                                                            2023/03/02
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto">
+                                                                                        <input class="form-check-input custody-input" type="checkbox" value="24-1401-4001105-000078" id="contract-number" name="checked-contract" >
+
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
+                                                                            
                                                                         </div>
                                                                     </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>1</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>2</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>   
-                                                                <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                   <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>3</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>4</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>   
-                                                                <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>5</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>   
-                                                                <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>6</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                 <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>7</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                 <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>8</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                 <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>9</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                 <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>10</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                 <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>11</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                 <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>12</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                 <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>13</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                 <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>14</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                 <tr>
-                                                                    <td class="text-center">
-                                                                        <a href="#"><img src="img/Rectangle 196.svg"
-                                                                                alt="pdf file link icon"></a>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="not-in-mobile not-in-tablet">9,999,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal"
-                                                                        data-bs-target="#myModal" class="Credit-debit-col">99,999.99
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col  not-in-mobile not-in-tablet">
-                                                                        <p class="No_Wrap_Text">صندوق فرع الزهور
-                                                                        </p>
-                                                                        <p class="secondline-p">اميركن اكسبرس</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="not-in-mobile contract_number_td firstTable-col">
-                                                                        <p class="No_Wrap_Text">
-                                                                            24-1401-4004106-000079</p>
-                                                                        <p class="secondline-p">إنشاء عقد</p>
-                                                                    </td>
-                                                                    <td data-bs-toggle="modal" data-bs-target="#myModal"
-                                                                        class="contract_number_td firstTable-col">
-                                                                        <div class="row flex-nowrap">
-                                                                            <div class="col">
-                                                                                <p class="No_Wrap_Text">
-                                                                                    24-1301-4004106-000100</p>
-                                                                                <p class="secondline-p">
-                                                                                    2024/06/30
-                                                                                    <span>10:12</span>
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td>
-                                                                        <div class="status-number gap-2">
-                                                                            <div class="status red-state"></div>
-                                                                            <div>15</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
+                                                                    <td >
+                                                                      
+                                                                     <div>1</div>
+                                                                        
+                                                                    </td>
+                                                              </tr>
+                                                              
                                                             </tbody>
-                                                        </table>
+                                                            
+                                                          </table>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="row button-row pb-1 ps-4">
+                                                <div class="button-card55">
+                                                   <button type="submit" class="btn btn-custom">حفظ</button>
 
+                                                </div>
+                                                <div class="button-card55">
+                                                </div>
                                             </div>
-                                            <div class="row w-100" style="min-height:61px;">
-                                            </div>
-                                        </fieldset>
-                                    </form>
+                                            </fieldset>
+
+                                        </form>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
+           
             </div>
-        </main>
-        <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" id="myModal">
-            <div class="modal-dialog modal-dialog-centered ">
-                <div class="modal-content report-modal-content">
-                    <div class="modal-header" style="border-bottom:0px">
-                        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
-                        <h5 class="modal-title card-title m-auto">بيانات تفاصيل القيد</h5>
+
+                <footer class="fixed-bottom-xl">
+                    <div class="before-footer-widget">
+                        <svg width: 100%; height:auto viewbox="0 0 2444 132">
+                            <path fill="rgba(254, 248, 232, 1)" fill-rule="evenodd"
+                                d="M1222 0h1222c-444.13 88-852.127 132-1223.993 132C849.253 132 442.585 88.263 0 .789V0h1222z">
+                            </path>
+                        </svg>
                     </div>
-                    <div class="modal-body p-0">
-                        <div class="data-details">
-                            <div class="row flex-row-reverse">
-                                <div class="col-md-12 d-flex flex-row-reverse">
-                                    <div class="col-auto p-0">
-                                        <p>رقم القيد</p>
-                                    </div>
-                                    <div class="col-auto personal-data">
-                                        <p> 24-1301-4001101-000092 </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row flex-row-reverse">
-                                <div class="col-md-7 d-flex flex-row-reverse">
-                                    <div class="col-auto p-0">
-                                        <P>رقم الحساب </P>
-                                    </div>
-                                    <div class="col-auto personal-data">
-                                        <p>SA80004001100400001</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-auto d-flex flex-row-reverse">
-                                    <div class="col-auto p-0">
-                                        <P> البنك</P>
-                                    </div>
-                                    <div class="col-auto personal-data">
-                                        <P> مصرف الإنماء </P>
-                                    </div>
-                                </div>
 
+                </footer>
+                <div class="modal fade" id="PasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered  ">
+                    <div class="modal-content">
+                        <form class="needs-validation" novalidate>
+                            <div class="modal-header password-modal-header mb-2">
+                                <p class="card-title">تغيير كلمة السر</p>
+                                <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><img src="img/cancel.png"></span>
+                                </button>
                             </div>
-
-                            <div class="row flex-row-reverse">
-                                <div class="col-md-7 d-flex flex-row-reverse">
-                                    <div class="col-auto p-0">
-                                        <p> رقم العهدة</P>
-                                    </div>
-                                    <div class="col-auto personal-data">
-                                        <P>24-1304-4001101-000044 </P>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row flex-row-reverse">
-                                <div class="col-md-7 d-flex flex-row-reverse">
-                                    <div class="col-auto p-0">
-                                        <p> المستلم</P>
-                                    </div>
-                                    <div class="col-auto personal-data">
-                                        <P> عادل عبدالعزيز رائد</P>
-                                    </div>
-                                </div>
-                                <div class="col-md-auto d-flex flex-row-reverse">
-                                    <div class="col-auto p-0">
-                                        <P> تاريخ التسليم</P>
-                                    </div>
-                                    <div class="col-auto personal-data">
-                                        <p>2024/02/03</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="row flex-row-reverse">
-                                <div class="col-md-12 d-flex flex-row-reverse flex-wrap">
-                                    <div class="col-auto p-0 text-end">
-                                        الملاحظات
-                                    </div>
-                                    <div class="col-auto personal-data ">
-                                        <div class="notes_box">
-                                            <p> ملاحظات </p>
+                            <div class="modal-body p-0 password-modal-body">
+                                <div class="account-container password-container p-4">
+                                    <div class="row gap-2">
+                                        <div class="col-md-12 ">
+                                            <div class="row flex-row-reverse">
+                                                <div class="col-md-5 pass-titles">
+                                                    <label for="current_pass">كلمة السر الحالية</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="password" id="current_pass" class="password-input"
+                                                        name=" current passowrd" autocomplete="off">
+                                                    <div class="row requird-field">
+                                                        <p style="display:none;"> هذا الحقل مطلوب</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="row flex-row-reverse">
+                                                <div class="col-md-5 pass-titles">
+                                                    <label for="New_pass">كلمة السر الجديدة </label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="password" id="New_pass" class="password-input"
+                                                        name="new passowrd" autocomplete="off">
+                                                    <div class="row requird-field">
+                                                        <p style="display:none;">هذا الحقل مطلوب</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="row flex-row-reverse">
+                                                <div class="col-md-5 pass-titles">
+                                                    <label for="New_pass_reenter">تأكيد كلمة السر الجديدة </label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="password" id="New_pass_reenter" class="password-input"
+                                                        name="new passowrd reenter" autocomplete="off">
+                                                    <div class="row requird-field">
+                                                        <p style="display:none;">هذا الحقل مطلوب</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
-
+                            <div class="modal-footer password-save-button-row" id="passowrd-save">
+                                <button type="submit" class="btn password-btn-custom ">حفظ</button>
+                            </div>
+        
+                        </form>
                     </div>
                 </div>
-
             </div>
+            </div>
+
+
         </div>
-        <footer class="fixed-bottom-xl">
-            <div class="before-footer-widget">
-                <svg width: 100%; height:auto viewbox="0 0 2444 132">
-                    <path fill="rgba(254, 248, 232, 1)" fill-rule="evenodd"
-                        d="M1222 0h1222c-444.13 88-852.127 132-1223.993 132C849.253 132 442.585 88.263 0 .789V0h1222z">
-                    </path>
-                </svg>
-            </div>
 
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
-    <script>
-        function setScrollToRight(el) {
-            if (!el) return;
-            const style = getComputedStyle(el);
-            const isRTL = style.direction === 'rtl';
-            const max = Math.max(0, el.scrollWidth - el.clientWidth);
-            function attempt() {
-                el.scrollLeft = max;
+      
 
-                if (isRTL && Math.abs(el.scrollLeft) < Math.max(1, max - 1)) {
-                    try { el.scrollLeft = -max; } catch (e) { }
-                }
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <script src="js/validation.js"></script>
 
-                if (Math.abs(el.scrollLeft) < Math.max(1, max - 1)) {
-                    try { el.scrollTo({ left: max, behavior: 'instant' }); } catch (e) { el.scrollLeft = max; }
-                }
-            }
-            requestAnimationFrame(() => {
-                attempt();
-                setTimeout(attempt, 50);
-            });
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.querySelector('.scroll-table-div');
-            if (!container) return;
-            setScrollToRight(container);
-            let resizeTimer;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(() => setScrollToRight(container), 120);
-            });
-            const observer = new MutationObserver(() => {
-                setTimeout(() => setScrollToRight(container), 40);
-            });
-            observer.observe(container, { childList: true, subtree: true, attributes: true });
-            const imgs = container.querySelectorAll('img');
-            imgs.forEach(img => img.addEventListener('load', () => setTimeout(() => setScrollToRight(container), 30)));
-        });
-    </script>
-</body>
+
+    </body>
 
 </html>
