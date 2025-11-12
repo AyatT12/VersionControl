@@ -23,250 +23,531 @@
         }
     </style>
 </head>
+<body class="d-flex flex-column min-vh-100" data-new-gr-c-s-check-loaded="14.1261.0" data-gr-ext-installed="">
 
 
-<body id="page-top">
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper">
-        <!-- Topbar -->
-        <header class="header">
-            <div class="navbar-area">
+    <!-- Start Header Area -->
+    <header class="header">
+        <div class="navbar-area">
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light topbar mb-2 static-top  justify-content-between" style="height:100px">
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light topbar mb-2 static-top   justify-content-between"
-                    style="height:100px">
-                </nav>
-            </div>
-        </header>
-        <main class="container-fluid">
-            <div class="row justify-content-center w-100 h-100" style="flex: 1;">
-                <div class="col-12 col-xl-10 text-center h-100">
-                    <div class="card main-card ">
-                        <!-- edited -->
-                        <div class="col-md-12">
-                            <div class="row py-2 align-items-center">
-                                <div class="col-auto d-flex gap-3">
-                                    <a href="https://ayatt12.github.io/BnanBranch/" style="width: fit-content;">
-                                        <div> <img src="img/Close.svg" alt="close_icon" class="close-icon">
-                                        </div>
-                                    </a>
-                                    <a href="index.html" style="width: fit-content;">
-                                        <div>
-                                            <img src="img/Arrow_Left.svg" alt="back_icon" class="back-icon">
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <h1 class="card-title"> تمديد العقد </h1>
-                                </div>
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav p-0 ">
+                    <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow position-relative">
+                        <a class="nav-link dropdown-toggle gap-2" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="img-profile rounded-circle" src="/images/Company/4001/Users/107/Image_20250413140649.png">
+                            <div class="userName" style="display: flex; flex-direction: column;">
+                                        <span class=" text-dark font-weight-bold">
+                                            عيسى هاني مبروك عزام
+                                        </span>
+                                        <span class="text-dark">
+                                            مشرف على الفروع
+                                        </span>
                             </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-left animated--grow-in text-right" style="font-size: 14px; width: 200px;" aria-labelledby="userDropdown">
+                            <!-- item-->
+                            <a class="dropdown-item notify-item" href="/BS/Employees/MyAccount">
+                                <img src="/CasSys/images/Frame (2).svg">
+                                <span>حسابى</span>
+                            </a>
+                            <a class="dropdown-item notify-item" href="/BS/Employees/ChangePassword">
+                                <img src="/CasSys/images/Frame (1).svg">
+                                <span>تغيير كلمة السر</span>
+                            </a>
+                                <a class="dropdown-item notify-item" href="/Identity/Account/Systems">
+                                    <img src="/CasSys/images/Frame (3).svg">
+                                    <span>الانظمة</span>
+                                </a>
+                            <hr class="dropdown-divider">
+                            <a href="javascript:void(0);" onclick="document.getElementById('logoutForm').submit()" class="dropdown-item notify-item">
+                                <img src="/CasSys/images/Frame (4).svg">
+                                <span>تسجيل الخروج</span>
+                            </a>
+
+                            <form id="logoutForm" method="post" style="display:none;" action="/Identity/Account/Logout">
+                                
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JwfT85Sxg9PgICpE-_xE3ihDMKh_m5rSq7l3zt25B1XPMp_gl4zPZTsVsJoF2IAfo9Ewu47kFIjB2O1TaqB24zcY7CXwxlSj2hL35F7sIRWS7_wuRZhV4jSIp6K4sJfCJTsAe0pjP3JERfHKMbQDrAt834gq7UMzUOr4iSvl-Moah_EwtTdZea7yfoiDZ6EEA" autocomplete="off"></form>
                         </div>
-                        <!-- --- -->
-                        <div class="col-md-12" style="flex: 1;min-height: 0;">
-                            <div class="row justify-content-center  content-row">
-                                <div class="col-md-12 px-md-4 h-100 d-flex">
-                                    <form id="contract-extension2-form"
-                                        class="needs-validation d-flex align-items-center w-100" novalidate>
-                                        <fieldset>
-                                            <div class="form-card extension2-card">
-                                                <!-- //// -->
-                                                <div class="d-flex pdfs_Container mb-3 gap-3">
-                                                    <a href="https://drive.google.com/file/d/1q2Mb1uLGjLIvRphej_9X4zHhc9OuCcyB/view"
-                                                        target="_blank" class="pdf-anchor"><img src="img/contract.svg"
-                                                            alt="pdf for contract details" class="pdf_img"></a>
-                                                    <a href="https://drive.google.com/file/d/1q2Mb1uLGjLIvRphej_9X4zHhc9OuCcyB/view"
-                                                        target="_blank" class="pdf-anchor2"><img src="img/Invoice.svg"
-                                                            alt="pdf for contract details" class="pdf_img2"></a>
-                                                    <a href="https://drive.google.com/file/d/1q2Mb1uLGjLIvRphej_9X4zHhc9OuCcyB/view"
-                                                        target="_blank" class="pdf-anchor3"><img src="img/naql.svg"
-                                                            alt="pdf for contract details" class="pdf_img3"></a>
+                    </li>
+                    <!-- Nav Item - Alerts -->
+                    <li class="nav-item dropdown no-arrow mx-2">
+    <a class="nav-link dropdown-toggle p-0" href="#" id="alertsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="dripicons-bell noti-icon d-flex" style="font-size: 22px;vertical-align: middle;line-height: 70px;color: #7a7272;"></i>
+        <!-- Counter - Alerts -->
+            <span class="noti-icon-badge"></span>
+    </a>
+    <!-- Dropdown - Alerts -->
+    <div class="dropdown-list dropdown-menu dropdown-menu-left shadow animated--grow-in" aria-labelledby="alertsDropdown">
+        <div class="row alert">
+            <div class="col-6" style="text-align:end;">
+                الإشعارات
+            </div>
 
-                                                </div>
-                                                <!-- //// -->
-                                                
-                                                <div class="row flex-row-reverse gx-1 align-items-start" style="flex: 1;">
-                                                    <div class="col-md-12 col-lg-12">
-                                                        <div class="row flex-row-reverse align-items-center g-2 mb-3 ">
-                                                            <div class="col-auto ">
-                                                                <P class="mb-0">رقم العقد</P>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <P class="mb-0">24-1401-4004101-000090 </P>
-                                                            </div>
-                                                            <!-- edited -->
-                                                            <div class="col-md-auto  seacrh-icon-col">
-                                                                <div class="col-sm-12  d-flex justify-content-end px-0">
+            <div class="col-3">
+                علي وشك
+            </div>
+            <div class="col-3">
+                <span class="d-block">
+                    منتهي
+                </span>
+            </div>
+        </div>
+        <a class="dropdown-item dropdown-item-custom ">
+            <div class="col-md-6 p-0" style="text-align:end;">
+                مستندات الفرع
+            </div>
+            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                0
+            </div>
+            <div class="col-md-3 ended-Docs-Num">
+                0
+            </div>
+        </a>
+        <a class="dropdown-item dropdown-item-custom ">
+            <div class="col-md-6 p-0" style="text-align:end;">
+                وثائق السيارة
+            </div>
+            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                0
+            </div>
+            <div class="col-md-3 ended-Docs-Num">
+                0
+            </div>
+        </a>
+        <a class="dropdown-item dropdown-item-custom ">
+            <div class="col-md-6 p-0" style="text-align:end;">
+                صيانة السيارة
+            </div>
+            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                0
+            </div>
+            <div class="col-md-3 ended-Docs-Num">
+                0
+            </div>
+        </a>
+        <a class="dropdown-item dropdown-item-custom ">
+            <div class="col-md-6 p-0" style="text-align:end;">
+                اسعار السيارات
+            </div>
 
-                                                                    <img src="img/Rectangle 129.svg"
-                                                                        alt="seacrh-icon Image"
-                                                                        id="hover-image-extension2">
+            <div class="col-md-3 Not-ended-Docs-Num text-center">
+                0
+            </div>
+            <div class="col-md-3 ended-Docs-Num">
+                25
+            </div>
+        </a>
+    </div>
+</li>
+
+                    <!-- Nav Item - Language -->
+                    <li class="nav-item dropdown no-arrow mx-2">
+                            <a class="nav-link dropdown-toggle p-0" role="button" href="/BS/Home/SetLanguage?returnUrl=~%2FBS%2FContractExtension%2FCreate%2F25-1401-4001100-000056&amp;culture=en-US">
+                                <h5 style="color: #272524;">En</h5>
+                            </a>
+                    </li>
+                </ul>
+
+                <!-- logo -->
+                <div class=" d-flex align-items-center on-mobile gap-3" style="color:black;">
+                    <div class="">
+                        <h1 class="hide-on-mobile" style="font-size: 1.2rem;font-weight: bold;">
+شركة كدي لتأجير السيارات                        </h1>
+                        <p class="extra-small-mobile m-0">
+الرئيسي                        </p>
+                    </div>
+                    <a href="/BS/Home/Index">
+                        <img class="extra-small-mobile " src="/images/Company/4001/Support Images/ImageLogo_20251026170901.png" style="height: 60px;">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JwfT85Sxg9PgICpE-_xE3ihDMKh_m5rSq7l3zt25B1XPMp_gl4zPZTsVsJoF2IAfo9Ewu47kFIjB2O1TaqB24zcY7CXwxlSj2hL35F7sIRWS7_wuRZhV4jSIp6K4sJfCJTsAe0pjP3JERfHKMbQDrAt834gq7UMzUOr4iSvl-Moah_EwtTdZea7yfoiDZ6EEA" autocomplete="off">
+    <!------------------------------------------end of Topbar-------------------------------------------------->
+    <!-- Expiration Modal -->
+    <style>
+    body {
+        font-family: 'Cairo';
+    }
+
+    .modal-body {
+        text-align: right;
+    }
+
+    #ActiveTime {
+        direction: ltr;
+        color: black;
+        letter-spacing: .0175rem;
+    }
+
+    .ActiveTime_title {
+        font-weight: 700 !important;
+        font-size: 1.5rem;
+        color: black;
+        margin-bottom: 0 !important;
+    }
+
+    .ActiveTime_P {
+        font-size: 18px;
+        color: #666666;
+        line-height: 32px;
+    }
+
+    .base-timer {
+        position: relative;
+        width: 100px;
+        height: 100px;
+    }
+
+    .base-timer__svg {
+        transform: scaleX(-1);
+    }
+
+    .base-timer__circle {
+        fill: none;
+        stroke: none;
+    }
+
+    .base-timer__path-elapsed {
+        stroke-width: 7px;
+        stroke: #39629C3D;
+    }
+
+    .base-timer__path-remaining {
+        stroke-width: 7px;
+        stroke-linecap: round;
+        transform: rotate(90deg);
+        transform-origin: center;
+        transition: 1s linear all;
+        fill-rule: nonzero;
+        stroke: currentColor;
+    }
+
+        .base-timer__path-remaining.blue {
+            color: #39629C;
+        }
+
+        .base-timer__path-remaining.orange {
+            color: orange;
+        }
+
+        .base-timer__path-remaining.red {
+            color: red;
+        }
+
+    .base-timer__label {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    .continueBtn {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #FF9626;
+        --bs-btn-border-color: #FF9626;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #FF9626;
+        --bs-btn-hover-border-color: #FF9626;
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #FF9626;
+        --bs-btn-active-border-color: #FF9626;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #f7c48e;
+        --bs-btn-disabled-border-color: #f7c48e;
+    }
+
+    .ActiveTimeFooter {
+        border-top: none;
+    }
+
+    .ActiveTimeContent {
+        border: 3px solid #FF9626;
+    }
+</style>
+
+
+
+
+
+<div class="modal fade" id="ActiveTime" tabindex="-1" aria-labelledby="ActiveTimeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ActiveTimeContent">
+
+            <div class="modal-body">
+                <div class="row align-items-center g-3 ">
+                    <div class="col-md-auto d-flex align-items-center justify-content-center">
+                        <div id="app"></div>
+                    </div>
+                    <div class="col text-center">
+                        <h4 class="ActiveTime_title">! جلستك على وشك الإنتهاء</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer ActiveTimeFooter ">
+                <button type="button" class="btn btn-secondary" id="logoutBtn">تسجيل الخروج</button>
+                <button type="button" class="btn continueBtn" id="continueBtn">استمرار </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Content Row -->
+    
+
+<link rel="stylesheet" href="/css/toastr.css">
+<link href="/BranchSys/css/loader.css" rel="styleSheet">
+<link href="/BranchSys/css/loadercontract.css" rel="styleSheet">
+<link href="/BranchSys/Pages/css/style.css" rel="styleSheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<style>
+    .form-control[readonly], .form-select[disabled] {
+        background-color: white;
+    }
+
+    .content-row {
+        height: 100%;
+    }
+    @media(max-height:800px) {
+        .content-row
+
+    {
+        height: auto !important;
+    }
+
+    }
+</style>
+
+<div class="container-fluid ">
+    <section class="section-mainCard">
+        <div class="row justify-content-center w-100 h-100">
+            <div class="col-11 col-sm-10 col-md-11 col-lg-11 col-xl-10 text-center p-0 ">
+                <div class="card main-card ">
+                    <div class="row p-2 align-items-center">
+                        <a style="width: fit-content;" href="/BS">
+                            <div>
+                                <img src="/BranchSys/Pages/img/Close.svg" alt="close_icon" class="close-icon">
+                            </div>
+                        </a>
+                        <a style="width: fit-content;" href="/BS/ContractExtension">
+                            <div>
+                                <img src="/BranchSys/Pages/img/Arrow_Left.svg" alt="back_icon" class="back-icon">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row layout-row">
+
+                        <div class="row" style="flex-direction: row-reverse;">
+                            <div class="col justify-content-center d-flex title-row">
+                                <h1 class="card-title">
+                                    تمديد العقد
+                                </h1>
+                            </div>
+
+                        </div>
+                        <div class="row justify-content-center content-row">
+
+                            <div class="col-md-11 mx-0 h-100">
+
+                                <form id="contract-extension2-form" class="needs-validation" enctype="multipart/form-data" novalidate="novalidate" action="/BS/ContractExtension/Create/25-1401-4001100-000056" method="post">
+                                    <input hidden="" type="text" id="SelectedBranch" name="SelectedBranch" value="100" autocomplete="off">
+                                    <input hidden="" type="text" id="PerformaInvoice_CrCasAccountInvoiceProformaReferenceNo" name="PerformaInvoice.CrCasAccountInvoiceProformaReferenceNo" value="25-1401-4001100-000056" autocomplete="off">
+                                    <input hidden="" type="text" data-val="true" data-val-required="The CrCasAccountInvoiceProformaNo field is required." id="PerformaInvoice_CrCasAccountInvoiceProformaNo" name="PerformaInvoice.CrCasAccountInvoiceProformaNo" value="25-1308-4001100-000060" autocomplete="off">
+                                    <input type="file" hidden="" id="ContractCardImg" name="ContractCardImg" autocomplete="off">
+                                    <input hidden="" type="text" id="PerformaInvoice_ExtensionValue" name="PerformaInvoice.ExtensionValue" value="" autocomplete="off">
+                                    <fieldset>
+                                        <div class="form-card extension2-card">
+                                            <div class="d-flex mb-3 gap-3">
+
+                                                <a onclick="CreateAndOpenContractPdf('25-1401-4001100-000056')" class="pdf-anchor" style="cursor:pointer"><img src="/BranchSys/Pages/img/contract.svg" alt="pdf for contract details" class="pdf_img"></a>
+                                                <a onclick="OpenPerformaInvoice('25-1401-4001100-000056', 0)" class="pdf-anchor2" style="cursor:pointer"><img src="/BranchSys/Pages/img/Invoice.svg" alt="pdf for contract details" class="pdf_img2"></a>
+                                              
+                                            </div>
+
+                                            <div class="row" style="flex-direction: row-reverse;align-items: flex-start;">
+                                                <div class=" col-md-7 col-lg-7 d-flex " style="flex-direction:row-reverse;flex-wrap:wrap">
+                                                    <div class="col-auto ">
+                                                        <p>رقم العقد</p>
+                                                    </div>
+                                                    <div class="col-auto personal-data">
+                                                        <p>25-1401-4001100-000056</p>
+                                                    </div>
+
+
+                                                    <div class="col-md-auto  seacrh-icon-col">
+                                                        <div class="col-sm-12  d-flex justify-content-end">
+
+                                                            <img src="/BranchSys/Pages/img/Rectangle 129.svg" alt="seacrh-icon Image" id="hover-image-extension2">
+                                                        </div>
+                                                        <div class="dropdown-content  dropdown-content-extension" id="dropdown-content-extension2">
+
+                                                            <div class="row dropdown-content-row">
+                                                                <div class="col-6">
+                                                                    <p>المستأجر</p>
                                                                 </div>
-                                                                <!-- edited -->
-                                                                <div class="dropdown-content  dropdown-content-extension"
-                                                                    id="dropdown-content-extension2">
-                                                                    <div class="row dropdown-content-row">
-                                                                        <div class="col-6">
-                                                                            <p> المستأجر </p>
-                                                                        </div>
-                                                                        <div class="col personal-data">
-                                                                            <p>نايف هشام هشام المعمر</p>
-                                                                        </div>
+                                                                <div class="col-6 personal-data">
+                                                                    <p>
+                                                                        رشود فايز عواد الراجحي
+                                                                    </p>
+                                                                </div>
 
-                                                                    </div>
+                                                            </div>
+                                                            <div class="row dropdown-content-row">
+                                                                <div class="col-6">
+                                                                    <p> السيارة</p>
+                                                                </div>
+                                                                <div class="col-6 personal-data">
+                                                                    <p>
+                                                                        ك ح ن 5927
+                                                                    </p>
+                                                                </div>
 
-                                                                    <div class="row dropdown-content-row">
-                                                                        <div class="col-6">
-                                                                            <p> السيارة</p>
-                                                                        </div>
-                                                                        <div class="col personal-data">
-                                                                            <p>
-                                                                                ل ق ق 1052
-                                                                            </p>
-                                                                        </div>
+                                                            </div>
 
-                                                                    </div>
-                                                                    <div class="row dropdown-content-row">
-                                                                        <div class="col-6">
-                                                                            <p> بداية العقد </p>
-                                                                        </div>
-                                                                        <div class="col personal-data">
-                                                                            <p>2025/04/22 21:10</p>
-                                                                        </div>
+                                                            <div class="row dropdown-content-row">
+                                                                <div class="col-6">
+                                                                    <p>بداية العقد</p>
+                                                                </div>
+                                                                <div class="col-6 personal-data">
+                                                                    <p>2025/11/11 10:47</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row dropdown-content-row">
+                                                                <div class="col-6">
+                                                                    <p>النهاية المتوقعة</p>
+                                                                </div>
+                                                                <div class="col-6 personal-data">
+                                                                    <p>2025/11/13 10:47</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row dropdown-content-row">
+                                                                <div class="col-6">
+                                                                    <p>الأيام المتوقعه</p>
+                                                                </div>
+                                                                <div class="col-6 personal-data">
+                                                                    <p>2</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row dropdown-content-row">
+                                                                <div class="col-6">
+                                                                    <p>الايام المتبقية</p>
+                                                                </div>
+                                                                <div class="col-6 personal-data">
+                                                                    <p>0</p>
+                                                                </div>
 
-                                                                    </div>
-                                                                    <div class="row dropdown-content-row">
-                                                                        <div class="col-6">
-                                                                            <p>النهاية المتوقعة </p>
-                                                                        </div>
-                                                                        <div class="col personal-data">
-                                                                            <p>2025/07/21 21:10</p>
-                                                                        </div>
+                                                            </div>
+                                                            <div class="row dropdown-content-row">
+                                                                <div class="col-6">
+                                                                    <p>نوع التفويض</p>
+                                                                </div>
+                                                                <div class="col-6 personal-data">
+                                                                    <p>
+                                                                        داخلي
+                                                                    </p>
+                                                                </div>
 
-                                                                    </div>
-                                                                    <div class="row dropdown-content-row">
-                                                                        <div class="col-6">
-                                                                            <p>الأيام المتوقعه</p>
-                                                                        </div>
-                                                                        <div class="col personal-data">
-                                                                            <p>30</p>
-                                                                        </div>
-
-                                                                    </div>
-                                                                    <div class="row dropdown-content-row">
-                                                                        <div class="col-6">
-                                                                            <p> الأيام المتبقية </p>
-                                                                        </div>
-                                                                        <div class="col personal-data">
-                                                                            <p>27</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row dropdown-content-row">
-                                                                        <div class="col-6">
-                                                                            <p> نوع التفويض</p>
-                                                                        </div>
-                                                                        <div class="col personal-data">
-                                                                            <p>داخلي</p>
-                                                                        </div>
-
-                                                                    </div>
-                                                                    <div class="row dropdown-content-row">
-                                                                        <div class="col-6">
-                                                                            <p> نسبة الخصم</p>
-                                                                        </div>
-                                                                        <div class="col personal-data">
-                                                                            <p>7%</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row dropdown-content-row">
-                                                                        <div class="col-6">
-                                                                            <p>نسبة الضريبة</p>
-                                                                        </div>
-                                                                        <div class="col personal-data">
-                                                                            <p>15%</p>
-                                                                        </div>
-                                                                    </div>
+                                                            </div>
+                                                            <div class="row dropdown-content-row">
+                                                                <div class="col-6">
+                                                                    <p>نسبة الخصم</p>
+                                                                </div>
+                                                                <div class="col-6 personal-data">
+                                                                    <p>0 %</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row dropdown-content-row">
+                                                                <div class="col-6">
+                                                                    <p>نسبة الضريبة</p>
+                                                                </div>
+                                                                <div class="col-6 personal-data">
+                                                                    <p>15 %</p>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                     <div class="col-md-12  col-lg-4">
-                                                        <div class="row flex-row-reverse align-items-center g-2">
-                                                            <div class="col-auto">
-                                                                <P class="mb-0"> صافى العقد</P>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <P class="mb-0">9,999,999.99</P>
-                                                            </div>
-                                                            <!-- edited -->
-                                                            <div
-                                                                class="col-md-auto col-md-5 col-lg-5 col-xl-4  seacrh-icon-col">
-                                                                <div class="col-sm-12  d-flex justify-content-end px-0">
-                                                                    <img src="img/Rectangle 129.svg"
-                                                                        alt="seacrh-icon Image" id="net_contract_Icon">
-                                                                </div>
-                                                                <div class="dropdown-content  dropdown-content-extension"
-                                                                    id="net_contract_dropdown">
+                                                </div>
+                                            </div>
+                                            <div class="row " style="flex-direction: row-reverse;">
+                                                <div class="col-md-12  col-lg-6 col-xl-4 d-flex " style="flex-direction:row-reverse;flex-wrap: wrap;">
+                                                    <div class="col-auto">
+                                                        <p> صافى العقد</p>
+                                                    </div>
+                                                    <div class="col-auto personal-data">
+                                                        <p>372.60</p>
+                                                    </div>
+                                                    <div class="col-md-5 col-lg-5 col-xl-4  seacrh-icon-col">
+                                                        <div class="col-sm-12  d-flex justify-content-end">
+                                                            <img src="/BranchSys/Pages/img/Rectangle 129.svg" alt="seacrh-icon Image" id="net_contract_Icon">
+                                                        </div>
+
+                                                        <div class="dropdown-content dropdown-content-extension" id="net_contract_dropdown">
                                                                     <div class="row dropdown-content-row">
                                                                         <div class="col-7">
-                                                                            <p>ايجار
-                                                                            </p>
+                                                                            <p>ايجار</p>
                                                                         </div>
                                                                         <div class="col-auto personal-data">
-                                                                            <p>4.652.00</p>
+                                                                            <p>280.00</p>
                                                                         </div>
-
+                                                                    </div>
+                                                                    <div class="row dropdown-content-row">
+                                                                        <div class="col-7">
+                                                                            <p>سائق اضافي</p>
+                                                                        </div>
+                                                                        <div class="col-auto personal-data">
+                                                                            <p>12.00</p>
+                                                                        </div>
                                                                     </div>
                                                                     <div class="row dropdown-content-row">
                                                                         <div class="col-7">
                                                                             <p>رسوم التفويض</p>
                                                                         </div>
                                                                         <div class="col-auto personal-data">
-                                                                            <p> 10.00 </p>
-
+                                                                            <p>2.00</p>
                                                                         </div>
-
                                                                     </div>
                                                                     <div class="row dropdown-content-row">
                                                                         <div class="col-7">
                                                                             <p>رسوم شموس</p>
                                                                         </div>
                                                                         <div class="col-auto personal-data">
-                                                                            <p>1.00</p>
+                                                                            <p>8.00</p>
                                                                         </div>
-
                                                                     </div>
                                                                     <div class="row dropdown-content-row">
                                                                         <div class="col-7">
                                                                             <p>رسوم حكومية</p>
                                                                         </div>
                                                                         <div class="col-auto personal-data">
-                                                                            <p>0.00</p>
+                                                                            <p>10.00</p>
                                                                         </div>
-
                                                                     </div>
                                                                     <div class="row dropdown-content-row">
                                                                         <div class="col-7">
-                                                                            <p>رسوم إدارية</p>
+                                                                            <p>رسوم ادارية</p>
                                                                         </div>
                                                                         <div class="col-auto personal-data">
-                                                                            <p>0.00</p>
+                                                                            <p>7.00</p>
                                                                         </div>
-
                                                                     </div>
                                                                     <div class="row dropdown-content-row">
                                                                         <div class="col-7">
                                                                             <p>رسوم أخرى</p>
                                                                         </div>
                                                                         <div class="col-auto personal-data">
-                                                                            <p>694.00 </p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="row dropdown-content-row">
-                                                                        <div class="col-7">
-                                                                            <p>خصم</p>
-                                                                        </div>
-                                                                        <div class="col-auto personal-data">
-                                                                            <p>590.31</p>
+                                                                            <p>5.00</p>
                                                                         </div>
                                                                     </div>
                                                                     <div class="row dropdown-content-row">
@@ -274,346 +555,1382 @@
                                                                             <p>ضريبة</p>
                                                                         </div>
                                                                         <div class="col-auto personal-data">
-                                                                            <p>1,176.40</p>
+                                                                            <p>48.60</p>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <hr>  
-                                                    </div>      
-                                                     <!-- edited -->
-                                                    <div class="col-md-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto centered-input-label">
-                                                                <label id="days-number" for="days-number-input"> عدد
-                                                                    أيام التمديد</label>
-                                                            </div>
-                                                            <div class="col-auto">
-                                                                <input type="tel" class="form-control form-control1"
-                                                                    id="days-number-input" name="days-number"
-                                                                    aria-describedby="inputGroupPrepend"
-                                                                    autocomplete="off" required>
-                                                                <div class="row requird-field-row-last">
-                                                                    <div class="invalid-feedback"
-                                                                        style="display: none;">
-                                                                        الحقل مطلوب
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="col-md-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto">
-                                                                <P> نهايته</P>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <P>2025/11/06 09:22 </P>
-                                                            </div>
-                                                        </div>
                                                     </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto">
-                                                                <P>إجمالي أيام العقد </P>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <P>999</P>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto">
-                                                                <P>إجمالي العقد</P>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <P> 9,99,999.99 </P>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto">
-                                                                <P>بعد الخصم</P>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <P>9,999,999.99</P>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto">
-                                                                <P>القيمة المضافة </P>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <P>9,999,999.99</P>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row flex-row-reverse gx-2">
-                                                            <div class="col-auto">
-                                                                <P>صافي العقد</P>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <P>9,999,999.99</P>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto">
-                                                                <P>
-                                                                    الرصيد المتاح
-                                                                </P>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <P>9,999,999.99</P>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto">
-                                                                <P>المبلغ المطلوب</P>
-                                                            </div>
-                                                            <div class="col-auto personal-data">
-                                                                <P>9,999,999.99</P>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                     <!-- edited -->
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto centered-input-label">
-                                                                <label id="amount-paid" for="amount-paid-input"> المبلغ المدفوع</label>
-                                                            </div>
-                                                            <div class="col col-auto">
-                                                                <input type="tel" class="form-control form-control2"
-                                                                    id="amount-paid-input" name="amount-paid"
-                                                                    autocomplete="off">
-                                                                <div class="row requird-field-row-last">
-                                                                    <div class="invalid-feedback"
-                                                                        style="display: none;">
-                                                                        الحقل مطلوب
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <!-- edited -->
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto centered-input-label"
-                                                            style="justify-content: flex-end;">
-                                                            <label id="payment-method" for="payment-method-select">طريقة
-                                                                الدفع</label>
-                                                           </div>
-                                                            <div class="col col-md-7">
-                                                            <div class="offset">
-                                                                <select class="form-select form-select-last"
-                                                                    id="payment-method-select" name="payment-method"
-                                                                    required>
-                                                                    <option selected disabled>
-                                                                    </option>
-                                                                    <option value="نقدا"> نقدا</option>
-                                                                    <option value="مدي"> مدي</option>
-                                                                    <option value="فيزا"> فيزا</option>
-                                                                    <option value="فيزا"> ماسترد كارد</option>
-
-                                                                </select>
-                                                                <div class="row requird-field-row-last">
-                                                                    <div class="invalid-feedback"
-                                                                        style="display: none;">
-                                                                        الحقل مطلوب
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4">
-                                                        <div class="row flex-row-reverse g-2">
-                                                            <div class="col-auto centered-input-label"
-                                                            style="justify-content: flex-end;">
-                                                            <label id="selling-point" for="selling-point-dropdown"> نقطة
-                                                                البيع
-                                                            </label>
-
-                                                        </div>
-                                                        <div class="col col-md-9">
-                                                            <div class="offset">
-                                                                <select class="form-select form-select-last"
-                                                                    id="selling-point-dropdown" name="selling-point"
-                                                                    required>
-                                                                    <option selected disabled>
-                                                                    </option>
-                                                                    <option value="">ايرادات المستأجرين بمصرف
-                                                                        الراجحي </option>
-                                                                    <option value=""> </option>
-                                                                    <option value=""> </option>
-                                                                </select>
-                                                                <div class="row requird-field-row-last">
-                                                                    <div class="invalid-feedback"
-                                                                        style="display: none;">
-                                                                        الحقل مطلوب
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row align-items-center flex-row-reverse gx-2">
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row flex-row-reverse">
+                                                <div class=" col-lg-6 col-xl-4 d-flex flex-wrap flex-md-nowrap" style="flex-direction:row-reverse;">
                                                     <div class="col-auto">
-                                                        <label id="notes" class="mb-lg-0">الملاحظات</label>
+                                                        <label id="days-number" for="dayNo">
+                                                            عدد أيام التمديد
+                                                        </label>
                                                     </div>
-                                                    <div class="col d-flex justify-content-end ">
-                                                        <textarea class="form-control textarea-inputs" rows="1"
-                                                            maxlength="100" name="notes"></textarea>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                            <div class="row button-row align-items-center">
-                                                <div class="col-auto py-2 px-0  d-flex flex-wrap gap-1 align-items-center"
-                                                    style="min-height: 61px;">
-                                                    <button type="submit" class="btn check-btn payment-button"
-                                                        id="SubmitFormBtn">حفظ
-                                                    </button>
-                                                    <button type="button"
-                                                        class="btn check-btn payment-button signature-button"
-                                                        data-bs-toggle="modal" href="#signature-modal"
-                                                        id="signature-Modal-button">
-                                                        <div class="row align-items-center g-1">
-                                                            <div class="col-auto">
-                                                                <div class="systems-check"> <i
-                                                                        class="fa-solid fa-check text-white"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col">
-                                                                توقيع المستأجر
+                                                    <div class="col-auto ps-0">
+                                                        <input type="text" class="form-control form-control1" id="dayNo" aria-describedby="inputGroupPrepend" autocomplete="off" oninput="this.value=this.value.replace(/[^0-9]/g,'');if(parseInt(this.value)&gt; 365) this.value = '365';" onfocusout="CalculateContract()" maxlength="3" autofocus="" required="" data-val="true" data-val-required="الحقل مطلوب" name="PerformaInvoice.NewDaysNo" value="">
+                                                        <div class="row requird-field-row-last">
+                                                            <div class="invalid-feedback">
+                                                                <span class="requird-field field-validation-valid" id="requird_field_PaymentMethod" data-valmsg-for="PerformaInvoice.NewDaysNo" data-valmsg-replace="true"></span>
                                                             </div>
                                                         </div>
-                                                    </button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-xl-4 d-flex " style="flex-direction:row-reverse;align-items: center;">
+                                                    <div class="col-auto">
+                                                        <p>نهايته</p>
+                                                    </div>
+                                                    <div class="col-auto personal-data">
+                                                        <p id="EndDate"></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-xl-4 d-flex " style="flex-direction:row-reverse;align-items: center;">
+                                                    <div class="col-auto">
+                                                        <p>إجمالي أيام العقد</p>
+                                                    </div>
+                                                    <div class="col-auto personal-data">
+                                                        <p id="ExpectedDaysNo"></p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </fieldset>
-                                    </form>
+                                            <div class="row " style="flex-direction: row-reverse;">
+                                                <div class="col-lg-6 col-xl-4 d-flex " style="flex-direction:row-reverse;align-items: center;">
+                                                    <div class="col-auto">
+                                                        <p>اجمالي العقد</p>
+                                                    </div>
+                                                    <div class="col-auto personal-data">
+                                                        <p id="RentValue">0.00</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-xl-4 d-flex " style="flex-direction:row-reverse;align-items: center;">
+                                                    <div class="col-auto">
+                                                        <p>قيمة الخصم</p>
+                                                    </div>
+                                                    <div class="col-auto personal-data">
+                                                        <p id="DiscountValue">0.00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-xl-4 d-flex " style="flex-direction:row-reverse;align-items: center;">
+                                                    <div class="col-auto">
+                                                        <p>قيمة الضريبة</p>
+                                                    </div>
+                                                    <div class="col-auto personal-data">
+                                                        <p id="TaxValue">0.00</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="flex-direction: row-reverse;">
+                                                <div class="col-lg-6 col-xl-4 d-flex " style="flex-direction:row-reverse;align-items: center;">
+                                                    <div class="col-auto">
+                                                        <p>صافي العقد</p>
+                                                    </div>
+                                                    <div class="col-auto personal-data">
+                                                        <p id="TotalContract">0.00</p>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-xl-4 d-flex " style="flex-direction:row-reverse;align-items: center;">
+                                                    <div class="col-auto">
+                                                        <p>الرصيد المتاح</p>
+                                                    </div>
+                                                    <div class="col-auto personal-data">
+                                                        <p>0.00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-xl-4 d-flex " style="flex-direction:row-reverse;align-items: center;">
+                                                    <div class="col-auto">
+                                                        <p>المبلغ المطلوب</p>
+                                                    </div>
+                                                    <div class="col-auto personal-data">
+                                                        <p id="TotalAmount">0.00</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="flex-direction: row-reverse;">
+                                                <div class="col-lg-6 col-xl-4 d-flex flex-row-reverse  flex-wrap flex-md-nowrap ">
+                                                    <div class="col-auto">
+                                                        <label id="amount-paid" for="amount-paid-input">
+                                                            المبلغ المدفوع
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <input type="text" class="form-control form-control2" autocomplete="off" oninput="handleAmountPayed(this)" readonly="" id="PerformaInvoice_AmountPayed" name="PerformaInvoice.AmountPayed" value="" style="border: 2px solid rgb(250, 166, 77);">
+                                                        <div class="row requird-field-row-last">
+                                                            <p class="requird_field_AmountPayed"></p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-lg-6 col-xl-4 d-flex flex-row-reverse  flex-wrap flex-md-nowrap ">
+                                                    <div class="col-auto d-flex" style="justify-content: flex-end;">
+                                                        <label id="payment-method" for="payment-method-select">طريقة الدفع</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-8 ">
+                                                        <div class="offset">
+                                                            <select class="form-select form-select-last" disabled="" data-val="true" data-val-required="الحقل مطلوب" id="PerformaInvoice_PaymentMethod" name="PerformaInvoice.PaymentMethod">
+                                                                <option selected="" disabled=""></option>
+                                                                        <option value="10" data-ar="نقداً" data-en="Cash" class="text-right">نقداً</option>
+                                                                        <option value="20" data-ar="مدى" data-en="Mada" class="text-right">مدى</option>
+                                                                        <option value="21" data-ar="فيزا" data-en="Visa" class="text-right">فيزا</option>
+                                                                        <option value="22" data-ar="ماستر كارد" data-en="Master Card" class="text-right">ماستر كارد</option>
+                                                                        <option value="23" data-ar="امريكن اكسبرس" data-en="American Express" class="text-right">امريكن اكسبرس</option>
+                                                                        <option value="30" data-ar="تحويل" data-en="Transfer" class="text-right">تحويل</option>
+                                                            </select>
+                                                        </div>
+                                                        <span class="requird-field field-validation-valid" id="requird_field_PaymentMethod" data-valmsg-for="PerformaInvoice.PaymentMethod" data-valmsg-replace="true"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-xl-4 d-flex flex-row-reverse  flex-wrap flex-md-nowrap ">
+                                                    <div class="col-auto d-flex" style="justify-content: flex-end;">
+                                                        <label id="selling-point" for="selling-point-dropdown">نقطة البيع</label>
+                                                    </div>
+
+                                                    <div class="col-12 col-md-8">
+                                                        <div class="offset">
+                                                            <select class="form-select form-select-last" disabled="" data-val="true" data-val-required="الحقل مطلوب" id="PerformaInvoice_SalesPoint" name="PerformaInvoice.SalesPoint"></select>
+                                                        </div>
+                                                        <span class="requird-field field-validation-valid" id="requird_field_SalesPoint" data-valmsg-for="PerformaInvoice.SalesPoint" data-valmsg-replace="true"></span>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                            <div class="row p-2" style="flex-direction:row-reverse">
+                                                <div class="col-auto">
+                                                    <label id="notes" for="FormControl-last-Textarea">الملاحظات</label>
+                                                </div>
+                                                <div class="col-sm-10 col-md-7 col-lg-7">
+                                                    <input class="form-control textarea-inputs" maxlength="100" id="reasons" name="reasons" autocomplete="off">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="row button-row align-items-center" style="padding: 6px 7px 10px 20px;">
+                                            <div class="payment-button-card button-card   gap-2">
+                                                <a class="btn check-btn payment-button" id="submitForm">حفظ</a>
+                                                <button type="button" class="btn check-btn payment-button signature-button" id="check_btn_load_Signture" data-bs-toggle="modal" href="#PicsignatureModal">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-auto">
+                                                            <div class="systems-check" style="background-color: green;">
+                                                                <svg class="svg-inline--fa fa-check text-white" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg><!-- <i class="fa-solid fa-check text-white"></i> Font Awesome fontawesome.com -->
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">توقيع المستأجر</div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JwfT85Sxg9PgICpE-_xE3ihDMKh_m5rSq7l3zt25B1XPMp_gl4zPZTsVsJoF2IAfo9Ewu47kFIjB2O1TaqB24zcY7CXwxlSj2hL35F7sIRWS7_wuRZhV4jSIp6K4sJfCJTsAe0pjP3JERfHKMbQDrAt834gq7UMzUOr4iSvl-Moah_EwtTdZea7yfoiDZ6EEA" autocomplete="off"></form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Signture-->
+                <div class="modal fade" id="PicsignatureModal" tabindex="-1" aria-labelledby="PicignaturPopupModalLabel" aria-hidden="true" data-bs-backdrop="true">
+                    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+                        <div class="modal-content signature-modal-content p-3">
+                            <div class="modal-body Signature-modal-body">
+                                <div class="SignatureCard">
+                                    <div class="main-container" id="removeSignatureImg"></div>
+                                    <div class="upload-container previewing"><img class="preview-image" src="/images/Bnan/Renters/800260451761911/Signture_20251111150845.png"></div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="sinature-Btn-Card p-2" id="UploadSigntaurePic">
+                                            <img src="/BranchSys/img/Pic.svg" class="w-100">
+                                            <input type="file" id="imageUpload" accept="image/*" style="display: none;" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-4" id="WriteSignature">
+                                        <div class="sinature-Btn-Card p-2">
+                                            <img src="/BranchSys/img/file-signature_9795523 1.svg" class="w-100">
+                                        </div>
+                                    </div>
+                                    <div class="col-4" id="Save_Btn">
+                                        <div class="sinature-Btn-Card p-2">
+                                            <img src="/BranchSys/img/save.svg" class="w-100" id="save">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
-        <footer class="fixed-bottom-xl">
-            <div class="before-footer-widget">
-                <svg width: 100%; height:auto viewbox="0 0 2444 132">
-                    <path fill="rgba(254, 248, 232, 1)" fill-rule="evenodd"
-                        d="M1222 0h1222c-444.13 88-852.127 132-1223.993 132C849.253 132 442.585 88.263 0 .789V0h1222z">
-                    </path>
-                </svg>
-            </div>
-
-        </footer>
-
-
-        <!-- signature modal----------------------------  -->
-        <div class="modal fade" id="signature-modal" tabindex="-1" aria-labelledby="PicignaturPopupModalLabel"
-            data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
-                <div class="modal-content signature-modal-content p-3">
-                    <div class="modal-header p-1 border-0">
-                        <button type="button" class="btn-close m-0 p-1" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body Signature-modal-body">
-                        <div class="SignatureCard">
-                            <div class="Signature-main-container" id="removeSignatureImg"></div>
-                            <div class="upload-container">
-
-
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="sinature-Btn-Card p-2">
-                                    <img src="img/signature/Pic.svg" class="w-100" id="UploadSigntaurePic">
-                                    <input type="file" id="imageUpload" accept="image/*" style="display: none;">
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="sinature-Btn-Card p-2">
-                                    <img src="img/signature/file-signature_9795523 1.svg" class="w-100"
-                                        id="WriteSignature">
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="sinature-Btn-Card p-2">
-                                    <img src="img/signature/Frame.svg" class="w-100" id="clear">
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="sinature-Btn-Card p-2">
-                                    <img src="img/signature/save.svg" class="w-100" id="save">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--Signture-->
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-            crossorigin="anonymous"></script>
-        <script src="js/extension2.js"></script>
-        <script src="js/validation.js"></script>
-        <!-- <script src="js/Loader.js"></script> -->
+    </section>
+</div>
+<canvas id="myCanvas" hidden=""></canvas>
+<div class="LoaderArea" style="display: none;">
+    <div class="loader-content d-flex flex-column gap-4 py-5 px-5">
+        <div id="stageContainer"></div>
+    </div>
+</div>
+<footer class="fixed-bottom-xl">
+    <div class="before-footer-widget">
+        <svg width:="" 100%;="" height:auto="" viewBox="0 0 2444 132">
+            <path fill="rgba(254, 248, 232, 1)" fill-rule="evenodd" d="M1222 0h1222c-444.13 88-852.127 132-1223.993 132C849.253 132 442.585 88.263 0 .789V0h1222z">
+            </path>
+        </svg>
+    </div>
 
-        <script>
-            const buttons = document.querySelectorAll('.signature-button');
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const originalContent = button.innerHTML;
+</footer>
 
-                    const spinner = document.createElement('div');
-                    spinner.classList.add('spinner-border', 'spinner-border-sm', 'text-warning');
-                    spinner.role = 'status';
+    <!-- buttons  -->
+    <!--Modals-->
+    <div class="container-fluid sec-loader-container h-100" id="ContainerLoader">
+        <div class="content">
+            <div class="loader"></div>
+        </div>
+    </div>
 
-                    const checkIcon = document.createElement('i');
-                    checkIcon.classList.add('fa-solid', 'fa-check');
+    <!-- charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
+    <!--link to make javascript function operate-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/heic2any/dist/heic2any.min.js"></script>
+    <script src="/BranchSys/js/javascript/carousel_data.js"></script>
+    <script src="/BranchSys/js/javascript/idleTimeoutHandler.js"></script>
+    <script src="/BranchSys/js/javascript/charts.js"></script>
+    <script src="/js/toastr.js"></script>
+    <!--Pdf-->
+    <script src="/PdfJS/Receipts/Receipt.js"></script>
+    <script src="/PdfJS/Receipts/ReceiptRenderingBS.js"></script>
+    <script src="/PdfJS/Invoices/ProformaInvoice.js"></script>
+    <script src="/PdfJS/Invoices/TaxInvoice.js"></script>
+    <script src="/PdfJS/Card/Card.js"></script>
+    <script src="/PdfJS/PdfAndImages.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
-                    button.innerHTML = '';
-                    button.appendChild(spinner);
-                    button.classList.add('spinner-payment-check');
+    <!--makes bootsrab animation works-->
+    <script src="/BranchSys/js/javascript/loadercontract.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5quvaXVa1mnnLSXUep5PS1qo5NRzHwG19aHmNJnj1Q8hpA/nBWZtZD4r4AX6YOt5ynLN2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="/PdfJS/Invoices/InvoiceRendering.js?v=gqQABAZwxWzaQfZMTmpZTdKa8tn5qDnkhdD7wn0mf9E"></script>
+        <script src="/PdfJS/Contract/ViewContract/ContractRenderingBS.js?v=FCE6iTkqTykZDHDIo1FOiMnAfZ5BYSKPPxpXfwqsU_M"></script>
+        <script src="/PdfJS/Contract/ViewContract/SetDataToContract.js?v=9JPWJKWwbzZ8feso4fXAsvv-q_IBGr_i4rOEkVg4QzI"></script>
+        <script src="/PdfJS/Contract/ViewContract/Pages/page1.js?v=cH-55QGrRULrzq7ZhshkgXUdMtt2g4q_BSzICwNz-QA"></script>
+        <script src="/PdfJS/Contract/ViewContract/Pages/page2.js?v=OKmRlIhk778fKHqjM_zyrENDtHiHNupHsLvPu8d_gYM"></script>
+        <script src="/PdfJS/Contract/ViewContract/Pages/page3.js?v=ye4donRADkNPeYJyqLmS8Emsutg98R3jjTEOxSYNg8I"></script>
+        <script src="/PdfJS/Contract/ViewContract/Pages/page4.js?v=rRYxLXEIh62UiqbiNqUSpqTL_I7Hax13Sd-7_HryLPQ"></script>
+        <script src="/PdfJS/Contract/ViewContract/Pages/techCheckupImgs.js?v=8K7q4lcydh1TTehLXz1ISzAE_IADqjGq_h2ffE3R_WM"></script>
+        <script src="/PdfJS/Contract/ViewContract/Pages/checkUpImgs.js?v=cHbNf0_aGKhhVlMiE0JnLuFi3rAbG-SDW78gKeDsldo"></script>
+        <script src="/PdfJS/Contract/ViewContract/Pages/page7.js?v=U1OEcQ0WbyueXreUkkntvsriVxMR03a-f8CsTxhanuo"></script>
+        <script src="/PdfJS/Contract/ViewContract/Pages/page8.js?v=_-M4rIOtdhPVkMKxdcQZ_C7ckOa7nIqcJD-PmT2EEqw"></script>
+        <script src="/PdfJS/Contract/ViewContract/Pages/conditions.js?v=uXqL986NNnwKytEq5KCT5KlJbFuMn5SSHs0zCFh65U4"></script>
+    <!--Pdf-->
+    <!--Upload Signture-->
+    <script>
+        let saveSignatureBtn = null;
+        var imgeURL;
+        document.getElementById("UploadSigntaurePic").addEventListener("click", function () { saveSignatureBtn = "UploadSigntaurePic"; });
+        document.getElementById("WriteSignature").addEventListener("click", function () { saveSignatureBtn = "WriteSignature"; });
+        var renterSignture = "~/images/Bnan/Renters/800260451761911/Signture_20251111150845.png";
+        const uploadContainer = document.querySelector(".upload-container");
+        const mainContainer = document.querySelector(".main-container");
+        const UploadSigntaurePic = document.getElementById("UploadSigntaurePic");
+        const imageUpload = document.getElementById("imageUpload");
+        var btnSignture = document.getElementById('check_btn_load_Signture');
+        var imgeURL;
+        const uploadedImg = null;
+        //
 
-                    setTimeout(() => {
-                        button.innerHTML = originalContent;
-                        const checkDiv = button.querySelector('.row .col-auto .systems-check');
-                        checkDiv.style.backgroundColor = 'green';
-                        button.classList.remove('spinner-payment-check');
-                    }, 2000);
+        UploadSigntaurePic.addEventListener("click", function () {
+            imageUpload.click();
+        });
+
+        imageUpload.addEventListener("change", function () {
+            const file = imageUpload.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imageURL = e.target.result;
+                    const previewImage = document.createElement("img");
+                    previewImage.classList.add("preview-image");
+                    previewImage.src = imageURL;
+                    previewImage.id = "signatureImage";
+                    imgeURL = imageURL;
+                    mainContainer.innerHTML =
+                        '<i class="fa-regular fa-circle-xmark"  style="cursor: pointer;"></i>';
+                    uploadContainer.innerHTML = "";
+                    uploadContainer.appendChild(previewImage);
+                    uploadContainer.classList.add("previewing");
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        removeSignatureImg.addEventListener("click", function (event) {
+            event.preventDefault();
+            if (uploadContainer.firstChild) {
+                uploadContainer.innerHTML = "";
+                mainContainer.innerHTML = "";
+                uploadContainer.classList.remove("previewing");
+                uploadContainer.innerHTML =
+                    '<img class="upload-icon" src="/BranchSys/CreateContract/img/Rectangle 144.png" alt="Upload Icon"><p>' + 'ارفع صورة التوقيع' + '</p>';
+            }
+        });
+
+        function CheckSigntureImgForRenter() {
+            if (renterSignture) {
+                const checkDiv = document.querySelector('.row .col-auto .systems-check');
+                if (checkDiv) {
+                    checkDiv.style.backgroundColor = 'green';
+                }
+                renterSignture = renterSignture.replace("~", "");
+                uploadContainer.innerHTML = ''; // Clear existing content
+                uploadContainer.innerHTML = '<img class="preview-image" src="' + renterSignture + '">';
+                uploadContainer.classList.add('previewing');
+            } else {
+                uploadContainer.innerHTML = '<img class="upload-icon" src="/BranchSys/CreateContract/img/Rectangle 144.png" alt="Upload Icon"><p>' + 'ارفع صورة التوقيع' + '</p>';
+                uploadContainer.classList.remove('previewing');
+            }
+        }
+        btnSignture.addEventListener('click', function (event) {
+            event.preventDefault();
+            CheckSigntureImgForRenter();
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            CheckSigntureImgForRenter();
+        });
+    </script>
+    <!--Write Signture-->
+    <script>
+        const WriteSignature = document.getElementById("WriteSignature");
+        WriteSignature.addEventListener("click", function () {
+            uploadContainer.innerHTML = "";
+            mainContainer.innerHTML = "";
+            uploadContainer.innerHTML =
+                '<canvas id="canvas" width="200" height="200" class="mb-2"></canvas>';
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            ctx.lineWidth = 4;
+
+            var drawing = false;
+            var prevX = 0;
+            var prevY = 0;
+            var currX = 0;
+            var currY = 0;
+
+            function drawLine(x0, y0, x1, y1) {
+                ctx.beginPath();
+                ctx.moveTo(x0, y0);
+                ctx.lineTo(x1, y1);
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            canvas.addEventListener("mousedown", handleMouseDown, false);
+            canvas.addEventListener("mousemove", handleMouseMove, false);
+            canvas.addEventListener("mouseup", handleMouseUp, false);
+
+            canvas.addEventListener("touchstart", handleTouchStart, false);
+            canvas.addEventListener("touchmove", handleTouchMove, false);
+            canvas.addEventListener("touchend", handleTouchEnd, false);
+
+            function handleMouseDown(e) {
+                drawing = true;
+                prevX = e.clientX - canvas.getBoundingClientRect().left;
+                prevY = e.clientY - canvas.getBoundingClientRect().top;
+            }
+
+            function handleMouseMove(e) {
+                if (!drawing) return;
+                currX = e.clientX - canvas.getBoundingClientRect().left;
+                currY = e.clientY - canvas.getBoundingClientRect().top;
+
+                drawLine(prevX, prevY, currX, currY);
+                prevX = currX;
+                prevY = currY;
+            }
+
+            function handleMouseUp() {
+                drawing = false;
+            }
+
+            function handleTouchStart(e) {
+                drawing = true;
+                prevX = e.touches[0].clientX - canvas.getBoundingClientRect().left;
+                prevY = e.touches[0].clientY - canvas.getBoundingClientRect().top;
+            }
+
+            function handleTouchMove(e) {
+                if (!drawing) return;
+                currX = e.touches[0].clientX - canvas.getBoundingClientRect().left;
+                currY = e.touches[0].clientY - canvas.getBoundingClientRect().top;
+
+                drawLine(prevX, prevY, currX, currY);
+                prevX = currX;
+                prevY = currY;
+            }
+
+            function handleTouchEnd() {
+                drawing = false;
+            }
+        });
+        // Save the written signature as an image
+        function SaveWrittenSignature() {
+            var canvas = document.getElementById("canvas");
+            if (canvas) {
+                var dataURL = canvas.toDataURL();
+                var link = document.createElement("a");
+                link.href = dataURL;
+                var imgeURL = dataURL;
+                $("#PicsignatureModal").modal("hide");
+                return imgeURL;
+            } else {
+                return null;
+            }
+        }
+
+        // Save the uploaded signature image
+        function SaveUploadedSignature() {
+            const img = document.getElementById("signatureImage");
+            if (img) {
+                const canvas = document.createElement("canvas");
+                canvas.width = img.width;
+                canvas.height = img.height;
+                const context = canvas.getContext("2d");
+                context.drawImage(img, 0, 0, canvas.width, canvas.height);
+                const base64 = canvas.toDataURL("image/jpeg");
+                $("#PicsignatureModal").modal("hide");
+                return base64;
+            } else {
+                return null;
+            }
+        }
+    </script>
+    <script>
+        const imageSubmitBtn = document.getElementById('Save_Btn');
+        imageSubmitBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            var renterId = decodeHTMLEntities("800260451761911");
+            imgeURL = null;
+            if (saveSignatureBtn === "UploadSigntaurePic") {
+                imgeURL = SaveUploadedSignature();
+            } else if (saveSignatureBtn === "WriteSignature") {
+                imgeURL = SaveWrittenSignature();
+            }
+            if (!imgeURL) {
+                // toastr.options = { "positionClass": 'toast-top-left', };
+                // toastr.error(' عفوا ... يجب ارفاق صورة التوقيع اولا');
+                $('#PicsignatureModal').modal('hide');
+                return;
+            }
+            if (uploadContainer.firstChild) {
+                uploadContainer.innerHTML = '';
+                uploadContainer.classList.remove('previewing');
+                uploadContainer.innerHTML = '<img class="upload-icon" src="/BranchSys/CreateContract/img/Rectangle 144.png" alt="Upload Icon"><p>' + 'ارفع صورة التوقيع' + '</p>';
+            }
+
+            $('#PicsignatureModal').modal('hide');
+            // Show the spinner
+            showSpinner(btnSignture);
+            var CheckUpdateSigntureForRenter = updateRenterSignture(imgeURL, renterId);
+            setTimeout(function () {
+                $('#thirdPopupModal').modal('hide');
+                if (CheckUpdateSigntureForRenter) {
+                    removeSpinnerAndChangeColor(btnSignture); // Remove spinner and change color
+                }
+                else {
+                    toastr.options = { "positionClass": 'toast-top-left', };
+                    toastr.error('هناك خطأ ما حدث يرجى التواصل مع الادارة');
+                }
+            }, 2000);
+        });
+        async function updateRenterSignture(img, renterId) {
+            try {
+                var data = await $.ajax({
+                    url: "/BS/Contract/UpdateSigntureForRenter",
+                    type: "POST",
+                    data: { img: img, renterId: renterId },
+                });
+                if (data) {
+                    renterSignture = data;
+                    return true; // Renter Updated Successfully
+                }
+            } catch (error) {
+                return false; // Error occurred or Renter doesn't exist
+            }
+            return false; // Renter doesn't exist
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const rows = document.querySelectorAll("#net_contract_dropdown .dropdown-content-row");
+
+            rows.forEach(row => {
+                const valueElement = row.querySelector(".personal-data p");
+                const value = parseFloat(valueElement.textContent.replace(",", "").replace(" ", "")); // إزالة الفواصل
+
+                // تحقق من عدم كون العنصر هو المبلغ المدفوع استنادًا إلى الـ id
+                const isAmountPaidRow = row.id === "PreviousAmountPaidElement";
+
+                if ((value === 0 || isNaN(value)) && !isAmountPaidRow) {
+                    row.style.display = "none";  // إخفاء الـ div إذا كانت القيمة صفر أو NaN إلا إذا كانت "المبلغ المدفوع"
+                }
+            });
+        });
+
+    </script>
+    <script>
+        // Search icon to show more details
+        const image = document.getElementById('hover-image-extension2');
+        const dropdown = document.getElementById('dropdown-content-extension2');
+
+        image.addEventListener('click', function () {
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        });
+
+        const net_contract_Icon = document.getElementById("net_contract_Icon");
+        const net_contract_dropdown = document.getElementById("net_contract_dropdown");
+
+        net_contract_Icon.addEventListener("click", function () {
+            if (net_contract_dropdown.style.display === "block") {
+                net_contract_dropdown.style.display = "none";
+            } else {
+                net_contract_dropdown.style.display = "block";
+                dropdown.style.display = "none";
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var formElements = document.querySelectorAll(
+                "#contract-extension2-form input, #contract-extension2-form select, #contract-extension2-form textarea"
+            );
+            var firstInput = document.getElementById("dayNo");
+
+            firstInput.focus();
+
+            formElements.forEach((element, index) => {
+                element.addEventListener("keydown", function (event) {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        var nextElement = formElements[index + 1];
+                        if (nextElement) {
+                            nextElement.focus();
+                        } else {
+                            document.getElementById("contract-extension2-form").submit();
+                        }
+                    }
                 });
             });
-        </script>
+        });
+    </script>
+    <script>
+        var rentValue = 0;
+        var choicesValue = 0;
+        var additionalValue = 0;
+        var additionalDriverValue = 0;
+        var privateDriverValue = 0;
+        var contractValue = 0;
+        var totalContract = 0;
+        var discountValue = 0;
+        var taxValue = 0;
+        var TotalAmount = 0;
+        var somethingIsNotOkay = true;
+        function CalculateContract() {
+            var price = 0;
+            var daysNo = document.getElementById('dayNo').value;
+            var oldDaysNo = '2';
+            var ExpectedDaysNo = parseInt(daysNo) + parseInt(oldDaysNo);
+            var RentalDayPrice = "140&#x66B;00";
+            if (parseInt(daysNo) > 0) {
+                $("#PerformaInvoice_DaysNo").val(ExpectedDaysNo);
+                var options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
+                var formattedstartDate = "2025/11/11 10:47:41";
+                var StartDate = new Date(formattedstartDate);
+                StartDate.setDate(StartDate.getDate() + parseInt(ExpectedDaysNo));
+                var formattedEndDate = StartDate.toLocaleDateString('ja-JP', options);
+                document.getElementById('EndDate').textContent = formattedEndDate;
+                document.getElementById('ExpectedDaysNo').textContent = ExpectedDaysNo.toString();
+
+                var choicesPerDay = parseFloat("0&#x66B;00");
+                choicesValue = choicesPerDay * parseInt(ExpectedDaysNo);
+
+                var additionalValue = parseFloat("0&#x66B;00");
+
+                var privateDriverValueForDay = parseFloat("0&#x66B;00");
+                var privateDriverValue = privateDriverValueForDay * parseInt(ExpectedDaysNo);
+
+                var additionalDriverValue = parseFloat("12&#x66B;00");
+                var delegationFeesValue = parseFloat("2&#x66B;00");
+                var adminstritiveFeesValue = parseFloat("7&#x66B;00");
+                var governmentFeesValue = parseFloat("10&#x66B;00");
+                var shomoosFeesValue = parseFloat("8&#x66B;00");
+                var otherFeesValue = parseFloat("5&#x66B;00");
+
+                var totalRental = parseInt(ExpectedDaysNo) * parseFloat(RentalDayPrice);
+
+                rentValue = totalRental + choicesValue + privateDriverValue + additionalDriverValue + additionalValue +
+                    delegationFeesValue + adminstritiveFeesValue + governmentFeesValue + shomoosFeesValue + otherFeesValue;
+
+                document.getElementById('RentValue').textContent = rentValue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                CalculateDiscount();
+                CalculateTax();
+                CalculateTotalAmount();
+                $('#PerformaInvoice_AmountPayed').prop('readonly', false);
+            }
+            else {
+                clearPaymentData();
+            }
+
+        }
+
+        function clearPaymentData() {
+            document.getElementById('EndDate').textContent = "";
+            document.getElementById('ExpectedDaysNo').textContent = "";
+            document.getElementById('TotalAmount').textContent = "0.00";
+            document.getElementById('TotalContract').textContent = "0.00";
+            document.getElementById('TaxValue').textContent = "0.00";
+            document.getElementById('DiscountValue').textContent = "0.00";
+            document.getElementById('RentValue').textContent = "0.00";
+            document.getElementById("dayNo").textContent = "";
+            $('#PerformaInvoice_AmountPayed').prop('readonly', true);
+            $('#PerformaInvoice_AmountPayed').val("");
+            document.getElementById('PerformaInvoice_PaymentMethod').disabled = true;
+            document.getElementById('PerformaInvoice_PaymentMethod').selectedIndex = 0;
+            document.getElementById('PerformaInvoice_SalesPoint').disabled = true;
+            document.getElementById('PerformaInvoice_SalesPoint').selectedIndex = 0;
+            $("#PerformaInvoice_SalesPoint").empty();
+            rentValue = 0;
+            choicesValue = 0;
+            additionalValue = 0;
+            advantagesValueTotal = 0;
+            additionalDriverValue = 0;
+            privateDriverValue = 0;
+            FeesTammValue = 0;
+            contractValue = 0;
+            totalContract = 0;
+            discountValue = 0;
+            taxValue = 0;
+            TotalAmount = 0;
+            $("#PerformaInvoice_AmountPayed").css({ "border": "2px solid #faa64d" }); //This For last Check When i submit Form
+            somethingIsNotOkay = true;
+        }
+
+        function CalculateDiscount() {
+            var DiscountInput = "0&#x66B;00";
+            if (parseFloat(DiscountInput) != null && parseFloat(DiscountInput) != "" && parseFloat(DiscountInput) != 0 && parseFloat(DiscountInput) != undefined) {
+                discountValue = rentValue * (parseFloat(DiscountInput) / 100);
+            }
+            else {
+                discountValue = 0;
+            }
+            document.getElementById('DiscountValue').textContent = discountValue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            // $("#ExtensionContract_DiscountValue").val(discountValue);
+            CalculateTax();
+            CalculateTotalAmount();
+        };
+        function CalculateTax() {
+            var TaxPercent = parseFloat("15&#x66B;00");
+            if (!isNaN(TaxPercent) && TaxPercent > 0) {
+                taxValue = (rentValue - discountValue) * (TaxPercent / 100);
+            }
+            document.getElementById('TaxValue').textContent = taxValue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            // $("#ExtensionContract_TaxValue").val(taxValue);
+        }
+
+        function CalculateTotalAmount() {
+            // Get Total Of amount Required
+            var RenterBalance = '0.00'
+            var PreviousTotalContract = '372.60'
+            RenterBalance = RenterBalance.replace(/,/g, '');
+            PreviousTotalContract = PreviousTotalContract.replace(/,/g, '');
+            totalContract = parseFloat(rentValue) - parseFloat(discountValue) + parseFloat(taxValue);
+            document.getElementById('TotalContract').textContent = totalContract.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            TotalAmount = (parseFloat(totalContract) - parseFloat(PreviousTotalContract)) - parseFloat(RenterBalance);
+            $("#PerformaInvoice_ExtensionValue").val(parseFloat(totalContract) - parseFloat(PreviousTotalContract));
+            if (TotalAmount < 0) {
+                TotalAmount = 0;
+            }
+            document.getElementById("TotalAmount").textContent = TotalAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            // $("#ExtensionContract_TotalAmount").val(TotalAmount);
+            // $("#ExtensionContract_TotalContract").val(totalContract);
+
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#PerformaInvoice_AmountPayed").focusout(function () {
+                var payed = document.getElementById('PerformaInvoice_AmountPayed').value;
+                CheckIfCanPayLessThanTotalAmount();
+                if (parseFloat(payed) > 0 && somethingIsNotOkay) {
+                    document.getElementById('PerformaInvoice_PaymentMethod').disabled = false;
+                    // document.getElementById('PerformaInvoice_PaymentMethod').selectedIndex = 0;
+                    document.getElementById('PerformaInvoice_SalesPoint').disabled = false;
+                    document.getElementById('PerformaInvoice_SalesPoint').selectedIndex = 0;
+                } else {
+                    document.getElementById('PerformaInvoice_PaymentMethod').disabled = true;
+                    document.getElementById('PerformaInvoice_PaymentMethod').selectedIndex = 0;
+                    document.getElementById('PerformaInvoice_SalesPoint').disabled = true;
+                    document.getElementById('PerformaInvoice_SalesPoint').selectedIndex = 0;
+                    $("#PerformaInvoice_SalesPoint").empty();
+                }
+            })
+        });
+
+        function handleAmountPayed(input) {
+            // Remove non-digit characters and additional decimal points
+            input.value = input.value.replace(/[^0-9\.]/g, '');
+            const decimalIndex = input.value.indexOf('.');
+            // Limit to 9 digits before and after the decimal point
+            if (decimalIndex !== -1) {
+                const digitsBeforeDecimal = input.value.substring(0, decimalIndex);
+                const digitsAfterDecimal = input.value.substring(decimalIndex + 1);
+
+                // Limit to 2 digits after the decimal point
+                input.value = digitsBeforeDecimal.substr(0, 7) + '.' + digitsAfterDecimal.substr(0, 2);
+
+                // Remove additional decimal points
+                if (input.value.indexOf('.', decimalIndex + 1) !== -1) {
+                    const lastValidIndex = input.value.lastIndexOf('.');
+                    input.value = input.value.substring(0, lastValidIndex) + input.value.substring(lastValidIndex + 1);
+                }
+            } else {
+                // Limit to 7 digits before the decimal point
+                input.value = input.value.substr(0, 7);
+            }
+        }
+        function CheckIfCanPayLessThanTotalAmount() {
+            var userAuthAmount = true;
+            var AmountPayed = document.getElementById("PerformaInvoice_AmountPayed").value;
+            if (userAuthAmount == false && TotalAmount > AmountPayed) {
+                toastr.options = { "positionClass": 'toast-top-left', };
+                toastr.error('عفوا ليس لديك صلاحية المقدم اقل من قيمة العقد');
+                $("#PerformaInvoice_AmountPayed").css({ "border": "2px solid red" });    //This For last Check When i submit Form
+                somethingIsNotOkay = false;
+            }
+            else {
+                $("#PerformaInvoice_AmountPayed").css({ "border": "2px solid #faa64d" }); //This For last Check When i submit Form
+                somethingIsNotOkay = true;
+            }
+        }
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#PerformaInvoice_PaymentMethod").change(function () {
+                var PaymentMethod = $("#PerformaInvoice_PaymentMethod").val();
+                var BranchCode = $("#SelectedBranch").val();
+                $.get("/BS/ContractExtension/GetSalesPoint", { PaymentMethod: PaymentMethod, BranchCode: BranchCode }, function (data) {
+                    $("#PerformaInvoice_SalesPoint").empty();
+                    if (data.type == "1" && data.salesPoints != null) {
+                        $.each(data.salesPoints, function (index, row) {
+                            if ("ar-EG" == "en-US") {
+                                $("#PerformaInvoice_SalesPoint").append("<option  value= '" + row.crCasAccountSalesPointCode + "'>" + row.crCasAccountSalesPointEnName + "</option>")
+                            }
+                            else {
+                                $("#PerformaInvoice_SalesPoint").append("<option class='text-right' value= '" + row.crCasAccountSalesPointCode + "'>" + row.crCasAccountSalesPointArName + "</option>")
+                            }
+                        });
+                    }
+                    else if (data.type == "2" && data.accountBank != null) {
+                        $.each(data.accountBank, function (index, row) {
+                            if ("ar-EG" == "en-US") {
+
+                                $("#PerformaInvoice_SalesPoint").append("<option class='text-left' value= '" + row.crCasAccountBankCode + "'>" + row.crCasAccountBankEnName + "</option>")
+                            }
+                            else {
+                                $("#PerformaInvoice_SalesPoint").append("<option class='text-right' value= '" + row.crCasAccountBankCode + "'>" + row.crCasAccountBankArName + "</option>")
+                            }
+                        });
+                    }
+
+                });
+            })
+        });
+    </script>
+    <!--Create Card Contract PDf-->
+    <script>
+        const CreateCardContract = async () => {
+         try {
+               const contractNo ='25-1401-4001100-000056';
+               const canvas = document.getElementById("myCanvas");
+               var dates = getDates();
+               const dynamicData = {
+                  CARD_TITLE_AR: "تمديد عقد إيجار سيارة",
+                  CARD_TITLE_EN: "Extend Car Rental Contract",
+                  RENTAR_NAME_AR: 'رشود فايز عواد الراجحي',
+                  RENTAR_NAME_EN: 'Rashid Fayez Awad AlRajhi',
+                  CAR_NAME_AR: 'شيفروليه - سبارك ال اس -  اقتصادية - 2019 - ك ح ن 5927 - أبيض',
+                  CAR_NAME_EN: 'Chevrolet - Spark LS -  Economy - 2019 - N J K 5927 - White',
+                  CONTRACT_DATE_AR: dates.start.startHijri,
+                  CONTRACT_DATE_EN: dates.start.startMiladi,
+                  CONTRACT_END_DATE_AR: dates.end.endHijri,
+                  CONTRACT_END_DATE_EN: dates.end.endMiladi,
+                  ADDRESS: 'مكة المكرمة - مكة المكرمة' + ' - ' + 'الرئيسي',
+                  CONTRACT_NUMBER: contractNo,
+                   images: {
+                       background: "/images/Company/4001/Support Images/ImageContractCard_20251026170901.png",
+                       QR: "/images/Company/4001/Support Images/ImageQrCodeAuthenticated_20251026170901.png",
+                   },
+               };
+
+               const loadedImages = await loadDynamicImages(dynamicData.images);
+               const dataWithImages = { ...dynamicData, images: loadedImages };
+
+               await drawCard(canvas, dataWithImages);
+               canvas.toBlob(blob => {
+                   const file = new File([blob], "ContractCard.png", { type: "image/png" });
+                   const dataTransfer = new DataTransfer();
+                   dataTransfer.items.add(file);
+                   const inputFile = document.getElementById("ContractCardImg");
+                   inputFile.files = dataTransfer.files;
+               }, "image/png");
+
+              } catch (error) {
+                  console.error("خطأ في إنشاء بطاقة العقد:", error);
+              }
+          }
+        function getDates() {
+               // تحديد خيارات التنسيق
+               var options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
+
+               // تنسيق التاريخ الميلادي باستخدام البيانات من الـ Model (تأكد من مرور التاريخ من الـ Razor بشكل صحيح)
+               var formattedStartDate = "2025/11/11 10:47";
+               var startDate = new Date(formattedStartDate);  // تحويل النص إلى كائن Date
+
+               // التحقق إذا كانت القيمة صالحة
+               if (isNaN(startDate)) {
+                 console.error('تاريخ البدء غير صالح');
+                 startDate = new Date();  // تعيين تاريخ افتراضي في حال حدوث خطأ
+               }
+
+               // تحويل التاريخ الهجري باستخدام دالة formatHijriDate
+                const startHijriDate = formatHijriDate(startDate,"ar");
+
+               // الحصول على تاريخ النهاية من الـ DOM (افترض أن #EndDate هو عنصر يحتوي على التاريخ)
+               var endDateInput = $("#EndDate").text();
+               var endDate = new Date(endDateInput);  // تحويل النص إلى كائن Date
+
+               // التحقق إذا كانت القيمة صالحة
+               if (isNaN(endDate)) {
+                 console.error('تاريخ الانتهاء غير صالح');
+                 endDate = new Date();  // تعيين تاريخ افتراضي في حال حدوث خطأ
+               }
+
+               // تنسيق التاريخ الميلادي لآخر تاريخ
+               var formattedEndDate = endDate.toLocaleDateString('ja-JP', options);
+
+               // تحويل التاريخ الهجري باستخدام دالة formatHijriDate
+               const endHijriDate = formatHijriDate(endDate,"ar");
+
+               // إرجاع التواريخ بالميلادي والهجري
+               return {
+                 start: {
+                   startMiladi: formattedStartDate,
+                   startHijri: startHijriDate,
+                 },
+                 end: {
+                   endMiladi: formattedEndDate,
+                   endHijri: endHijriDate,
+                 },
+               };
+         }
+    </script>
+    <!--Create Receipt PDf-->
+    <script>
+        const CreateReceiptPdf = async () => {
+            try {
+                    const canvas = document.getElementById("myCanvas");
+                    const contractNo = "25-1401-4001100-000056";
+                    const accountReceiptNo = "25-1301-4001100-000266";
+                    const dateDatetimeNow = decodeHTMLEntities("2025-11-12T15:07:14.045Z");
+                    const dates = getFormattedDatesMiliadiAndHijri(dateDatetimeNow);
+                    var namesOfPaymentMethod = getSelectedOptionDataPaymentMethod();
+                    var AmountPayedInput = document.getElementById("PerformaInvoice_AmountPayed").value;
+                    var getAfterAndBeforeDecimalAmountPayed =await getFormattedAmount(AmountPayedInput);
+                    const dynamicData = {
+                        DATE_AR: dates.hijriDate.ar,
+                        DATE_EN: dates.hijriDate.en,
+                        DATE_NUM: dates.miladiDate.ar,
+                        CONTRACT_NUMBER: accountReceiptNo,
+                        AMOUNT: getAfterAndBeforeDecimalAmountPayed.beforeDecimal,
+                        HALALAS: getAfterAndBeforeDecimalAmountPayed.afterDecimal,
+                        TENANT_NAME_AR: 'رشود فايز عواد الراجحي',
+                        TENANT_NAME_EN: 'Rashid Fayez Awad AlRajhi',
+                        AMOUNT_AR: getAfterAndBeforeDecimalAmountPayed.arabicText,
+                        AMOUNT_EN: getAfterAndBeforeDecimalAmountPayed.englishText,
+                        PAYMENT_METHOD_AR: namesOfPaymentMethod.ar,
+                        PAYMENT_METHOD_EN: namesOfPaymentMethod.en,
+                        PAYMENT_DESC_AR: `${contractNo}  دفعة تحت الحساب لعقد ايجار السيارة لعقد`,
+                        PAYMENT_DESC_EN: `Payment to extend the car rental contract ${contractNo}`,
+                        NOTES_AR: document.getElementById("reasons").value,
+                        APPROVER_NAME_AR: decodeHTMLEntities("&#x639;&#x64A;&#x633;&#x649; &#x647;&#x627;&#x646;&#x64A; &#x645;&#x628;&#x631;&#x648;&#x643; &#x639;&#x632;&#x627;&#x645;"),
+                        APPROVER_NAME_EN: decodeHTMLEntities("Issa Hani Mumrok Azzam"),
+                        images: {
+                            background: "/images/Company/4001/Support Images/ImageReceipt_20251026170901.png",
+                            signature: "/images/Company/4001/Users/107/Signture_20250302140021.png",
+                            qr: "/images/Company/4001/Support Images/ImageQrCodeAuthenticated_20251026170901.png",
+                            stamp: "/images/Company/4001/Support Images/ImageStamp_20251026170901.png",
+                        },
+                    };
+                    const loadedImages = await loadDynamicImages(dynamicData.images);
+                    const dataWithImages = { ...dynamicData, images: loadedImages };
+                    console.log("dataWithImages",dataWithImages);
+                    await drawReceipt(canvas, dataWithImages);
+                    await createPdfToSendItToRenterOnly(accountReceiptNo, canvas, "ReceiptFile");
+                    // return new Promise((resolve) => {
+                    //     canvas.toBlob(function (blob) {
+                    //         const file = new File([blob], "receipt.png", { type: "image/png" });
+                    //         const fileInput = document.getElementById("ReceiptFile");
+                    //         const dataTransfer = new DataTransfer();
+                    //         dataTransfer.items.add(file);
+                    //         fileInput.files = dataTransfer.files;
+                    //         resolve();
+                    //     }, "image/png");
+                    // });
+            }
+            catch (error) {
+                console.error("خطأ في إنشاء السند:", error);
+            }
+        }
+        function getSelectedOptionDataPaymentMethod() {
+                var selectElement = document.getElementById("PerformaInvoice_PaymentMethod");
+                var selectedOption = selectElement.options[selectElement.selectedIndex];
+                // Get the text of the selected option
+                const selectedText = selectedOption.textContent || selectedOption.innerText;
+                var selectedArabicName = selectedOption.dataset.ar;
+                var selectedEnglishName = selectedOption.dataset.en;
+
+                // Return the data as an object
+                return {
+                    ar: selectedArabicName,
+                    en: selectedEnglishName,
+                };
+        }
+
+    </script>
+    <!--Create invoice -->
+    <script>
+        const CreateInvoicePdf = async () => {
+            try {
+                const canvas = document.getElementById("myCanvas");
+                const contractNo = "25-1401-4001100-000056";
+                const contractNoCopy = "0";
+                const contractNoCopyInt =parseInt(contractNoCopy)+1;
+                const accountInvoiceNo = "25-1308-4001100-000062";
+                var newDaysNo = parseInt(document.getElementById('dayNo').value) || 0;
+                var oldDaysNo = parseInt("2") || 0;
+                var daysNo = newDaysNo+oldDaysNo;
+                const dateDatetimeNow = decodeHTMLEntities("2025-11-12T15:07:14.045Z");
+                const dates = getFormattedDatesMiliadiAndHijri(dateDatetimeNow);
+
+                var startDate = decodeHTMLEntities('2025-11-11T10:47:41.097');
+                const startDates = getFormattedDatesMiliadiAndHijri(startDate);
+
+                var endDate = new Date(startDate);
+                endDate.setDate(endDate.getDate() + daysNo);
+                const endDates = getFormattedDatesMiliadiAndHijri(endDate);
+
+                var rentDailyValue = parseFloat("140&#x66B;00");
+                var addDriverValue =  parseFloat("12&#x66B;00")||0;
+                var privateDriverValue =  parseFloat("0&#x66B;00")||0;
+                var choicesValue = parseFloat("0&#x66B;00")||0;
+                var additionalsValue = parseFloat("0&#x66B;00")||0;
+
+                var authrizationFeesValue = parseFloat("2&#x66B;00")||0;
+                var adminstritiveFeesValue = parseFloat("7&#x66B;00")||0;
+                var governmentFeesValue = parseFloat("10&#x66B;00")||0;
+                var shomoosFeesValue = parseFloat("8&#x66B;00")||0;
+                var otherFeesValue = parseFloat("5&#x66B;00")||0;
+
+
+                var discountInput = parseFloat('0٫00') || 0;
+                var taxPercent = parseFloat('15٫00') || 0;
+
+               const itemsData = [
+                {
+                    arabic: "الإيجار",
+                    english: "Rent",
+                    value: rentDailyValue,
+                    number: daysNo,
+                    discount: discountInput,
+                    vat: taxPercent,
+                },
+                {
+                    arabic: "سائق اضافي",
+                    english: "Add Driver",
+                    value: addDriverValue,
+                    number: 1,
+                    discount: discountInput,
+                    vat: taxPercent,
+                },
+                {
+                    arabic: "سائق خاص",
+                    english: "Private Driver",
+                    value: privateDriverValue,
+                    number: daysNo,
+                    discount: discountInput,
+                    vat: taxPercent,
+                },
+                {
+                    arabic: "خيارات",
+                    english: "Choices",
+                    value: choicesValue,
+                    number: daysNo,
+                    discount: discountInput,
+                    vat: taxPercent,
+                },
+                {
+                    arabic: "اضافات",
+                    english: "Additionals",
+                    value: additionalsValue,
+                    number: 1,
+                    discount: discountInput,
+                    vat: taxPercent,
+                }
+                ,
+                {
+                    arabic: "رسوم التفويض",
+                    english: "Authrization Fees",
+                    value: authrizationFeesValue,
+                    number: 1,
+                    discount: discountInput,
+                    vat: taxPercent,
+                }
+                ,
+                {
+                    arabic: "رسوم شموس",
+                    english: "Shomoos Fees",
+                    value: shomoosFeesValue,
+                    number: 1,
+                    discount: discountInput,
+                    vat: taxPercent,
+                }
+                ,
+                {
+                    arabic: "رسوم حكومية",
+                    english: "Government Fees",
+                    value: governmentFeesValue,
+                    number: 1,
+                    discount: discountInput,
+                    vat: taxPercent,
+                }
+                ,
+                {
+                    arabic: "رسوم ادارية",
+                    english: "Adminstritive Fees",
+                    value: adminstritiveFeesValue,
+                    number: 1,
+                    discount: discountInput,
+                    vat: taxPercent,
+                }
+                ,
+                {
+                    arabic: "رسوم اخرى",
+                    english: "Other Fees",
+                    value: otherFeesValue,
+                    number: 1,
+                    discount: discountInput,
+                    vat: taxPercent,
+                }
+
+            ];
+                const processedData = generateInvoiceItems(itemsData);
+                const dynamicData = {
+                    CONTRACT_NUMBER: accountInvoiceNo,
+
+                    DATE_AR: dates.hijriDate.ar,
+                    DATE_Num: dates.miladiDate.ar,
+                    DATE_EN: dates.hijriDate.en,
+                    START_DATE_AR:  startDates.hijriDate.ar,
+                    START_DATE_EN: startDates.hijriDate.en,
+                    START_DATE_NUM: startDates.miladiDate.ar,
+                    END_DATE_AR:  endDates.hijriDate.ar,
+                    END_DATE_EN: endDates.hijriDate.en,
+                    END_DATE_NUM:endDates.miladiDate.ar,
+
+                    REFERENCE_AR: "تمديد عقد",
+                    REFERENCE_EN: "Extension Contract",
+                    REFERENCE_NUM: `${contractNo} (${contractNoCopyInt})`,
+                    TENANT_NAME_AR: 'رشود فايز عواد الراجحي',
+                    TENANT_NAME_EN: 'Rashid Fayez Awad AlRajhi',
+                    CAR_DESCRIPTION_AR: 'شيفروليه - سبارك ال اس -  اقتصادية - 2019 - ك ح ن 5927 - أبيض',
+                    CAR_DESCRIPTION_EN: 'Chevrolet - Spark LS -  Economy - 2019 - N J K 5927 - White',
+                    EMPLOYEE_AR: decodeHTMLEntities("&#x639;&#x64A;&#x633;&#x649; &#x647;&#x627;&#x646;&#x64A; &#x645;&#x628;&#x631;&#x648;&#x643; &#x639;&#x632;&#x627;&#x645;"),
+                    EMPLOYEE_EN:decodeHTMLEntities("Issa Hani Mumrok Azzam"),
+                    images: {
+                        background: "/images/Company/4001/Support Images/ImagePerformInvoice_20251026170901.png",
+                        signature: "/images/Company/4001/Users/107/Signture_20250302140021.png",
+                        qr: "/images/Company/4001/Support Images/ImageQrCodeAuthenticated_20251026170901.png",
+                        stamp: "/images/Company/4001/Support Images/ImageStamp_20251026170901.png",
+                    },
+                    Serviceitems: processedData.Serviceitems,
+                    Valueitems: processedData.Valueitems,
+                    Numberitems: processedData.Numberitems,
+                    Amountitems: processedData.Amountitems,
+                    Discountitems: processedData.Discountitems,
+                    AfterDiscountitems: processedData.AfterDiscountitems,
+                    VATitems: processedData.VATitems,
+                    Totalitems: processedData.Totalitems,
+                };
+
+                const loadedImages = await loadDynamicImages(dynamicData.images);
+                const dataWithImages = { ...dynamicData, images: loadedImages };
+                console.log("dataWithImages", dataWithImages);
+                await drawInvoice(canvas, dataWithImages);
+                await createPdfToSendItToRenterOnly(accountInvoiceNo, canvas, "InvoiceFile");
+                // return new Promise((resolve) => {
+                //         canvas.toBlob(function (blob) {
+                //             const file = new File([blob], "invoice.png", { type: "image/png" });
+                //             const fileInput = document.getElementById("InvoiceFile");
+                //             const dataTransfer = new DataTransfer();
+                //             dataTransfer.items.add(file);
+                //             fileInput.files = dataTransfer.files;
+                //             resolve();
+                //         }, "image/png");
+                //     });
+                }
+            catch (error) {
+                    console.error("خطأ في إنشاء الفاتورة:", error);
+                }
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+             var form = document.getElementById("contract-extension2-form");
+             var submitButton = document.getElementById("submitForm");
+
+             window.stageStatus = {};
+             window.markStageDone = function (key) {
+                 window.stageStatus[key] = true;
+             };
+            
+            submitButton.addEventListener("click", async function (event) {
+                 event.preventDefault();
+                 var AmountPayed = parseFloat(document.getElementById("PerformaInvoice_AmountPayed").value);
+
+                 if ($("#contract-extension2-form").valid()) {
+                     const loaderArea = document.querySelector(".LoaderArea");
+                     const stageContainer = document.getElementById("stageContainer");
+
+                     const stages = [
+                         {
+                             key: "Create_Contract",
+                             loadingText: "جاري إصدار العقد...",
+                             doneText: "تم إصدار العقد.",
+                             process: async () => {
+                                 await Promise.all([
+                                     CreateCardContract(),
+                                     // CreateInvoicePdf()
+                                 ]);
+                                  window.markStageDone("Create_Contract");
+                             }
+                         }
+                     ];
+
+                     // if (AmountPayed > 0) {
+                     //     stages.push({
+                     //         key: "receipt_Issuance",
+                     //         loadingText: "جاري إصدار السند...",
+                     //         doneText: "تم إصدار السند.",
+                     //         process: async () => {
+                     //             await CreateReceiptPdf();
+                     //             window.markStageDone("receipt_Issuance");
+                     //         }
+                     //     });
+                     // }
+
+                     stages.push({
+                         key: "submitForm",
+                         loadingText: "لحظة من فضلك...",
+                         doneText: "",
+                         process: async () => {
+                             form.submit();
+                         }
+                     });
+
+                     // تجهيز واجهة اللودر
+                     stageContainer.innerHTML = "";
+                     stages.forEach((stage, i) => {
+                         const el = createStageElement(stage, i);
+                         stageContainer.appendChild(el);
+                     });
+
+                     loaderArea.style.display = "flex";
+
+                     // تشغيل كل مرحلة بالترتيب
+                     await processStagesSequentially(stages);
+                 }
+             });
+
+            document.addEventListener("keydown", function(event) {
+                if (document.body.classList.contains("loading-active")) {
+                    if (event.ctrlKey || event.altKey || event.metaKey) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        return false;
+                    }
+
+                    const blockedKeys = [
+                        'F5', 'F12', 'Escape', 'Tab', 'Enter', 'Space',
+                        'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight',
+                        'Home', 'End', 'PageUp', 'PageDown'
+                    ];
+
+                    if (blockedKeys.includes(event.key)) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        return false;
+                    }
+                }
+            }, true);
+
+            document.addEventListener("contextmenu", function(event) {
+                if (document.body.classList.contains("loading-active")) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+
+            document.addEventListener("selectstart", function(event) {
+                if (document.body.classList.contains("loading-active")) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+         });
+
+    </script>
+   
+    <script>
+
+        // To decode some string
+        function decodeHTMLEntities(text) {
+            var textArea = document.createElement("textarea");
+            textArea.innerHTML = text;
+            return textArea.value;
+        }
+        function formatHijriDate(date, language) {
+            const parsedDate = new Date(date);
+            const options = { weekday: 'long', day: 'numeric', year: 'numeric', month: 'long', calendar: 'islamic-umalqura' };
+            if (language === 'ar') {
+                return parsedDate.toLocaleDateString('ar-SA', options).replace(/هـ/g, ''); // إزالة "هـ" من التاريخ العربي
+            } else {
+                return parsedDate.toLocaleDateString('en-US-u-ca-islamic-umalqura', options).replace(/AH/g, ''); // إزالة "AH" من التاريخ الإنجليزي
+            }
+        }
+        function splitNumberbeforeAndafterDecimal(number) {
+            let cleanedValueString = number.replace(/,/g, "");
+            let parts = cleanedValueString.split('.');
+            let beforeDecimal = parts[0];
+            let afterDecimal = parts.length > 1 ? parts[1] : "00";
+            afterDecimal = afterDecimal.padEnd(2, '0');
+            // Add thousands separators to the before decimal part
+            beforeDecimal = beforeDecimal.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            return [beforeDecimal, afterDecimal];
+        }
+        
+    </script>
+    <script>
+        function showSpinner(button) {
+            button.dataset.originalContent = button.innerHTML;
+
+            const spinner = document.createElement('div');
+            spinner.classList.add('spinner-border', 'spinner-border-sm', 'text-warning');
+            spinner.setAttribute('role', 'status');
+            const checkIcon = document.createElement('i');
+            checkIcon.classList.add('fa-solid', 'fa-check');
+            button.innerHTML = '';
+            button.appendChild(spinner);
+            button.classList.add('spinner-payment-check');
+        }
+        function removeSpinnerAndChangeColor(button) {
+            button.innerHTML = button.dataset.originalContent;
+            const checkDiv = document.querySelector('.row .col-auto .systems-check');
+            if (checkDiv) {
+                checkDiv.style.backgroundColor = 'green';
+            }
+            button.classList.remove('spinner-payment-check');
+        }
+    </script>
+
+    <script src="/_content/NToastNotify/toastr.js?8.0.0.0" type="text/javascript"></script>
+<script>
+    if (nToastNotify) {
+        nToastNotify.init({
+            firstLoadEvent: 'DOMContentLoaded',
+            messages: [],
+            responseHeaderKey: 'X-NToastNotify-Messages',
+            requestHeaderKey: 'X-Requested-With',
+            libraryDetails:{"varName":"toastr","scriptSrc":"https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js","styleHref":"https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css","options":{"type":"success"}},
+            disableAjaxToasts:false
+        });
+    };
+</script>
+    <!--Hide All Console-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+             var exitUser = parseInt("10");
+             initializeIdleTimeoutHandler(exitUser);
+         });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var inputFields = document.querySelectorAll('input');
+
+            inputFields.forEach(function (input) {
+                input.setAttribute('autocomplete', 'off');
+            });
+        });
+          function  showLoader()
+          {
+                 $("#ContainerLoader").show();
+          }
+
+            function hideLoader()
+            {
+                  $("#ContainerLoader").hide();
+            }
+
+    </script>
+
 
 </body>
-
-</html>
