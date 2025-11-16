@@ -5,476 +5,917 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> عقود محفوظة </title>
+    <title> قائمة العقود المحفوظة</title>
     <link rel="icon" href="img/logo.png">
     <!-- ========================= CSS here ========================= -->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cairo:500,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-..." crossorigin="anonymous">
+    <link href="../css/style.css" rel="styleSheet">
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/dripicons/2.0.0/webfont.min.css' />
-    <link href="css/style.css" rel="styleSheet">
-    <!-- <link href="css/English_style.css" rel="styleSheet"> -->
-
-
+    <!-- <link href="../css/English_style.css" rel="styleSheet"> -->
+    <style>
+        @media(max-width:500px) {
+            body {
+                overflow-y: hidden;
+            }
+        }
+    </style>
 </head>
 
 
-<body id="page-top" style="background-color:rgba(254, 248, 232, 1);">
+<body id="page-top" >
 
     <!-- Content Wrapper -->
     <div id="content-wrapper">
-
-        <!-- Main Content -->
-        <div id="content">
+        <header class="header">
+            <div class="navbar-area">
                 <!-- Topbar -->
-                <header class="header">
-                    <div class="navbar-area">
-                        <!-- Topbar -->
-                        <nav class="navbar navbar-expand navbar-light topbar mb-2 static-top shadow  justify-content-between"
-                            style="height:90px">
-                            <!-- Topbar -->
-                            <!-- Topbar Navbar -->
-                            <ul class="navbar-nav ">
-                                <!-- Nav Item - User Information -->
-                                <li class="nav-item dropdown no-arrow">
-                                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img class="img-profile rounded-circle" src="img/pic (3).svg">
-                                        <div class="userName" style="display: flex; flex-direction: column;">
-                                            <span class=" text-dark font-weight-bold">
-                                                &#x639;&#x64A;&#x633;&#x649; &#x647;&#x627;&#x646;&#x64A;
-                                                &#x645;&#x628;&#x631;&#x648;&#x643; &#x639;&#x632;&#x627;&#x645;
-                                            </span>
-                                            <span class="text-dark">
-                                                &#x645;&#x634;&#x631;&#x641; &#x639;&#x644;&#x649;
-                                                &#x627;&#x644;&#x641;&#x631;&#x648;&#x639;
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-left shadow animated--grow-in text-right"
-                                        style="font-size: 16px;font-weight: 600;color: black;" aria-labelledby="userDropdown">
-                                        <!-- item-->
-                                        <div class="dropdown-header noti-title dropdown-item">
-                                            <h6 class="text-overflow m-0">مرحباً</h6>
-                                        </div>
-            
-                                        <!-- item-->
-                                        <a class="dropdown-item notify-item" href="https://ayatt12.github.io/account/">
-                                            <i class="mdi mdi-account-circle me-1"></i>
-                                            <span>حسابى</span>
-                                        </a>
-                                        <a class="dropdown-item notify-item" data-bs-toggle="modal" data-bs-target="#PasswordModal"
-                                            style="cursor:pointer">
-                                            <i class="mdi mdi-onepassword me-1"></i>
-                                            <span>تغيير كلمة السر</span>
-                                        </a>
-                                        <a class="dropdown-item notify-item" href="https://ayatt12.github.io/test-page/">
-                                            <i class="mdi mdi-access-point-network me-1"></i>
-                                            <span>الانظمة</span>
-                                        </a>
-            
-                                        <!-- item-->
-                                        <a class="dropdown-item notify-item" href="https://ayatt12.github.io/test-page/login.html">
-                                            <i class="mdi mdi-logout me-1"></i>
-                                            <span>تسجيل الخروج</span>
-                                        </a>
-                                    </div>
-                                </li>
-                                <!-- Nav Item - Alerts -->
-                                <li class="nav-item dropdown no-arrow mx-1">
-                                    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="dripicons-bell noti-icon"
-                                            style="font-size: 22px;vertical-align: middle;line-height: 70px;color: #7a7272;"></i>
-                                        <!-- Counter - Alerts -->
-                                        <span class="noti-icon-badge"></span>
-                                    </a>
-                                    <!-- Dropdown - Alerts -->
-                                    <div class="dropdown-list dropdown-menu dropdown-menu-left shadow animated--grow-in"
-                                        aria-labelledby="alertsDropdown">
-                                        <div class="row alert">
-                                            <div class="col-6" style="text-align:end;">
-                                                الاشعارات
-                                            </div>
-            
-                                            <div class="col-3">
-                                                علي وشك
-                                            </div>
-                                            <div class="col-3">
-                                                <span class="d-block">
-                                                    منتهي
-                                                </span>
-                                                <span>
-                                                    (لم يسجل)
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <a class="dropdown-item dropdown-item-custom ">
-                                            <div class="col-md-6 p-0" style="text-align:end;">
-                                                مستندات الفرع
-                                            </div>
-                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
-                                                1
-                                            </div>
-                                            <div class="col-md-3 ended-Docs-Num">
-                                                0
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item dropdown-item-custom ">
-                                            <div class="col-md-6 p-0" style="text-align:end;">
-                                                وثائق السيارة
-                                            </div>
-                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
-                                                0
-                                            </div>
-                                            <div class="col-md-3 ended-Docs-Num">
-                                                4
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item dropdown-item-custom ">
-                                            <div class="col-md-6 p-0" style="text-align:end;">
-                                                صيانة السيارة
-                                            </div>
-                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
-                                                0
-                                            </div>
-                                            <div class="col-md-3 ended-Docs-Num">
-                                                5
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item dropdown-item-custom ">
-                                            <div class="col-md-6 p-0" style="text-align:end;">
-                                                اسعار السيارات
-                                            </div>
-            
-                                            <div class="col-md-3 Not-ended-Docs-Num text-center">
-                                                0
-                                            </div>
-                                            <div class="col-md-3 ended-Docs-Num">
-                                                2
-                                            </div>
-                                        </a>
-                                    </div>
-                                </li>
-                                <!-- Nav Item - Language -->
-                                <li class="nav-item dropdown no-arrow mx-2 me-2">
-                                    <a class="nav-link dropdown-toggle" role="button"
-                                        href="#">
-                                        <span class="align-middle"
-                                            style="color: #8d8282;font-size: 14px;font-weight: 600;">En</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!-- logo -->
-                            <div class=" d-flex align-items-center on-mobile" style="color:black;">
-                                <div class="pt-sm-0 pt-md-4  pt-lg-4 pt-xl-4 px-3">
-                                    <h1 class="hide-on-mobile" style="font-size: 1.2rem;font-weight: bold;">
-                                        شركة كدي لتأجير السيارات </h1>
-                                    <p class="extra-small-mobile">
-                                        &#x627;&#x644;&#x631;&#x626;&#x64A;&#x633;&#x64A; </p>
-                                </div>
-                                <img class="extra-small-mobile " src="img/CompanyLogo_20240325231449.png"
-                                    style="height: 60px;width: 140px;">
-                            </div>
-                        </nav>
-                    </div>
-                </header>
-            <div class="container-fluid">
-                <section class="section-mainCard">
-                    <div class="row justify-content-center w-100 h-100">
-                        <div class="col-11 col-sm-10 col-md-11 col-lg-11 col-xl-10 text-center p-0 ">
-                            <div class="card main-card ">
-                                <div class="row p-2">
-                                    <a href="https://ayatt12.github.io/BranchesUI/" style="width: fit-content;">
-                                        <div>
-                                            <img src="img/Close.svg" alt="close_icon" class="close-icon">
-                                        </div>
-                                    
+                <nav class="navbar navbar-expand navbar-light topbar mb-2 static-top  justify-content-between"
+                    style="height:100px">
 
+                </nav>
+            </div>
+        </header>
+        <main class="main-container container-fluid">
+            <div class="row justify-content-center w-100 h-100" style="flex:1">
+                <div class="col-xl-10 text-center h-100">
+                    <div class="card main-card ">
+                        <div class="col-md-12">
+                            <div class="row py-2 align-items-center">
+                                <div class="col-auto d-flex">
+                                    <a href="https://ayatt12.github.io/BnanBranch/" style="width: fit-content;">
+                                        <div> <img src="img/Close.svg" alt="close_icon" class="close-icon">
+                                        </div>
                                     </a>
                                 </div>
-                                <!-- ---- -->
-                                <div class="row layout-row">
-                                    <div class="row" style="flex-direction: row-reverse;">
-                                        <div class="col justify-content-center d-flex title-row">
-
-                                            <h1 class="card-title"> العقود المحفوظة </h1>
-                                           <!-- -------- -->
-
-                                        </div>
-
-                                    </div>
-                                    <div class="row justify-content-center h-100 content-row">
-
-                                        <div class="col-md-11 mx-0 h-100">
-
-                                            <form id="tenant-form">
-
-                                                <fieldset>
-                                                    <div class="form-card card-tables">
-                                                         <!-- edited -->
-
-                                                        <div class="row pb-4 seacrh-row gap-4"
-                                                            style="flex-direction: row-reverse;justify-content: space-between;">
-                                                            <div class="col-12 d-flex align-items-center flex-row-reverse Search-col align-items-baseline"
-                                                                style="justify-content: flex-start;flex-wrap: wrap;">
-
-                                                                <div class="col-auto">
-                                                                    <label for="search"> بحث</label>
-                                                                </div>
-                                                                <div class="col-auto">
-                                                                    <div class="form-outline" data-mdb-input-init>
-                                                                        <span class="fa fa-search"></span>
-                                                                        <input type="search" id="search"
-                                                                            class="form-control inputs" name="search"
-                                                                            aria-label="Search" autofocus />
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                           
-                                                        </div>
-                                                        <div class="row table-row px-3">
-                                                            <div class="col  scroll-table-div  table-responsive-sm  w-100  ">
-                                                                <table  class=" tables-style table table-borderless " id="settelmentListTable">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th scope="col" class="not-in-mobile text-end">السيارة</th>
-                                                                            <th scope="col" class="not-in-mobile text-end">المستأجر</th>
-                                                                            <th scope="col"> المتبقي</th>
-                                                                            <th scope="col" class="firstTable-col"> العقد</th>
-                                                                            <th></th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr>
-
-                                                                           
-                                                                            <td class="car not-in-mobile text-end">مازدا - سي اكس
-                                                                                30 - سماوي - 2021-دددد</td>
-                                                                            <td class="name not-in-mobile text-end">نايف هشام
-                                                                                هشام المعمر</td>
-                                                                            <td> يوم </td>
-                                                                            <td class="firstTable-col">
-                                                                                <div
-                                                                                    class="row flex-nowrap align-items-center">
-                                                                                    <div class="col">
-                                                                                        <p class="contract-id">24-1401-4001105-000078</p>
-                                                                                        <div class="row licence-dates-settel">
-                                                                                            <div class="col-auto date-col">
-                                                                                                <div class="d-flex">
-                                                                                                  <div class="col settelDate">   2024/08/22 </div>
-                                                                                                  <div class="col-auto p-0"> 11:12</div>
-                                                                                                </div>
-                                                                                              </div>
-                                                                                            <div class="col-auto date-col">
-                                                                                              <div class="d-flex">
-                                                                                                <div class="col settelDate">   2024/07/19 </div>
-                                                                                                <div class="col-auto p-0"> 11:12</div>
-                                                                                              </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                   
-                                                                                </div>
-                                                                            </td>
-                                                                            <td >
-                                                                                  
-                                                                                    <div>1</div>
-                                                                               
-                                                                            </td>
-
-                                                                        </tr>
-                                                                        <tr>
-
-                                                                            
-                                                                            <td class="car not-in-mobile text-end">مازدا - سي اكس
-                                                                                30 - سماوي - 2021-دددد</td>
-                                                                            <td class="name not-in-mobile text-end">نايف هشام
-                                                                                هشام المعمر</td>
-                                                                            <td> يوم </td>
-                                                                            <td class="firstTable-col">
-                                                                                <div
-                                                                                    class="row flex-nowrap align-items-center">
-                                                                                    <div class="col">
-                                                                                        <p class="contract-id">24-1401-4001105-000078</p>
-                                                                                        <div class="row licence-dates-settel">
-                                                                                            <div class="col-auto date-col">
-                                                                                                <div class="d-flex">
-                                                                                                  <div class="col settelDate">   2024/08/22 </div>
-                                                                                                  <div class="col-auto p-0"> 11:12</div>
-                                                                                                </div>
-                                                                                              </div>
-                                                                                            <div class="col-auto date-col">
-                                                                                              <div class="d-flex">
-                                                                                                <div class="col settelDate">   2024/07/19 </div>
-                                                                                                <div class="col-auto p-0"> 11:12</div>
-                                                                                              </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                   
-                                                                                </div>
-                                                                            </td>
-                                                                            <td >
-                                                                                   
-                                                                                    <div>2</div>
-                                                                               
-                                                                            </td>
-
-                                                                        </tr>
-                                                                        <tr>
-
-                                                                            
-                                                                            <td class="car not-in-mobile text-end">مازدا - سي اكس
-                                                                                30 - سماوي - 2021-دددد</td>
-                                                                            <td class="name not-in-mobile text-end">نايف هشام
-                                                                                هشام المعمر</td>
-                                                                            <td> يوم </td>
-                                                                            <td class="firstTable-col">
-                                                                                <div
-                                                                                    class="row flex-nowrap align-items-center">
-                                                                                    <div class="col">
-                                                                                        <p class="contract-id">24-1401-4001105-000078</p>
-                                                                                        <div class="row licence-dates-settel">
-                                                                                            <div class="col-auto date-col">
-                                                                                                <div class="d-flex">
-                                                                                                  <div class="col settelDate">   2024/08/22 </div>
-                                                                                                  <div class="col-auto p-0"> 11:12</div>
-                                                                                                </div>
-                                                                                              </div>
-                                                                                            <div class="col-auto date-col">
-                                                                                              <div class="d-flex">
-                                                                                                <div class="col settelDate">   2024/07/19 </div>
-                                                                                                <div class="col-auto p-0"> 11:12</div>
-                                                                                              </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                   
-                                                                                </div>
-                                                                            </td>
-                                                                            <td >
-                                                                                   
-                                                                                    <div>3</div>
-                                                                               
-                                                                            </td>
-
-                                                                        </tr>
-                                                                        <tr>
-
-                                                                            
-                                                                            <td class="car not-in-mobile text-end">مازدا - سي اكس
-                                                                                30 - سماوي - 2021-دددد</td>
-                                                                            <td class="name not-in-mobile text-end">نايف هشام
-                                                                                هشام المعمر</td>
-                                                                            <td> يوم </td>
-                                                                            <td class="firstTable-col">
-                                                                                <div
-                                                                                    class="row flex-nowrap align-items-center">
-                                                                                    <div class="col">
-                                                                                        <p class="contract-id">24-1401-4001105-000078</p>
-                                                                                        <div class="row licence-dates-settel">
-                                                                                            <div class="col-auto date-col">
-                                                                                                <div class="d-flex">
-                                                                                                  <div class="col settelDate">   2024/08/22 </div>
-                                                                                                  <div class="col-auto p-0"> 11:12</div>
-                                                                                                </div>
-                                                                                              </div>
-                                                                                            <div class="col-auto date-col">
-                                                                                              <div class="d-flex">
-                                                                                                <div class="col settelDate">   2024/07/19 </div>
-                                                                                                <div class="col-auto p-0"> 11:12</div>
-                                                                                              </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                   
-                                                                                </div>
-                                                                            </td>
-                                                                            <td >
-                                                                                   
-                                                                                    <div>4</div>
-                                                                               
-                                                                            </td>
-
-                                                                        </tr>
-                                                                   
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                      <!-- -------- -->
-
-                                                    </div>
-
-
-                                                </fieldset>
-
-                                            </form>
-                                        </div>
-                                    </div>
+                                <div class="col">
+                                    <h1 class="card-title"> قائمة العقود المحفوظة </h1>
                                 </div>
                             </div>
                         </div>
+                        <!-- ---- -->
+                        <div class="col-md-12" style="flex: 1;min-height: 0;">
+                            <div class="row justify-content-center h-100 content-row">
+                                <div class="col-md-12 px-md-4 h-100 d-flex">
+                                    <form class="d-flex align-items-center w-100">
+                                        <fieldset class="w-100"> 
+                                            <div class="form-card">
+                                                <!-- edited -->
+                                                <div class="row pb-4 seacrh-row align-items-baseline"
+                                                    style="flex-direction: row-reverse;flex-wrap: wrap;">
+                                                    <div class="col-auto">
+                                                        <label for="search"> بحث</label>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="form-outline" data-mdb-input-init>
+                                                            <span class="fa fa-search"></span>
+                                                            <input type="search" id="search" class="form-control inputs"
+                                                                name="search" aria-label="Search" autofocus />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row table-row px-md-2">
+                                                    <div class="col  scroll-table-div  table-responsive-sm ">
+                                                        <table class=" tables-style table table-borderless "
+                                                            id="ContactsTable">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th 
+                                                                        class=" firstTable-col">
+                                                                        السيارة</th>
+                                                                    <th 
+                                                                        class=" firstTable-col">
+                                                                        المستأجر</th>
+                                                                    <th > الزمن المتبقي</th>
+                                                                    <th  class="firstTable-col"> رقم
+                                                                        العقد</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        تويوتا - يارس - اقتصادية - 2020 - ل ق ب
+                                                                        4749 - أخضر</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالله عمر عامر العسعوس </td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>2</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2019 - أ ى
+                                                                        هـ 3436 - أبيض </td>
+                                                                    <td class="name  firstTable-col">
+                                                                        نادية طارق مشعل الجميع</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>3</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="car  firstTable-col">
+                                                                        فورد - تورس - سيدان متوسطة - 2021 - ى ر
+                                                                        ر 8343 - أزرق</td>
+                                                                    <td class="name  firstTable-col">
+                                                                        عبدالمنعم عبدالحليم هشام الريس</td>
+                                                                    <td> 15:09:22:30 </td>
+                                                                    <td class="firstTable-col">
+                                                                        <div class="row flex-nowrap align-items-center">
+                                                                            <div class="col">
+                                                                                <p class="No_Wrap_Text">
+                                                                                    24-1401-4001105-000078</p>
+                                                                                <div class="row licence-dates-settel">
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/08/22
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col-auto date-col">
+                                                                                        <div class="d-flex">
+                                                                                            <div class="col settelDate">
+                                                                                                2024/07/19
+                                                                                            </div>
+                                                                                            <div class="col-auto p-0">
+                                                                                                11:12</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div>1</div>
+                                                                    </td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row w-100" style="min-height:61px;"></div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                               
+                            </div>
+                        </div>
                     </div>
-                </section>
-            </div>
-
-
-            <footer class="fixed-bottom-xl">
-                <div class="before-footer-widget">
-                    <svg width: 100%; height:auto viewbox="0 0 2444 132">
-                        <path fill="rgba(254, 248, 232, 1)" fill-rule="evenodd"
-                            d="M1222 0h1222c-444.13 88-852.127 132-1223.993 132C849.253 132 442.585 88.263 0 .789V0h1222z">
-                        </path>
-                    </svg>
                 </div>
-
-            </footer>
-        </div>
+            </div>
+        </main>
+        <footer class="fixed-bottom-xl">
+            <div class="before-footer-widget">
+                <svg width: 100%; height:auto viewbox="0 0 2444 132">
+                    <path fill="rgba(254, 248, 232, 1)" fill-rule="evenodd"
+                        d="M1222 0h1222c-444.13 88-852.127 132-1223.993 132C849.253 132 442.585 88.263 0 .789V0h1222z">
+                    </path>
+                </svg>
+            </div>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var table = document.getElementById("ContactsTable");
+            var rows = table.getElementsByTagName("tr");
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.body.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      document.getElementById("contract-extension-form").onsubmit = function (event) {
-        event.preventDefault();
-        console.log("Search Query:", document.getElementById("search").value);
-      };
-    }
-  });
-});
-//////////////////////////////////////////////////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", function() {
-  var table = document.getElementById("settelmentListTable");
-  var rows = table.getElementsByTagName("tr");
+            for (var i = 0; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName("td");
 
-  for (var i = 0; i < rows.length; i++) {
-    var cells = rows[i].getElementsByTagName("td");
+                for (var j = 0; j < cells.length; j++) {
+                    cells[j].addEventListener("click", function () {
+                        window.location.href = "Saved_Contracts.html";
+                    });
+                }
+            }
+        });
+    </script>
+      <script>
+        function setScrollToRight(el) {
+            if (!el) return;
+            const style = getComputedStyle(el);
+            const isRTL = style.direction === 'rtl';
+            const max = Math.max(0, el.scrollWidth - el.clientWidth);
+            function attempt() {
+                el.scrollLeft = max;
 
-    for (var j = 1; j < cells.length; j++) { 
-      cells[j].addEventListener("click", function() {
-        window.location.href = "Saved_Contracts.html"; 
-      });
-    }
-  }
-});
-/////
-var rows = document.getElementById("settelmentListTable").getElementsByTagName("tr");
-for (var i = 0; i < rows.length; i++) {
-  rows[i].onclick = function () {
-    var cells = this.getElementsByTagName("td");
-    var tenantIdParagraph = cells[4].getElementsByClassName("contract-id")[0];
-    console.log(tenantIdParagraph.innerText);
-  };
-}
+                if (isRTL && Math.abs(el.scrollLeft) < Math.max(1, max - 1)) {
+                    try { el.scrollLeft = -max; } catch (e) { }
+                }
 
+                if (Math.abs(el.scrollLeft) < Math.max(1, max - 1)) {
+                    try { el.scrollTo({ left: max, behavior: 'instant' }); } catch (e) { el.scrollLeft = max; }
+                }
+            }
+            requestAnimationFrame(() => {
+                attempt();
+                setTimeout(attempt, 50);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.scroll-table-div');
+            if (!container) return;
+            setScrollToRight(container);
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => setScrollToRight(container), 120);
+            });
+            const observer = new MutationObserver(() => {
+                setTimeout(() => setScrollToRight(container), 40);
+            });
+            observer.observe(container, { childList: true, subtree: true, attributes: true });
+            const imgs = container.querySelectorAll('img');
+            imgs.forEach(img => img.addEventListener('load', () => setTimeout(() => setScrollToRight(container), 30)));
+        });
     </script>
 </body>
 
