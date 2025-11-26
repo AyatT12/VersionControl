@@ -1,14 +1,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل الدخول - بنان</title>
+    <title>الأنظمة - عيسى هاني مبروك عزام</title>
     <link rel="icon" type="image/png" href="/images/Bnan/Support Image/Bnan.png">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&amp;display=swap" rel="stylesheet">
     
 </head>
 <body class="d-flex flex-column min-vh-100" data-new-gr-c-s-check-loaded="14.1264.0" data-gr-ext-installed="">
 
-    <style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<style>
     :root {
         --priamry_color: #FF9626;
         --secondary_color: #39629C;
@@ -39,9 +40,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 40px 10px;
+        padding: 20px 40px;
         position: relative;
         z-index: 10;
+        gap: 10px;
     }
 
     .language-selector {
@@ -66,7 +68,7 @@
 
     .logo-section {
         display: flex;
-        align-items: center;
+        align-items: end;
         gap: 15px;
     }
 
@@ -78,183 +80,126 @@
             height: 100%;
         }
 
+    a {
+        /* لإزالة الخط الموجود أسفل النص */
+        text-decoration: none;
+    }
     .system-title {
         color: var(--secondary_color);
         font-size: 18px;
         font-weight: 600;
     }
-        ul {
-        list-style-type: none;
-    }
 
-    /* Main content */
-    .main-content {
-        flex: 1;
+    .navbar_options {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 25px;
+    }
+
+    .logout {
+        display: flex;
+    }
+
+    /* Main Content */
+    .main-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 0px 20px 10px;
         position: relative;
         z-index: 5;
     }
 
-    /* Login container */
-    .login-container {
-        border-radius: 20px;
-        padding: 50px 40px;
-        width: 100%;
-        max-width: 450px;
-        position: relative;
-        overflow: hidden;
-        border: 2px solid var(--priamry_color);
-    }
-
-
-    .login-title {
-        text-align: center;
-        color: #1A1A1A;
-        font-size: 28px;
-        font-weight: 600;
-        margin-bottom: 40px;
-        position: relative;
-    }
-
-    /* Form styles */
-    .form-label {
-        display: block;
-        color: #1A1A1A;
-        font-size: 16px;
-        font-weight: 500;
-        margin-bottom: 8px;
-        text-align: right;
-    }
-
-    .form-input {
-        font-family: 'Cairo';
-        width: 100%;
-        padding: 8px;
-        border: 2px solid #e1e8ed;
-        border-radius: 12px;
-        font-size: 16px;
-        background: rgba(255, 255, 255, 0.8);
-        transition: all 0.3s ease;
-        outline: none;
-        text-align: right;
-    }
-
-        .form-input:focus {
-            border-color: var(--priamry_color);
-            box-shadow: 0 0 0 3px rgba(255, 154, 86, 0.1);
-            transform: translateY(-2px);
-        }
-
-        .form-input::placeholder {
-            color: #999;
-            font-size: 14px;
-        }
-
-    /* Login button */
-    .login-button {
-        width: 100%;
-        font-family: 'Cairo';
-        padding: 16px 20px;
-        background: var(--priamry_color);
-        color: white;
-        border: none;
-        border-radius: 12px;
-        font-size: 18px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        margin-top: 10px;
-    }
-
-        .login-button:hover {
-            transform: translateY(-3px);
-        }
-
-        .login-button:active {
-            transform: translateY(-1px);
-        }
-
-    /* Footer */
-    .footer {
-        background: var(--secondary_color);
-        color: white;
-        padding: 10px;
-        position: relative;
-        z-index: 10;
-        backdrop-filter: blur(10px);
-    }
-
-    .footer-content {
+    .systems-grid {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 100%;
-        margin: 0 auto;
-        flex-wrap: wrap;
-        gap: 15px;
+        max-width: 1000px;
+        width: 100%;
     }
 
-    .Footer-company {
-        display: flex;
-        gap: 5px;
-    }
-
-    .social-icons {
-        display: flex;
-        gap: 15px;
-    }
-
-    .social-icon img {
-        width: 25px;
-        height: 25px;
+    .system-card {
         border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-decoration: none;
-        transition: transform 0.3s ease;
+        background: rgba(254, 254, 254, 0.32);
+        box-shadow: 0 0 4px 0 rgba(255, 150, 38, 0.25);
+        backdrop-filter: blur(3px);
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        backdrop-filter: blur(10px);
+        overflow-x: hidden;
+        cursor: pointer;
     }
 
+        .system-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
 
-    .social-icon.web {
-        width: 25px;
+    .system-Image img {
+        width: 100%;
+        transition: transform 0.4s ease;
     }
 
-    .social-icon:hover {
+    .system-card:hover .system-Image img {
         transform: scale(1.1);
     }
 
-    .footer-text {
-        font-size: 14px;
-        opacity: 0.9;
-        text-align: start;
+    .card-management:hover {
+        border-color: #153962;
     }
 
-    .footer-logo {
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-weight: bold;
+        .card-management:hover .option-title {
+            background-color: #153962;
+            color: #fff;
+        }
+
+    .card-branch:hover {
+        border-color: #1C9BA0;
     }
 
-    .error_message_container {
-        min-height: 30px;
-        margin: 10px 0px;
+        .card-branch:hover .option-title {
+            background-color: #1C9BA0;
+            color: #fff;
+        }
+
+    .card-owners:hover {
+        border-color: #4B6FB5;
     }
 
-    .error_message {
-        color: var(--error);
-        display: block;
+        .card-owners:hover .option-title {
+            background-color: #4B6FB5;
+            color: #fff;
+        }
+
+    .admin-icon {
+        background: linear-gradient(135deg, var(--secondary_color), #4a7bc8);
     }
 
+    .branch-icon {
+        background: linear-gradient(135deg, var(--priamry_color), #ffad4d);
+    }
+
+    .management-icon {
+        background: linear-gradient(135deg, var(--secondary_color), var(--priamry_color));
+    }
+
+    .option-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--secondary_color);
+        background-color: rgba(255, 255, 255, 1);
+        padding: 12px;
+        margin: 0;
+    }
+
+
+    /* images */
+    .system-Image img {
+        width: 100%;
+    }
+
+    /* bg */
     .bg_vectors {
         overflow: hidden;
         height: 100%;
@@ -292,62 +237,33 @@
         .header {
             padding: 15px 20px;
             flex-direction: column;
-            gap: 15px;
         }
 
-            .header .language-selector {
-                order: 1;
-                align-self: flex-end;
-            }
+        .navbar_options {
+            align-self: flex-end;
+        }
 
-            .header .logo-section {
-                order: 2;
-            }
+        .header .logo-section {
+            order: 2;
+        }
 
         .system-title {
             font-size: 16px;
         }
+    }
 
-        .login-container {
-            margin: 20px;
-            padding: 30px 25px;
+    @media (max-width: 767px) {
+        .system-card {
+            max-width: 60%;
         }
 
-        .login-title {
-            font-size: 24px;
-            margin-bottom: 30px;
-        }
-
-        .footer-content {
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .social-icons {
+        .systems-grid .col-md-4 {
+            display: flex;
             justify-content: center;
         }
     }
 
     @media (max-width: 480px) {
-        .main-content {
-            padding: 20px 10px;
-        }
-
-        .login-container {
-            margin: 10px;
-            padding: 25px 20px;
-        }
-
-        .form-input {
-            padding: 12px 15px;
-            font-size: 15px;
-        }
-
-        .login-button {
-            padding: 14px 20px;
-            font-size: 16px;
-        }
-
         .logo {
             height: 50px;
         }
@@ -363,7 +279,7 @@
         }
 
         body {
-            background-image: url(../LoginAndSystems/images/bg/bg.svg);
+            background-image: url(.~/LoginAndSystems/images/bg/bg.svg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -378,119 +294,229 @@
             top: 0px;
         }
     }
-
-    @media (max-height:712px) {
-        .login-container {
-            padding: 20px;
-        }
-
-        .login-title {
-            margin-bottom: 10px;
-        }
-    }
 </style>
 
 <!-- Header -->
 <header class="header">
-
     <div class="logo-section">
-        <div class="logo"><img src="/LoginAndSystems/images/Logo.svg"></div>
-        <div class="system-title">بنان لإدارة شركات ومكاتب تأجير السيارات</div>
+
+        <div class="logo">
+                <img src="/images/Company/4001/Support Images/ImageLogo_20251125080419.png">
+        </div>
+            <div class="system-title">شركة كدي لتأجير السيارات</div>
     </div>
-        <a class="language-selector" href="/Identity/Account/SetLanguage?returnUrl=~%2FIdentity%2FAccount%2FLogin&amp;culture=en-US">
-            <span>English</span>
-            <div class="language-icon"><img src="/LoginAndSystems/images/global.svg"></div>
+    <div class="navbar_options">
+
+            <a class="language-selector" href="/Identity/Account/SetLanguage?returnUrl=~%2FIdentity%2FAccount%2FSystems&amp;culture=en-US">
+                <span>English</span>
+                <div class="language-icon"><img src="/LoginAndSystems/images/global.svg"></div>
+            </a>
+
+
+        <a class="logout" href="javascript:void(0);" onclick="document.getElementById('logoutForm').submit()">
+            <img src="/LoginAndSystems/images/logout.svg">
         </a>
-
-
-
+        <form id="logoutForm" method="post" style="display:none;" action="/Identity/Account/Logout">
+            
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8IOPCy8gYyhGi4I9cKzCht7RZxDixGm2VR8yQpAKnA1mwq_tTH699rUHBSQfuKEb-GT-Y9W7XOa5AQyBzGLVLZOnQywEjwfhFsDdOcT_W8THSxUZNFPOh5M9ZuV4WCRns8a24UPHMnJQ6_CfvSOhoBH9I0o8-QMbfrCCzIR2cC2PDTLCEQTwidYxMau4zV7vpA"></form>
+    </div>
 </header>
 
 <!-- Main Content -->
-<main class="main-content">
-    <div class="login-container">
-        <h1 class="login-title">تسجيل الدخول</h1>
+<main class="container main-content">
+    <div class="row g-3 systems-grid ">
 
-        <form id="loginForm" method="post" action="/Identity/Account/Login" novalidate="novalidate">
-            <div class="form-group" style="transform: scale(1);">
-                <label for="username" class="form-label">
-                    رقم الموظف
-                </label>
-                <input type="text" id="username" class="form-input valid" autofocus="true" autocomplete="new-password" data-val="true" data-val-required="الرجاء ادخال رقم الموظف" name="UserName" value="" aria-describedby="username-error" aria-invalid="false">
+            <div class="col-md-4">
+                <div class="system-card card-management">
+                    <a href="/CAS">
+                        <div class="system-Image">
+                            <img src="/LoginAndSystems/images/managment.png" alt="الادارة background card image">
+                        </div>
+                        <h2 class="option-title">الادارة</h2>
+                    </a>
+                </div>
             </div>
 
-            <div class="form-group" style="transform: scale(1);">
-                <label for="password" class="form-label">كلمة السر</label>
-                <input type="password" id="password" class="form-input valid" autocomplete="off" data-val="true" data-val-required="الرجاء ادخال كلمة السر" name="Password" aria-describedby="password-error" aria-invalid="false">
+            <div class="col-md-4">
+                <div class="system-card card-branch">
+
+                    <a href="/BS">
+                        <div class="system-Image">
+                            <img src="/LoginAndSystems/images/Branches.png" alt="الفروع system background card image">
+                        </div>
+                        <h2 class="option-title">الفروع</h2>
+                    </a>
+                </div>
             </div>
-            <div class="error_message_container">
-                <div class="error_message validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
-</ul></div>
+
+            <div class="col-md-4">
+                <div class="system-card card-owners">
+
+                    <a href="/Owners">
+                        <div class="system-Image">
+                            <img src="/LoginAndSystems/images/owners.png" alt="لوحة التحكم image">
+                        </div>
+                        <h2 class="option-title">لوحة التحكم</h2>
+                    </a>
+                </div>
             </div>
-            <button type="submit" class="login-button" id="loginBtn">
-                تسجيل الدخول
-            </button>
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8IOPCy8gYyhGi4I9cKzCht6ACTtD4jDNN6oYx0Q1stSgwSNYdWMd5dXsR-GlXZdYrhdAIR56H-0evbXZ6MJRsJQOpxQUxeStHhcR8fAFFC6nEhvdwRWeF6ttD61fOitT_Qfuf2fwoUIc1RvvyWA-IcY"></form>
+
     </div>
 </main>
+<style>
+    body {
+        font-family: 'Cairo';
+    }
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-        <div class="Footer-company">
-            <img src="/LoginAndSystems/images/C 1.svg" class="w-100">
-            <div class="footer-text">
-                تطوير وتشغيل شركة غيوم الودق لتقنية المعلومات
-                <br>
-                جميع الحقوق محفوظة
+    .modal-body {
+        text-align: right;
+    }
+    #ActiveTime{
+        direction:ltr;
+        color:black;
+        letter-spacing:.0175rem;
+    }
+    .ActiveTime_title {
+        font-weight: 700 !important;
+        font-size:1.5rem;
+        color:black;
+        margin-bottom:0 !important;
+    }
+
+    .ActiveTime_P {
+        font-size: 18px;
+        color: #666666;
+        line-height: 32px;
+    }
+
+    .base-timer {
+        position: relative;
+        width: 100px;
+        height: 100px;
+    }
+
+    .base-timer__svg {
+        transform: scaleX(-1);
+    }
+
+    .base-timer__circle {
+        fill: none;
+        stroke: none;
+    }
+
+    .base-timer__path-elapsed {
+        stroke-width: 7px;
+        stroke: #39629C3D;
+    }
+
+    .base-timer__path-remaining {
+        stroke-width: 7px;
+        stroke-linecap: round;
+        transform: rotate(90deg);
+        transform-origin: center;
+        transition: 1s linear all;
+        fill-rule: nonzero;
+        stroke: currentColor;
+    }
+
+        .base-timer__path-remaining.blue {
+            color: #39629C;
+        }
+
+        .base-timer__path-remaining.orange {
+            color: orange;
+        }
+
+        .base-timer__path-remaining.red {
+            color: red;
+        }
+
+    .base-timer__label {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        font-weight:400;
+    }
+
+    .continueBtn {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #FF9626;
+        --bs-btn-border-color: #FF9626;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #FF9626;
+        --bs-btn-hover-border-color: #FF9626;
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #FF9626;
+        --bs-btn-active-border-color: #FF9626;
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #f7c48e;
+        --bs-btn-disabled-border-color: #f7c48e;
+    }
+
+    .ActiveTimeFooter {
+        border-top: none;
+    }
+
+    .ActiveTimeContent {
+        border: 3px solid #FF9626;
+    }
+</style>
+
+
+
+
+
+<div class="modal fade" id="ActiveTime" tabindex="-1" aria-labelledby="ActiveTimeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ActiveTimeContent">
+
+            <div class="modal-body">
+                <div class="row align-items-center g-3 ">
+                    <div class="col-md-auto d-flex align-items-center justify-content-center">
+                        <div id="app"></div>
+                    </div>
+                    <div class="col text-center">
+                        <h4 class="ActiveTime_title">! جلستك على وشك الإنتهاء</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer ActiveTimeFooter ">
+                <button type="button" class="btn btn-secondary" id="logoutBtn">تسجيل الخروج</button>
+                <button type="button" class="btn continueBtn" id="continueBtn">استمرار </button>
             </div>
         </div>
-
-        <div class="social-icons">
-            <a href="https://www.youtube.com/%40Ghyom0" target="_blank" class="social-icon youtube" title="YouTube"><img src="/LoginAndSystems/images/Youtube.svg"></a>
-            <a href="https://bnan.ghyum.sa/#/home" target="_blank" class="social-icon web" title="Website">
-                <img src="/LoginAndSystems/images/Logo.svg">
-            </a>
-        </div>
-
     </div>
-</footer>
+</div>
+
+
 <!-- Main background vectors -->
 <div class="bg_vectors">
     <img src="/LoginAndSystems/images/bg/VectorUP.svg" class="up">
     <img src="/LoginAndSystems/images/bg/car.svg" class="car">
     <img src="/LoginAndSystems/images/bg/VectorDown.svg" class="down">
 </div>
-<!-- Footer -->
+
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8IOPCy8gYyhGi4I9cKzCht7RZxDixGm2VR8yQpAKnA1mwq_tTH699rUHBSQfuKEb-GT-Y9W7XOa5AQyBzGLVLZOnQywEjwfhFsDdOcT_W8THSxUZNFPOh5M9ZuV4WCRns8a24UPHMnJQ6_CfvSOhoBH9I0o8-QMbfrCCzIR2cC2PDTLCEQTwidYxMau4zV7vpA">
+
 
 
     
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-
-    <script>
-        document.querySelectorAll('.form-input').forEach(input => {
-            input.addEventListener('focus', function () {
-                this.parentElement.style.transform = 'scale(1.02)';
-            });
-
-            input.addEventListener('blur', function () {
-                this.parentElement.style.transform = 'scale(1)';
-            });
-        });
-
-        function handleResize() {
-            const header = document.querySelector('.header');
-            if (window.innerWidth <= 768) {
-                header.style.textAlign = 'center';
-            } else {
-                header.style.textAlign = '';
-            }
-        }
-
-        window.addEventListener('resize', handleResize);
-        handleResize();
+    <script src="/BranchSys/js/javascript/idleTimeoutHandler.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+             var exitUser = parseInt("10");
+             if (!isNaN(exitUser)) {
+                 initializeIdleTimeoutHandler(exitUser);
+             }
+         });
     </script>
 
     <script>
