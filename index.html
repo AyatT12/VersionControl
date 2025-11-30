@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - بنان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/Logo.svg" />
+    <style>
+        :root {
+            --priamry_color: #FF9626;
+            --secondary_color: #39629C;
+            --bg: #FEF8E8;
+            --error: #c80000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo';
+            background: var(--bg);
+            min-height: 100dvh;
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow-x: hidden;
+            direction: rtl;
+        }
+
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .language-selector {
+            display: flex;
+            align-items: center;
+            color: var(--secondary_color);
+            font-weight: 500;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .language-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 80px;
+        }
+
+        .logo img {
+            height: 100%;
+        }
+
+        .system-title {
+            color: var(--secondary_color);
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* Main content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 20px 5px;
+            position: relative;
+            z-index: 5;
+            min-height: 0;
+        }
+
+        /* Login container */
+        .login-container {
+            border-radius: 20px;
+            padding: 30px 40px;
+            width: 100%;
+            max-width: 450px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--priamry_color);
+            max-height: 100%;
+            overflow: auto;
+        }
+
+
+        .login-title {
+            text-align: center;
+            color: #1A1A1A;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        /* Form styles */
+        .form-label {
+            display: block;
+            color: #1A1A1A;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            text-align: right;
+        }
+
+        .form-input {
+            font-family: 'Cairo';
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #e1e8ed;
+            border-radius: 12px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            outline: none;
+            text-align: right;
+        }
+
+        .form-input:focus {
+            border-color: var(--priamry_color);
+            box-shadow: 0 0 0 3px rgba(255, 154, 86, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-input::placeholder {
+            color: #999;
+            font-size: 14px;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px white inset !important;
+            box-shadow: 0 0 0 30px white inset !important;
+            -webkit-text-fill-color: #000 !important;
+        }
+
+
+        /* Login button */
+        .login-button {
+            width: 100%;
+            font-family: 'Cairo';
+            padding: 16px 20px;
+            background: var(--priamry_color);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .login-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .login-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary_color);
+            color: white;
+            padding: 10px;
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100%;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .Footer-company {
+            display: flex;
+            gap: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon img {
+            width: 25px;
+            height: 25px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+
+        .social-icon.web {
+            width: 25px;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .footer-text {
+            font-size: 14px;
+            opacity: 0.9;
+            text-align: start;
+        }
+
+        .footer-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .error_message_container {
+            min-height: 30px;
+            margin: 10px 0px;
+        }
+
+        .error_message {
+            color: var(--error);
+            display: none;
+        }
+
+        .bg_vectors {
+            overflow: hidden;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .car {
+            position: absolute;
+            bottom: 0px;
+            width: 75%;
+            right: 25%;
+            z-index: -1;
+        }
+
+        .up {
+            position: absolute;
+            top: 0px;
+            width: 50%;
+            left: 0px;
+            z-index: -1;
+
+        }
+
+        .down {
+            position: absolute;
+            bottom: 0px;
+            width: 77.4%;
+            right: 0;
+            z-index: -2;
+        }
+
+        /* iPad specific fixes */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .login-container {
+                padding: 25px 35px;
+                max-width: 400px;
+            }
+
+            .login-title {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .form-input {
+                padding: 10px;
+            }
+
+            .login-button {
+                padding: 14px 20px;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+
+            .header .language-selector {
+                order: 1;
+                align-self: flex-end;
+            }
+
+            .header .logo-section {
+                order: 2;
+            }
+
+            .system-title {
+                font-size: 16px;
+            }
+
+            .login-container {
+                margin: 20px;
+                padding: 30px 25px;
+            }
+
+            .login-title {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .login-container {
+                margin: 10px;
+                padding: 25px 20px;
+            }
+
+            .form-input {
+                padding: 12px 15px;
+                font-size: 15px;
+            }
+
+            .login-button {
+                padding: 14px 20px;
+                font-size: 16px;
+            }
+
+            .logo {
+                height: 50px;
+            }
+
+            .system-title {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-height : 367px) {
+
+            .bg_vectors {
+                display: none;
+            }
+
+            body {
+                background-image: url(../images/bg/bg.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+        }
+
+        @media (max-width : 768px) {
+            .up {
+                width: 100%;
+                top: 0px;
+            }
+
+        }
+
+        @media (max-height:700px) {
+
+
+            .login-container {
+                padding: 20px;
+            }
+
+            .login-title {
+                margin-bottom: 5px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-section">
+            <div class="logo"><img src="./images/Logo.svg" /></div>
+            <div class="system-title">بنان لإدارة شركات ومكاتب تأجير السيارات</div>
+        </div>
+        <a class="language-selector" href="#">
+            <span>English</span>
+            <div class="language-icon"><img src="./images/global.svg" /></div>
+        </a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="login-container">
+            <h1 class="login-title">تسجيل الدخول</h1>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username" class="form-label">رقم الموظف</label>
+                    <input type="text" id="username" name="username" class="form-input" required autofocus="true" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">كلمة المرور</label>
+                    <input type="password" id="password" name="password" class="form-input" required />
+                </div>
+                <div class="error_message_container">
+                    <p class="error_message">عفوا .... رقم الموظف أو كلمة السر غير صحيحة</p>
+                </div>
+                <button type="submit" class="login-button" id="loginBtn">
+                    <!-- عنصر اللينك مؤقت فقط للتجربة الانتقال بين شاشة الدخول وشاشة الانظمة -->
+                    <a href="Systems.html" style="text-decoration: none;color: inherit;">
+                        تسجيل الدخول
+                    </a>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="Footer-company">
+                <img src="./images/C 1.svg" class="w-100" />
+                <div class="footer-text">
+                    تطوير وتشغيل شركة غيوم الودق لتقنية المعلومات
+                    <br>
+                    جميع الحقوق محفوظة © 2022
+                </div>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@Ghyom0" target="_blank" class="social-icon youtube"
+                    title="YouTube"><img src="./images/Youtube.svg" /></a>
+                <a href="https://bnan.ghyum.sa/#/home" target="_blank" class="social-icon web" title="Website"><img
+                        src="./images/Logo.svg" /></a>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Main background vectors -->
+    <div class="bg_vectors">
+        <img src="./images/bg/VectorUP.svg" class="up">
+        <img src="./images/bg/car.svg" class="car">
+        <img src="./images/bg/VectorDown.svg" class="down">
+    </div>
+
+    <script>
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function () {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+
+            input.addEventListener('blur', function () {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+
+        function handleResize() {
+            const header = document.querySelector('.header');
+            if (window.innerWidth <= 768) {
+                header.style.textAlign = 'center';
+            } else {
+                header.style.textAlign = '';
+            }
+        }
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); 
+    </script>
+</body>
+
+</html>
