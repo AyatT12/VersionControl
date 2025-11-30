@@ -68,7 +68,7 @@
 
         .logo-section {
             display: flex;
-            align-items: center;
+            align-items: end;
             gap: 15px;
         }
 
@@ -76,7 +76,10 @@
             height: 80px;
         }
 
-  
+        .logo img {
+            height: 100%;
+        }
+
         .system-title {
             color: var(--secondary_color);
             font-size: 18px;
@@ -112,8 +115,6 @@
             width: 100%;
             max-height: 100%;
             overflow: auto;
-            height: 100%;
-           align-items: center;
         }
 
         .system-card {
@@ -170,6 +171,18 @@
             color: #fff;
         }
 
+        .admin-icon {
+            background: linear-gradient(135deg, var(--secondary_color), #4a7bc8);
+        }
+
+        .branch-icon {
+            background: linear-gradient(135deg, var(--priamry_color), #ffad4d);
+        }
+
+        .management-icon {
+            background: linear-gradient(135deg, var(--secondary_color), var(--priamry_color));
+        }
+
         .option-title {
             font-size: 20px;
             font-weight: 600;
@@ -200,7 +213,6 @@
             width: 75%;
             right: 25%;
             z-index: -1;
-            overflow: hidden;
         }
 
         .up {
@@ -209,7 +221,6 @@
             width: 50%;
             left: 0px;
             z-index: -1;
-            overflow: hidden;
         }
 
         .down {
@@ -218,15 +229,6 @@
             width: 77.4%;
             right: 0;
             z-index: -2;
-            overflow: hidden;
-        }
-
-        /* anchor */
-        .systemLink {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         /* Responsive design */
@@ -258,7 +260,6 @@
                 display: flex;
                 justify-content: center;
             }
-
         }
 
         @media (max-width: 480px) {
@@ -279,7 +280,7 @@
             }
 
             body {
-                background-image: url(images/bg/bg.svg);
+                background-image: url(../images/bg/bg.svg);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -294,17 +295,6 @@
             }
 
         }
-
-        .systems-grid .col-md-4 {
-            padding-bottom: 15px;
-        }
-
-        @media (min-width: 768px) {
-            .systems-grid .col-md-4 {
-                padding-bottom: 30px;
-            }
-
-        }
     </style>
 </head>
 
@@ -312,8 +302,8 @@
     <!-- Header -->
     <header class="header">
         <div class="logo-section">
-            <img class="logo" src="images/Logo.png" />
-            <div class="system-title">شركة كدي لتأجير السيارات</div>
+            <a href="#" class="logo"><img src="images/أنوار الحجاز.png" /></a>
+            <div class="system-title">شركة أنوار الحجاز لتأجير السيارات</div>
         </div>
         <div class="navbar_options">
             <a class="language-selector" href="#">
@@ -328,38 +318,32 @@
 
     <!-- Main Content -->
     <main class="container main-content">
-        <div class="row systems-grid p-2 ">
+        <div class="row g-3 systems-grid ">
             <div class="col-md-4">
-                <a class="systemLink" >
-                    <div class="system-card card-management">
-                        <div class="system-Image">
-                            <img src="./images/managment.png" alt="Adminstration system background card image" />
-                        </div>
-                        <h2 class="option-title">الإدارة</h2>
+                <div class="system-card card-management">
+                    <div class="system-Image">
+                        <img src="./images/managment.png" alt="Adminstration system background card image" />
                     </div>
-                </a>
+                    <h2 class="option-title">الإدارة</h2>
+                </div>
             </div>
 
             <div class="col-md-4">
-                <a class="systemLink" href="https://ayatt12.github.io/BnanBranch/">
-                    <div class="system-card card-branch">
-                        <div class="system-Image">
-                            <img src="./images/Branches.png" alt="Branches system background card image" />
-                        </div>
-                        <h2 class="option-title">الفروع</h2>
+                <div class="system-card card-branch">
+                    <div class="system-Image">
+                        <img src="./images/Branches.png" alt="Branches system background card image" />
                     </div>
-                </a>
+                    <h2 class="option-title">الفروع</h2>
+                </div>
             </div>
 
             <div class="col-md-4">
-                <a class="systemLink" href="https://ayatt12.github.io/Owners-Demo/">
-                    <div class="system-card card-owners">
-                        <div class="system-Image">
-                            <img src="./images/owners.png" alt="owners system background card image" />
-                        </div>
-                        <h2 class="option-title">لوحة التحكم</h2>
+                <div class="system-card card-owners">
+                    <div class="system-Image">
+                        <img src="./images/owners.png" alt="owners system background card image" />
                     </div>
-                </a>
+                    <h2 class="option-title">لوحة التحكم</h2>
+                </div>
             </div>
 
         </div>
