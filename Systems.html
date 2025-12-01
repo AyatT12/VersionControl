@@ -23,19 +23,14 @@
             box-sizing: border-box;
         }
 
-        html {
-            overflow: hidden;
-            height: 100%;
-        }
-
         body {
             font-family: 'Cairo';
             background: var(--bg);
-            height: 100%;
+            min-height: 100svh;
+            height: 100svh;
             display: flex;
             flex-direction: column;
             direction: rtl;
-            overflow: hidden;
         }
 
         /* Header */
@@ -45,7 +40,6 @@
             align-items: center;
             padding: 10px 40px;
             z-index: 10;
-            flex-shrink: 0; /* Prevents header from shrinking */
         }
 
         .language-selector {
@@ -82,24 +76,28 @@
             width: 100%;
         }
 
-        /* Main Content - FIXED */
+        /* Main Content */
         .main-content {
             flex: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 10px 20px;
-            min-height: 0; /* Important for flex children */
-            overflow: auto; /* Allows scrolling if content overflows */
+            min-height: 0;
+            max-height: 80%;
         }
 
         .systems-grid {
+            flex: 1;
             display: flex;
             max-width: 1000px;
             width: 100%;
             align-items: center;
             padding: 10px;
-            /* Remove height: 100% - let content determine height */
+            overflow-y: auto;
+            max-height: 100%;
+
         }
 
         .system-card {
@@ -204,59 +202,28 @@
             padding-bottom: 20px;
         }
 
-        /* Mobile - UPDATED */
+        /* Mobile  */
         @media (max-width: 768px) {
             .header {
                 flex-direction: column-reverse;
-                padding: 15px 20px;
             }
 
             .logo {
                 height: 60px;
             }
 
-            .system-title {
-                font-size: 16px;
-            }
-
-            /* Remove problematic max-height from mobile */
-            .main-content {
-                padding: 5px 10px;
-            }
         }
 
         @media (max-height: 400px) {
             .bg_vectors {
                 display: none;
             }
-            
-            .systems-grid .col-md-4 {
-                padding-bottom: 10px;
-            }
+
         }
 
         @media (max-width: 767px) {
             .system-card {
-                max-width: 80%; /* More reasonable for mobile */
-            }
-            
-            .systems-grid {
-                flex-direction: column;
-            }
-        }
-
-        /* Very small screens */
-        @media (max-width: 480px) {
-            .system-card {
-                max-width: 95%;
-            }
-            
-            .header {
-                padding: 10px 15px;
-            }
-            
-            .navbar_options {
-                gap: 15px;
+                max-width: 60%;
             }
         }
     </style>
