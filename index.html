@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -22,10 +22,11 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
-            min-height: 100dvh;
-            height: 100dvh;
+        /* Update your existing styles */
+        html {
+            /* Prevent bounce but keep normal flow */
+            overscroll-behavior-y: none;
+            height: 100%;
         }
 
         body {
@@ -34,14 +35,21 @@
             display: flex;
             flex-direction: column;
             direction: rtl;
+            height: 100%;
+            margin: 0;
+            /* Remove overflow: hidden from body */
         }
-        .content-wrapper{
+
+        .content-wrapper {
             flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+            height: 100%; /* ADD THIS */
         }
-        /* Header */
+
         .header {
             display: flex;
             justify-content: space-between;
@@ -59,7 +67,6 @@
             font-weight: 500;
             gap: 8px;
             text-decoration: none;
-            width: 100%;
             justify-content: flex-end;
         }
 
@@ -85,21 +92,19 @@
             font-weight: 600;
         }
 
-        /* Main content */
         .main-content {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             padding: 20px;
             z-index: 5;
             width: 100%;
             min-height: 0;
-            max-height:calc(100% - 100px) ;
-            overflow: hidden;
+            overscroll-behavior-y: contain;
         }
 
-        /* Login container */
         .login-container {
             border-radius: 20px;
             padding: 30px;
@@ -109,13 +114,10 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
-            max-height: 80%;
-            flex: 1;
             min-height: 0;
-            /* Add background for better visibility */
+            overscroll-behavior-y: contain;
         }
 
-        /* Login form container */
         .login-form-wrapper {
             flex: 1;
             display: flex;
@@ -123,6 +125,7 @@
             min-height: 0;
             overflow-y: auto;
             padding: 0px 10px;
+            overscroll-behavior-y: contain;
         }
 
         .login-title {
@@ -148,7 +151,6 @@
             font-size: 16px;
             font-weight: 500;
             margin-bottom: 8px;
-            text-align: right;
             flex-shrink: 0;
         }
 
@@ -206,7 +208,6 @@
             transform: translateY(-2px);
         }
 
-        /* Custom scrollbar for login container */
         .login-form-wrapper::-webkit-scrollbar {
             width: 2px;
         }
@@ -225,7 +226,6 @@
             background: #7a7a7a;
         }
 
-        /* Footer */
         .footer {
             background: var(--secondary_color);
             color: white;
@@ -234,9 +234,7 @@
             position: relative;
             z-index: 5;
             width: 100%;
-            position: fixed;
-            bottom: 0;
-           
+            flex-shrink: 0;
         }
 
         .footer-content {
@@ -285,9 +283,8 @@
             gap: 15px;
         }
 
-        /* Background Vectors */
         .bg_vectors {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             right: 0;
@@ -336,13 +333,13 @@
 
         @media (max-width: 480px) {
             .header {
-                flex-direction: column;
+                flex-direction: column-reverse;
                 gap: 10px;
+                align-items: flex-end;
             }
 
             .system-title {
                 font-size: 14px;
-                text-align: center;
             }
 
             .login-container {
@@ -397,78 +394,176 @@
                 height: 50px;
             }
         }
+
+        /* iOS Safari specific - SINGLE BLOCK ONLY */
+        @supports (-webkit-touch-callout: none) {
+            html {
+                height: -webkit-fill-available;
+            }
+            
+            body {
+                height: -webkit-fill-available;
+                min-height: -webkit-fill-available;
+            }
+            
+            .content-wrapper {
+                height: 100%;
+                flex: 1 1 auto;
+            }
+        }
     </style>
 
 </head>
 
 <body>
-  <div class="content-wrapper">
-  <!-- Background Vectors -->
-    <div class="bg_vectors">
-        <img src="./images/background/VectorUP.svg" class="up" alt="">
-        <img src="./images/background/car.svg" class="car" alt="">
-        <img src="./images/background/VectorDown.svg" class="down" alt="">
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="logo-section">
-            <div class="logo"><img src="./images/BnanLogo.svg" alt="بنان لوجو" /></div>
-            <div class="system-title">بنان لإدارة شركات ومكاتب تأجير السيارات</div>
-        </div>
-
-        <a class="language-selector" href="#">
-            <span>English</span>
-            <img src="./images/global.svg" width="24" alt="لغة" />
-        </a>
-    </header>
-
-    <!-- Main -->
-    <main class="main-content">
-        <div class="login-container">
-            <div class="login-form-wrapper">
-                <h1 class="login-title">تسجيل الدخول</h1>
-
-                <form>
-                    <label class="form-label">رقم الموظف</label>
-                    <input class="form-input" type="text">
-
-                    <label class="form-label">كلمة المرور</label>
-                    <input class="form-input" type="password">
-
-                    <div class="error_message_container">
-                        <p class="error_message">عفوا .... رقم الموظف أو كلمة السر غير صحيحة</p>
-                    </div>
-
-                    <a href="Systems.html" class="login-button">
-                        تسجيل الدخول
-                    </a>
-                </form>
+    <div class="content-wrapper">
+        <header class="header">
+            <div class="logo-section">
+                <div class="logo"><img src="./images/BnanLogo.svg" /></div>
+                <div class="system-title">بنان لإدارة شركات ومكاتب تأجير السيارات</div>
             </div>
-        </div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="Footer-company">
-                <img src="./images/GhouymLogo.svg" class="w-100" alt="غيوم لوجو">
-                <div class="footer-text">
-                    تطوير وتشغيل شركة غيوم الودق لتقنية المعلومات
-                    <br>
-                    جميع الحقوق محفوظة © 2022
+            <a class="language-selector" href="#">
+                <span>English</span>
+                <img src="./images/global.svg" width="24" />
+            </a>
+        </header>
+        <main class="main-content">
+            <div class="login-container">
+                <div class="login-form-wrapper">
+                    <h1 class="login-title">تسجيل الدخول</h1>
+
+                    <form>
+                        <label class="form-label">رقم الموظف</label>
+                        <input class="form-input" type="text">
+
+                        <label class="form-label">كلمة المرور</label>
+                        <input class="form-input" type="password">
+
+                        <div class="error_message_container">
+                            <p class="error_message">عفوا .... رقم الموظف أو كلمة السر غير صحيحة</p>
+                        </div>
+
+                        <a href="Systems.html" class="login-button">
+                            تسجيل الدخول
+                        </a>
+                    </form>
                 </div>
             </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="Footer-company">
+                    <img src="./images/GhouymLogo.svg" class="w-100">
+                    <div class="footer-text">
+                        تطوير وتشغيل شركة غيوم الودق لتقنية المعلومات
+                        <br>
+                        جميع الحقوق محفوظة © 2022
+                    </div>
+                </div>
 
-            <div class="social-icons">
-                <a href="https://www.youtube.com/@Ghyom0" target="_blank" class="social-icon youtube"
-                    title="YouTube"><img src="./images/Youtube.svg" alt="يوتيوب"></a>
-                <a href="https://bnan.ghyum.sa/#/home" target="_blank" class="social-icon web" title="Website"><img
-                        src="./images/BnanLogo.svg" alt="موقع بنان"></a>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@Ghyom0" target="_blank" class="social-icon youtube"
+                        title="YouTube"><img src="./images/Youtube.svg"></a>
+                    <a href="https://bnan.ghyum.sa/#/home" target="_blank" class="social-icon web" title="Website"><img
+                            src="./images/BnanLogo.svg"></a>
+                </div>
             </div>
+        </footer>
+        <div class="bg_vectors">
+            <img src="./images/background/VectorUP.svg" class="up">
+            <img src="./images/background/car.svg" class="car">
+            <img src="./images/background/VectorDown.svg" class="down">
         </div>
-    </footer>
-  </div>
+    </div>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Enhanced iOS fix
+        function enhanceIOSFix() {
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+            if (!isIOS || !isSafari) return;
+
+            console.log('Applying enhanced iOS Safari fix');
+
+            // 1. Set initial height
+            const setExactHeight = () => {
+                const vh = window.innerHeight;
+                document.documentElement.style.height = vh + 'px';
+                document.body.style.height = vh + 'px';
+                document.body.style.minHeight = '-webkit-fill-available';
+                
+                // Also set wrapper height
+                const wrapper = document.querySelector('.content-wrapper');
+                if (wrapper) {
+                    wrapper.style.height = vh + 'px';
+                }
+            };
+
+            // 2. Check if footer is visible
+            const checkFooterVisibility = () => {
+                const footer = document.querySelector('.footer');
+                if (!footer) return true;
+
+                const footerRect = footer.getBoundingClientRect();
+                return footerRect.bottom <= window.innerHeight;
+            };
+
+            // 3. Apply fix only if needed
+            const applyFixIfNeeded = () => {
+                setExactHeight();
+
+                // Check after a brief delay
+                setTimeout(() => {
+                    if (!checkFooterVisibility()) {
+                        console.log('Footer not visible, applying shrink-restore fix');
+                        
+                        // Apply your shrink idea as fallback
+                        const mainContent = document.querySelector('.main-content');
+                        if (mainContent) {
+                            // Shrink temporarily
+                            mainContent.style.maxHeight = 'calc(100% - 80px)';
+                            mainContent.style.transition = 'max-height 0.3s ease';
+                            
+                            // Restore after Safari recalculates
+                            setTimeout(() => {
+                                mainContent.style.maxHeight = '';
+                            }, 800);
+                        }
+                    }
+                }, 100);
+            };
+
+            // Initial fix
+            applyFixIfNeeded();
+
+            // Re-apply on orientation change
+            window.addEventListener('orientationchange', function () {
+                setTimeout(applyFixIfNeeded, 300);
+            });
+
+            // Re-apply when page becomes visible (tab switch)
+            document.addEventListener('visibilitychange', function () {
+                if (!document.hidden) {
+                    setTimeout(applyFixIfNeeded, 100);
+                }
+            });
+
+            // Also fix on window resize
+            let resizeTimeout;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(applyFixIfNeeded, 150);
+            });
+
+            // Final safety fix
+            setTimeout(applyFixIfNeeded, 1000);
+        }
+
+        enhanceIOSFix();
+    });
+</script>
 
 </html>
